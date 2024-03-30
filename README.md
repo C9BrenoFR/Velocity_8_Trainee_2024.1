@@ -1,6 +1,6 @@
 # **Trainee 2024.1**
 
-# **Nome do seu blog**
+# **Velocity 8**
 
 ## **Projeto Trainee, Code Jr, Grupo 000, 2024.1**
 
@@ -22,13 +22,13 @@
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [Breno Furtado Rosado](https://github.com/C9BrenoFR).
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/invite/b/L2Q9DbqJ/ATTI04377f18992569d5adcdeb8de62ba582CEC177BF/velocity-8)
 
-* [Drive com ID Visual]()
+* [Drive com ID Visual](https://drive.google.com/drive/folders/1uUw_1CkW1rDVKE4bVRw2NAQ-33wjtAnb?usp=sharing)
 
 
 

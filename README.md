@@ -13,11 +13,11 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
-* Trainee 5
+* Felipe Sachetto
+* Giovana Maieli
+* Giovanni Welp
+* Igor Reis
+* Matheus Ribeiro
 
 
 #### Scrum Master:

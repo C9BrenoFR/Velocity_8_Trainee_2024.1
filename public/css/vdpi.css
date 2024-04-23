@@ -11,68 +11,59 @@ body {
 
 #perfil {
     display: flex;
-    border: 1px solid red;
-    
 }
 
 #perfil img{
     width: 102px;
+    border-radius: 300px;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 0px 0px 40px 5px rgba(34, 230, 136, 0.90);
 }
 
 #perfil p{
+    margin-top: 0px;
     margin-right: 25px;
     margin-left: 25px;
+    display: inline;
 }
 
 .name{
-    display: inline;
     color: #FFF;
     font-family: Roboto;
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .data_hora{
     color: #FFF;
     font-family: Roboto;
     font-size: 20px;
-    font-style: normal;
     font-weight: 100;
-    line-height: normal;
-
-    width: 180px;
-    height: 20px;
-    flex-shrink: 0;
 }
 
 #postagem {
-    border: 1px solid red;
     display: block;
     margin-right: 820px;
+    margin-top: -70px;
 }
 
 .titulo {
     color: #FFF;
     font-family: Roboto;
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 
     padding-left: 127px;
 }
 
 .descricao {
-    display: block;
 
     color: #FFF;
     text-align: justify;
     font-family: Roboto;
     font-size: 24px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
 
     width: 496px;
@@ -82,5 +73,10 @@ body {
     padding-left: 127px;
 }
 
+#imagem {   
+    display: flex;
+    margin-left: 715px;
+    margin-top: -740px;
+}
 
 

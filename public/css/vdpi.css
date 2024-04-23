@@ -62,9 +62,7 @@ body {
     text-align: justify;
     font-family: Roboto;
     font-size: 24px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
 
     width: 496px;
     height: 638px;
@@ -76,7 +74,7 @@ body {
 #imagem {   
     display: flex;
     margin-left: 715px;
-    margin-top: -740px;
+    margin-top: -730px;
 }
 
 

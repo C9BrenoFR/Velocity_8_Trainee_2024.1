@@ -1,0 +1,86 @@
+
+body {
+    background-image: url(../assets/Desktop\ -\ 3.png);
+    background-size: cover;
+}
+
+#container {
+    margin-left: 50px;
+    margin-top: 150px;
+}
+
+#perfil {
+    display: flex;
+    border: 1px solid red;
+    
+}
+
+#perfil img{
+    width: 102px;
+}
+
+#perfil p{
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.name{
+    display: inline;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.data_hora{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+
+    width: 180px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+#postagem {
+    border: 1px solid red;
+    display: block;
+    margin-right: 820px;
+}
+
+.titulo {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding-left: 127px;
+}
+
+.descricao {
+    display: block;
+
+    color: #FFF;
+    text-align: justify;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    width: 496px;
+    height: 638px;
+    flex-shrink: 0;
+
+    padding-left: 127px;
+}
+
+
+

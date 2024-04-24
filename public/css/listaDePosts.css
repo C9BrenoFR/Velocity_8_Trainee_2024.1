@@ -1,0 +1,36 @@
+body{
+    font-family: montserrat;
+    background: linear-gradient(to top, #622F84, #B27FC8);
+    
+
+    text-align: center;
+}
+#pesquisa{
+    width: 510px;
+    height: 45px;
+    border: 1px solid white;
+    margin: 42px auto 461px auto;
+}
+
+#posts{
+    width: 325px;
+    height: 325px;
+    background-color: #622F84;
+    display: inline-block;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    
+}
+
+#posts img{
+    margin-top: 10px;
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+
+}
+
+#paginacao{
+    border: goldenrod;
+}

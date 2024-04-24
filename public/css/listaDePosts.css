@@ -12,6 +12,20 @@ body{
     margin: 42px auto 461px auto;
 }
 
+#divona{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+#divinha{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+
 #posts{
     width: 325px;
     height: 325px;
@@ -20,7 +34,7 @@ body{
     margin-right: 100px;
     margin-bottom: 100px;
     border-radius: 10px;
-    
+    flex-direction: column;
 }
 
 #posts img{
@@ -28,6 +42,9 @@ body{
     width: 280px;
     height: 200px;
     border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f2ebd5;
 
 }
 

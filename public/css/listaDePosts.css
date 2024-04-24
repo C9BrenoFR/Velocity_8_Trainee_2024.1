@@ -5,39 +5,36 @@ body{
 
     text-align: center;
 }
-#pesquisa{
+.pesquisa{
     width: 510px;
     height: 45px;
     border: 1px solid white;
-    margin: 42px auto 461px auto;
+    margin: auto;
+    margin: 42px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#divona{
+.divona{
     display: flex;
     flex-direction: row;
-    
-    
-}
-#divinha{
-    display: flex;
-    flex-direction: row;
-    
+    align-items: center;
+    justify-content: space-around;
     
 }
 
 
-#posts{
+.posts{
     width: 325px;
     height: 325px;
     background-color: #622F84;
     display: inline-block;
-    margin-right: 100px;
     margin-bottom: 100px;
     border-radius: 10px;
     flex-direction: column;
 }
 
-#posts img{
+.posts img{
     margin-top: 10px;
     width: 280px;
     height: 200px;
@@ -45,9 +42,28 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     background-color: #f2ebd5;
+    
 
 }
 
-#paginacao{
-    border: goldenrod;
+.posts span img{
+    
+    display:block;
+    width: 47px;
+    height: 47px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 300px;
+    
+    
+}
+
+.paginacao{
+    width: 200px;
+    height: 30px;
+    border: 1px solid white;
+    margin: auto;
+    border: 1px solid goldenrod;
+    margin-bottom: 30px;
 }

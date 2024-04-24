@@ -52,7 +52,7 @@ body {
     }
 
     .login input{
-
+        
         margin-top: 10px;
         background: #3F1859;
         padding-left: 10px;
@@ -63,12 +63,12 @@ body {
         border-radius: 8px;
         
     }
-    .lnr-eye {
+    /* .lnr-eye {
         position: absolute;
         top: 5px;
         right: 10px;
         cursor: pointer;
-    }
+    } */
     .login button {
         margin-top: 10px;
         background: #3F1859;
@@ -110,5 +110,14 @@ body {
     }
     
 
-   
+   .login i{
+    position: absolute;
     
+    top: 54.5%;
+    right: 9%;
+    cursor: pointer;
+   }
+    .password {
+        position: relative;
+
+    }

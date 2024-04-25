@@ -1,19 +1,43 @@
 body{
     font-family: montserrat;
     background: linear-gradient(to top, #622F84, #B27FC8);
-    
+    font-family: "Montserrat", sans-serif;
+    color: white;
 
-    text-align: center;
+    
 }
 .pesquisa{
     width: 510px;
     height: 45px;
-    border: 1px solid white;
-    margin: auto;
+    background-color: #D9D9D9;
+    border-radius: 50px;
     margin: 42px;
     margin-left: auto;
     margin-right: auto;
+    
 }
+
+.pesquisa img{
+    width: 31px;
+    height: 31px;
+    margin-bottom: 6px;
+    margin-left: 9px;
+}
+
+.pesquisa h1{
+    display: inline-block;
+    font-size: 20px;
+    color: #000000;
+    opacity: 30%;
+    width: 300px;
+    margin-left: 10px;
+}
+
+#img-txt{
+    display: flex;
+    align-items: center;
+}
+
 
 .divona{
     display: flex;
@@ -27,12 +51,33 @@ body{
 .posts{
     width: 325px;
     height: 325px;
-    background-color: #622F84;
+    background-color: #240638;
     display: inline-block;
     margin-bottom: 100px;
     border-radius: 10px;
     flex-direction: column;
+    transition: height 0.5s ease-in-out;
 }
+
+.posts:hover{
+    height: 400px;
+    .desc{
+        display: block;
+        animation: forwards anima 1.5s;
+    }
+
+}
+
+@keyframes anima{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 
 .posts img{
     margin-top: 10px;
@@ -47,16 +92,40 @@ body{
 }
 
 .posts span img{
-    
+
     display:block;
     width: 47px;
     height: 47px;
     border-radius: 10px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
     border-radius: 300px;
     
     
+}
+
+.divona h1{
+    margin: 9px;
+    width: 220px;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+
+}
+.usuario {
+    display: flex;
+    align-items: center;
+}
+
+p{
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.desc{
+    display: none;
+    opacity: 0;
 }
 
 .paginacao{
@@ -66,4 +135,16 @@ body{
     margin: auto;
     border: 1px solid goldenrod;
     margin-bottom: 30px;
+}
+.quadradinhos{
+    width: 30px;
+    height: 30px;
+    background-color: #9368A6;
+    display: inline-block;
+    
+    
+}
+
+.quadradinhos a{
+    
 }

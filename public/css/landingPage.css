@@ -78,8 +78,54 @@ body{
 }
 
 .post{
-    border: 1px solid white;
     width: 40%;
     height: 20%;
+    background-color: #3f1859;
+    display: inline-block;
+    border-radius: 10px;
+    flex-flow: column wrap;
 }
 
+.post h1{
+    margin: 9px;
+    width: 220px;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.post p{
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.desc{
+    opacity: 0.2;
+}
+
+.post span img{
+    display:block;
+    width: 47px;
+    height: 47px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+    border-radius: 300px;
+}
+
+.post img{
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f2ebd5;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+}

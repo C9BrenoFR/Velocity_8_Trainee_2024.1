@@ -19,10 +19,11 @@ body{
     width: 50%;
     height: 100vh;
     
-    background-image: url(/public/assets/fundobk.svg);
+    background-color: #240638;
+    background-image: url(/public/assets/fundobk.svg), radial-gradient(circle at bottom left, rgba(34,230,136, .65) 0%, rgba(36,6,56,1) 50%);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #240638;
+   background-size: auto;
     
     padding: 0 0 0 20px;
 }
@@ -80,3 +81,4 @@ body{
     width: 40%;
     height: 20%;
 }
+

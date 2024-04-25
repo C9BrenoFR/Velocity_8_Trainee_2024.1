@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    
+  }
+
+  main {
+    height: 80vh;
+  }
+  
+
+  footer {
+    width: 100%;
+    color: rgba(242, 235, 213, 1);
+
+  }
+
+  #footer-content {  
+    background-color: #240638;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+    
+  }
+
+#socialmedia {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+#socialmedia .footer-link {
+    
+   
+    color: rgba(242, 235, 213, 1);
+    display: flex;
+    text-decoration: none;
+    
+    align-items: flex-end;
+    transition: all 0.2s;
+}
+
+
+img {
+ 
+    width: 15.625rem;
+    
+}
+
+#socialmedia{
+    align-items: right;
+}
+
+#socialmedia .footer-link:hover {
+    opacity: 0.7;   
+}
+
+#socialmedia .footer-link i {
+      font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer_social h2 {
+    text-align: right;
+}
+
+.footer_social {
+    width: 15rem;
+    
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 14rem;
+    
+}
+
+.footer-list .footer-link {
+    color: #F2EBD5;
+    text-decoration: none;
+    transition: all 0.5s;
+    
+}
+
+
+
+
+
+.footer-list .footer-link:hover{
+    color: #B27FC8;
+}
+
+hr {
+    color: #F2EBD5;
+}

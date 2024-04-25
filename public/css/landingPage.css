@@ -129,3 +129,38 @@ body{
     display: flex;
     align-items: center;
 }
+
+@media only screen and (max-width: 800px){
+    body{
+        flex-direction: column;
+    }
+
+    .container1{
+        width: 100%;
+        padding: 0 10px 0 10px;
+
+        background-image: url(/public/assets/fundobk.svg);
+        background-size: contain;
+    }
+
+    .container1 h1{
+        font-size: 40px;
+    }
+
+    .container1 h2{
+        font-size: 30px;
+    }
+
+    .container2{
+        width: 100%;
+        height: 100%;
+        flex-flow: column nowrap;
+        justify-items: center;
+    }
+
+    .post{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        width: 80%;
+    }
+} 

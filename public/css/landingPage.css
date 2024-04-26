@@ -116,13 +116,11 @@ body{
 }
 
 .post img{
-    margin-top: 10px;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
+    width: 100px;
+    height: 100px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #f2ebd5;
+    background-color: #3f1859;
 }
 
 .usuario {

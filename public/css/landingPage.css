@@ -172,7 +172,7 @@ body{
         padding: 0;
 
         background-image: url(/public/assets/fundobk.svg);
-        background-size: contain;
+        background-size: auto;
     }
 
     .container1 h1{

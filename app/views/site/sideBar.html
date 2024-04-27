@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/sideBar.css">
     <title>SideBar</title>
+
+    <link rel="stylesheet" href="/public/css/sideBar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav id="sidebar">
+        <div id="container_sidebar">
+            <div class="user">
+                <img src="/public/assets/profile-default-svgrepo-com.svg" alt="avatar" width="40px">
+                <p>Felipe Sachetto</p>
+            </div>
     
+            <ul id="sidebar_items">
+                <li class="side_item active">
+                    <img src="/public/assets/homeicon.svg" alt="Home">
+                    <a href="#">Home</a>
+                </li>
+                <li class="side_item">
+                    <img src="/public/assets/list_icon.svg" alt="listaDePosts">
+                    <a href="#">Lista de Posts</a>
+                </li>
+                <li class="side_item">
+                    <img src="/public/assets/useradd.svg" alt="userADD">
+                    <a href="#">Adicionar usuário</a>
+                </li>
+                <li class="side_item"> 
+                    <img src="/public/assets/dashboardIcon.svg" alt="dashboard">
+                    <a href="#">Dashboard</a>
+                </li>
+            </ul>
+        
+            <div id="seta">
+                <img src="/public/assets/arrowRight.svg" alt="">
+            </div>
+        </div>
+
+        <div id="logout">
+            <img src="/public/assets/logoutIcon.svg" alt="">
+            <a href="#">Logout</a>
+        </div>
+    </nav>
 </body>
 </html>

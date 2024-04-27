@@ -20,7 +20,7 @@ body{
     height: 100vh;
     
     background-color: #240638;
-    background-image: url(/public/assets/fundobk.svg), radial-gradient(circle at bottom left, rgba(34,230,136, .65) 0%, rgba(36,6,56,1) 50%);
+    background-image: url(/public/assets/fundobk.svg), linear-gradient(to right, rgba(34,230,136, .65) 0%, rgba(36,6,56,1) 70%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -33,11 +33,11 @@ body{
     color: white;
     font-size: 56px;
     font-weight: bolder;
-    text-shadow: 3px 1px rgba(34, 230, 136, 0.5);
+    text-shadow: 3px 1px #3f1859;
 }
 
 .container1 h2{
-    color: #22E688;
+    color: white;
     font-size: 28px;
     margin-top: 10px;
     text-shadow: 3px 1px rgba(0, 0, 0, 0.5);
@@ -83,7 +83,7 @@ body{
 
 .post{
     width: 40%;
-    height: 20%;
+    height: 25%;
     background-color: #3f1859;
     display: flex;
     border-radius: 10px;
@@ -95,6 +95,10 @@ body{
     margin: 9px;
     color: white;
     font-size: 12px;
+}
+
+.post p{
+    padding: 0 10px 0 10px;
 }
 
 .usuario {
@@ -139,7 +143,7 @@ body{
 .descricao{
     position: absolute;
     width: 20%;
-    height: 20%;
+    height: 25%;
     background-color: black;
     z-index: 2;
     border-radius: 10px;

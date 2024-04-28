@@ -104,6 +104,17 @@ body {
 
     }
 
+    p{
+color: aliceblue ;
+
+    }
+    a{
+color: black;
+text-decoration: none;
+margin-left: 10px;
+
+    }
+
     .area-global{
         display: flex;
         justify-content: center;

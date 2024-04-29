@@ -1,9 +1,9 @@
 /*let olho = document.getElementsByClassName("eye"){
 
 }*/
-function mostrarSenha(){
+function mostrarSenha(senha){
 
-var inputPass = document.getElementById('senha')
+var inputPass = document.getElementById(senha)
 var btnShowPass = document.getElementById('btn-senha')
 
 if(inputPass.type === 'password'){
@@ -21,3 +21,15 @@ if(inputPass.type === 'password'){
 
 
 }
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () =>
+    container.classList.add('right-panel-active'));
+
+signInButton.addEventListener('click', () =>
+    container.classList.remove('right-panel-active'));
+
+
+

@@ -5,6 +5,7 @@ height: 100%;
 }
 body{
 background-image: url('/public/assets/imagens/carros.jpg');
+
 }
 .card-title{
     margin-top: 2%;
@@ -40,7 +41,7 @@ tr{
 }
 
 td{
-    width: 33.3%;
+    
     height: 9vh;
     color: #F2EBD5;
     border-top: 1px solid;
@@ -51,13 +52,57 @@ td{
 }
 .td1{
     border-left: 1px solid;
+    width: 8%;
 }
 
 .td2{
-    
+    width: 62%;
     border-left: 1px solid;
     border-right: 1px solid;
 }
 .td3{
+    width: 30%;
     border-right: 1px solid;
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    .pc{
+        display: none;
+    } 
+  
+   td{
+   
+    height: 12vh;
+   
+   }
+   .btn{
+    margin: 2%;
+   }
+   
+ 
+}
+@media screen and (min-width: 1001px) {
+    .mobile{
+        display: none;
+    
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 420px){
+
+.btn{
+    margin: 3% 10% 3% 10%;
+}
+    
+}
+@media screen and (max-height: 1400px) and (min-height: 1100px) {
+body{
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+    
 }

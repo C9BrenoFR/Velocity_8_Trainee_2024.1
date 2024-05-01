@@ -26,15 +26,16 @@ nav.sidebar{
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: .4s;
 }
 
-nav.sidebar:hover{
+nav.sidebar.expandir{
     width: 300px;
 }
 
 .btn-expandir{
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .btn-expandir > i{
@@ -55,6 +56,10 @@ ul li.item-menu{
     transition: 0.2s;
 }
 
+ul li.ativo{
+    background-color: #3f1859;
+}
+
 ul li.item-menu a{
     color: #f2ebd5;
     text-decoration: none;
@@ -66,7 +71,14 @@ ul li.item-menu a{
 }
 
 ul li.item-menu a .txt-link{
+    margin-left: 75px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.sidebar.expandir .txt-link{
     margin-left: 40px;
+    opacity: 1;
 }
 
 ul li.item-menu a .icon > i{

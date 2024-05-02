@@ -21,102 +21,109 @@ margin-top: 10%;
 }
 
 #perfil {
-display: flex;
+    display: flex;
 }
 
 #perfil img{
-width: 7.2%;
-max-width: 102px;
-border-radius: 50%;
-background: lightgray 50% / cover no-repeat;
-box-shadow: 0px 0px 4vh 5px rgba(34, 230, 136, 0.90);
+    width: 7.2%;
+    max-width: 102px;
+    border-radius: 50%;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 0px 0px 4vh 5px rgba(34, 230, 136, 0.90);
 }
 
 #perfil p{
-margin-top: 0%;
-margin-left: 1.80%;
-display: flex;
+    display: flex;
+    margin-top: 0%;
+    padding-left: 2%;
+    display: flex;
 }
 
 .name{
-color: #FFF;
-font-family: 'Montserrat';
-font-size: 3vh;    
-font-weight: 400; 
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 20px;    
+    font-weight: 400; 
 }
 
 .data_hora{
-color: #FFF;
-font-family: 'Montserrat';
-font-size: 3vh;
-font-weight: 100;
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 100;
 }
 
 #postagem {
-margin-right: 50%;
-margin-top: -5%;
+    margin-top: -5%;
+    width: 90%;
 }
 
 .titulo {
-color: #FFF;
-font-family: 'Montserrat';
-font-size: 5vh;
-font-weight: 700;
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 700;
 
-padding-left: 17.8%;
+    padding-left: 10%;
+}
+
+.post {
+    overflow: hidden;
 }
 
 .descricao {
 
-color: #FFF;
-text-align: justify;
-font-family: 'Montserrat';
-font-size: 3.5vh;
-font-weight: 300;
+    color: #FFF;
+    text-align: justify;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
 
-width: 68%;
-
-
-padding-left: 17.8%;
+    padding-left: 10%;
 }
 
-.imagem img {   
-display: flex;
-margin-left: 48%;
-margin-top: -57%;
-width: 80%;
-max-width: 600px;
+.post img {   
+    
+    shape-outside: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    float: right;
+    margin-left: 2%;
+    
+    max-width: 450px;
 }
 
 
 @media only screen and (max-width: 1024px) {
 
 #perfil img {
-    width: 15%;
+    width: 13%;
     max-width: 102px;
+    margin-left: 2%;
 }
 .name, .data_hora {
+    font-size: 12px;
     padding-top: 5%;
-    font-size: 1.5vh;
+    padding-left: 2%;
 }
 .titulo {
     display: block;
     padding-left: 0%;
     margin-top: 15%;
-    font-size: 3vh;
+    font-size: 20px;
+    padding-top: 10px;
 }
 .descricao {
-    font-size: 2vh;
+    font-size: 15px;
     width: 100%;
     padding-left: 0;
+    padding-top: 300px;
 }
 #postagem {
-    margin-right: 10px;
+    padding-left: 2%;
     margin-top: -40px;
 }
 .imagem {
-    margin-left: -40%;
-    margin-top: 50%;
-    width: 100%;
+    width: 5%;
+    max-width: 200px;
 }
 }

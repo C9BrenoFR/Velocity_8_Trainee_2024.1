@@ -1,0 +1,116 @@
+*{
+    font-family: 'Montserrat';
+    color: white;
+    
+}
+
+body {
+    margin: 0;
+    padding: 5%; 
+}
+
+
+.tamanho {
+    display: flex;
+    margin: auto;
+    width: 45%;
+}
+
+.fundo {
+   border-radius: 5%;
+   background-image: url(../Car-Station-Home-page-hero-2_result.jpg);
+   background-size: cover;
+   width: 100%;
+   height: fit-content;
+}
+
+.caixa {
+    width: 100%;
+    height: 100%;
+    padding: 5% 5% 5% 5%;
+    border-radius: 5%;
+    backdrop-filter: blur(30px);
+}
+
+.caixa #descr{
+    position: relative;
+    max-height: 100px;
+    min-height: 150px;
+}
+
+#descr textarea {
+    max-height: 140px;
+    min-height: 85px;
+}
+
+.caixa legend {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.caixa label {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.caixa button {
+    background-color: #22E688;
+    color: #491D66;
+    font-weight: 600;
+    border: none;
+}
+
+.caixa button:hover{
+    background-color: #491D66;
+    color: #22E688;
+}
+
+.caixa button:active{
+    background-color: #240638 !important;
+    color: #22E688 !important;
+    transform: scale(0.98);
+}
+
+.caixa input{
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.caixa input:focus {
+    box-shadow: 0 0 10px #22E688;  
+}
+
+.caixa input:hover{
+    opacity: 90%;
+}
+
+.caixa textarea:hover{
+    opacity: 90%;
+}
+
+.caixa textarea{
+    border: none;
+    transition-duration: 0.3s;
+}
+.caixa textarea:focus{
+    box-shadow: 0 0 10px #22E688;  
+}
+
+.caixa input[type=file]::file-selector-button{
+    border: none;
+}
+
+@media only screen and (max-width:768px) {
+
+    body {
+        padding: 0%;
+    }
+
+    .tamanho{
+        width: 100%;
+    } 
+
+    .caixa{
+        border-radius: 0%;
+    }
+}

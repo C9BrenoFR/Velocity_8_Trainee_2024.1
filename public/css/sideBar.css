@@ -50,6 +50,7 @@ ul{
 
 ul li.item-menu:hover{
     background-color: #3f1859;
+    border-radius: 10px 0 0 10px;
 }
 
 ul li.item-menu{
@@ -58,6 +59,7 @@ ul li.item-menu{
 
 ul li.ativo{
     background-color: #3f1859;
+    border-radius: 8px 0 0 8px;
 }
 
 ul li.item-menu a{

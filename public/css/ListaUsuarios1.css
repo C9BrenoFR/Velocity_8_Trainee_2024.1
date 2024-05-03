@@ -15,7 +15,6 @@ html,body{
     background: url('/public/assets/carros.jpg') ;
     }
     
-    
 
     .btn {
 
@@ -231,6 +230,7 @@ html,body{
     border-radius: 10px;
     padding: 15px;
     position: absolute;
+    z-index: 3;
 }
 
 .modal_edicao>h1{
@@ -265,7 +265,7 @@ html,body{
     padding: 8px;
     background-color: white;
     border: none;
-    margin: 5px;
+    margin-left: 5px;
 }
 
 .botoes_edicao>button:hover{
@@ -284,6 +284,17 @@ html,body{
         width: fit-content;
     }
 }
+
+/*ALTERANDO TELA DE FUNDO QUANDO ABRIR O MODAL*/
+.tela{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    display: none;
+    z-index: 2;
+}    
+
     
     
     

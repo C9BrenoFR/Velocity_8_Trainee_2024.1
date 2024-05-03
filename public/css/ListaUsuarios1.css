@@ -32,7 +32,7 @@ html,body{
         display: flex;
         align-items: center;
         padding: 50px;
-        color: #F2EBD5;
+        color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -59,7 +59,7 @@ html,body{
     td{
         
         height: 9vh;
-        color: #F2EBD5;
+        color: white;
         border-top: 1px solid;
         border-bottom: 1px solid;
         text-align: center;
@@ -134,7 +134,7 @@ html,body{
         align-items: center;
         justify-content: center;
         border-radius: 25px;
-        background-color: #F2EBD5;
+        background-color: white;
         margin: 5px;
         color: #B27FC8;
         font-weight: 600;
@@ -149,20 +149,20 @@ html,body{
 
     .paginacao .control {
         font-weight: 500;
-        color: #F2EBD5;
+        color: white;
         cursor: pointer;
     }
 
     .control-prev {
         margin-right: 20px;
-        color: #F2EBD5;
+        color: white;
         cursor: pointer;
     }
 
 
     .control-next {
         margin-left: 20px;
-        color: #F2EBD5;
+        color: white;
         cursor: pointer;
     }
 
@@ -219,6 +219,71 @@ html,body{
         }
 
     }
+
+/*MODAL EDIÇÃO DE USUARIO*/
+
+.modal_edicao{
+    height: fit-content;
+    width: 35%;
+    display: none;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+}
+
+.modal_edicao>h1{
+    color: white;
+    width: 60%;
+    text-decoration: underline;
+}
+
+.modal_edicao>label{
+    color: white;
+    font-size: 20px;
+}
+
+.modal_edicao>input{
+    width: 60%;
+    border-radius: 7px;
+    background-color: white;
+    border: none;
+    padding: 5px;
+    outline: 0;
+}
+
+.botoes_edicao{
+    margin-top: 10px;
+    display: flex;
+    width: 10%;
+    flex-direction: row;
+}
+
+.botoes_edicao>button{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: white;
+    border: none;
+    margin: 5px;
+}
+
+.botoes_edicao>button:hover{
+    opacity: 0.7;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 900px){
+    .modal_edicao>input{
+        width: 100%;
+    }
+
+    .botoes_edicao{
+        flex-direction: column;
+        width: fit-content;
+    }
+}
     
     
     

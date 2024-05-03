@@ -289,7 +289,7 @@ html,body{
 .modal_vis{
     height: fit-content;
     width: 35%;
-    display: block;
+    display: none;
     flex-direction: column;
     backdrop-filter: blur(30px);
     border-radius: 10px;

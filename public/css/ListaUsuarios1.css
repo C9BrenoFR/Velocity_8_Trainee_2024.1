@@ -256,8 +256,8 @@ html,body{
 .botoes_edicao{
     margin-top: 10px;
     display: flex;
-    width: 10%;
-    flex-direction: row;
+    width: 100%;
+    flex-direction: row-reverse;
 }
 
 .botoes_edicao>button{
@@ -315,6 +315,29 @@ html,body{
     color: white;
     font: 24px;
 }
+
+.botao-close{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.botao-close>button{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: white;
+    border: none;
+    margin-left: 5px;
+}
+
+.botao-close>button:hover{
+    opacity: 0.7;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+
 
 /*ALTERANDO TELA DE FUNDO QUANDO ABRIR O MODAL*/
 .tela{

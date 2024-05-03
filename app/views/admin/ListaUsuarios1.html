@@ -36,10 +36,10 @@
                         <td class="td2"> <img src="/public/assets/placeholder profile.jpg"> Giovani Welp </td>
                         <td class="td3">giovanijws@gmail.com</td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc">Excluir</button>
-                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
@@ -50,10 +50,10 @@
                         <td class="td2"> <img src="/public/assets/placeholder profile.jpg"> Felipe Sachetto </td>
                         <td class="td3">felipesachetto2004@gmail.com</td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc">Excluir</button>
-                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
@@ -64,10 +64,10 @@
                         <td class="td2"> <img src="/public/assets/placeholder profile.jpg"> Giovana Maieli </td>
                         <td class="td3">giovana.maieli@estudante.ufjf.br</td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc">Excluir</button>
-                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
@@ -78,10 +78,10 @@
                         <td class="td2"> <img src="/public/assets/placeholder profile.jpg"> Igor Reis </td>
                         <td class="td3">igorblr2010@gmail.com</td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc">Excluir</button>
-                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
@@ -92,10 +92,10 @@
                         <td class="td2"> <img src="/public/assets/placeholder profile.jpg"> Júnior Gomes </td>
                         <td class="td3">juniorgomes@gmail.com</td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc">Excluir</button>
-                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
@@ -139,6 +139,9 @@
         <p>Nome de usuario</p>
         <h2>Email:</h2>
         <p>email do usuario</p>
+        <div class="botao-close">
+            <button onclick="fecharModalEditar('m_vis')">Fechar</button>
+        </div>
     </div>
 
     <script src="/public/js/ListaUsuarios1.js"></script>

@@ -285,6 +285,37 @@ html,body{
     }
 }
 
+/*MODAL DE VISUAÇIZAÇÃO DE USUÁRIO*/
+.modal_vis{
+    height: fit-content;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    z-index: 3;
+}
+
+.modal_vis>h1{
+    color: white;
+    width: 60%;
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+.modal_vis>h2{
+    color: white;
+    width: 60%;
+    font-size: 32px;
+}
+
+.modal_vis>p{
+    color: white;
+    font: 24px;
+}
+
 /*ALTERANDO TELA DE FUNDO QUANDO ABRIR O MODAL*/
 .tela{
     width: 100%;

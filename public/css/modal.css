@@ -1,0 +1,129 @@
+*{
+    font-family: 'Montserrat';
+   color: white;
+    
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filtro{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    display: none;
+    z-index: 1050;
+
+}
+
+.tamanho {
+    display: none;
+   width: 40%;
+
+    position: absolute;
+    z-index: 1051;
+}
+
+.fundo {
+   border-radius: 5%;
+   background-image: url('/public/assets/imagens/Car-Station-Home-page-hero-2_result..jpg');
+   background-size: cover;
+   width: fit-content;
+   height: fit-content;
+}
+
+.caixa {
+    width: 100%;
+    height: 100%;
+    padding: 5% 5% 5% 5%;
+    border-radius: 5%;
+    backdrop-filter: blur(30px);
+}
+
+.caixa #descr{
+    max-height: 100px;
+    min-height: 150px;
+}
+
+#descr textarea {
+    max-height: 140px;
+    min-height: 85px;
+}
+
+.caixa legend {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.caixa label {
+    margin-top: 2%;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.caixa button {
+    background-color: #22E688;
+    color: #491D66;
+    font-weight: 600;
+    border: none;
+}
+
+.caixa button:hover{
+    background-color: #491D66;
+    color: #22E688;
+}
+
+.caixa button:active{
+    background-color: #240638 !important;
+    color: #22E688 !important;
+    transform: scale(0.98);
+}
+
+.caixa input{
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.caixa input:focus {
+    box-shadow: 0 0 10px #22E688;  
+}
+
+.caixa input:hover, textarea:hover{
+    opacity: 85%;
+}
+
+.caixa textarea{
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.caixa textarea:focus{
+    box-shadow: 0 0 10px #22E688;  
+}
+
+
+@media only screen and (max-width:1024px) {
+
+    .tamanho{
+        width: 90%;
+    } 
+
+    .caixa{
+        border-radius: 0%;
+    }
+
+    .caixa legend {
+        font-size: 18px;
+    }
+
+    .caixa label {
+        font-size: 14px;
+    }
+}

@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/listadepost_adm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/public/css/modal.css">
     <title>V8</title>
 </head>
 <body>
+        <div class="filtro" id="filtro"></div>
     <div class="container">
         <div class="card-title">
              <h1>Lista de Posts</h1>
-             <button type="button" class="btn btn-outline-info pc " data-bs-toggle="modal" data-bs-target="#criar">Criar</button>
-             <button type="button" class="btn btn-outline-info mobile" data-bs-toggle="modal" data-bs-target="#criar">+</button>
+             <button type="button" class="btn btn-outline-info pc" onclick="abrirmodal('criar')" >Criar</button>
+             <button type="button" class="btn btn-outline-info mobile">+</button>
         </div>
         <div class="card-table">
             <table class="tabela">
@@ -29,12 +34,12 @@
                         <td class="td1">1</td>
                         <td class="td2">Paixão Automotiva</td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" data-bs-toggle="modal" data-bs-target="#visualizar">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" data-bs-toggle="modal" data-bs-target="#editar">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" data-bs-toggle="modal" data-bs-target="#deletar">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" data-bs-toggle="modal" data-bs-target="#visualizar"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" data-bs-toggle="modal" data-bs-target="#editar"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" data-bs-toggle="modal" data-bs-target="#deletar"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-warning pc">Editar</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
+                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-warning mobile"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar')"><i class="fa-solid fa-trash"></i></button>
                         </td>
                         
                     </tr>
@@ -42,12 +47,12 @@
                         <td class="td1">2</td>
                         <td class="td2">Tesla Model 3: Eletrizante!</td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" data-bs-toggle="modal" data-bs-target="#visualizar">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" data-bs-toggle="modal" data-bs-target="#editar">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" data-bs-toggle="modal" data-bs-target="#deletar">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" data-bs-toggle="modal" data-bs-target="#visualizar"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" data-bs-toggle="modal" data-bs-target="#editar"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" data-bs-toggle="modal" data-bs-target="#deletar"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-warning pc">Editar</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
+                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-warning mobile"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
                         
                     </tr>
@@ -55,13 +60,12 @@
                         <td class="td1">3</td>
                         <td class="td2">Condução Imbativel: Chevrolet</td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" data-bs-toggle="modal" data-bs-target="#visualizar">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" data-bs-toggle="modal" data-bs-target="#editar">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" data-bs-toggle="modal" data-bs-target="#deletar">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" data-bs-toggle="modal" data-bs-target="#visualizar"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" data-bs-toggle="modal" data-bs-target="#editar"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" data-bs-toggle="modal" data-bs-target="#deletar"><i class="fa-solid fa-trash"></i></button>
-                            
+                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-warning pc">Editar</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
+                            <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-warning mobile"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
                         </td>
                        
                     </tr>
@@ -69,122 +73,61 @@
             </table>
         </div>
     </div>
-    <!-- Modal criar -->
-    <div class="modal fade" id="criar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Criar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-<!-- colocar formulario -->
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Autor:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Autor">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data:</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Titulo:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira o título">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Descrição:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Insira a descrição" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Arquivo:</label>
-                        <input type="file" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn button-modal" data-bs-dismiss="modal">Criar</button>
-                    <button type="button" class="btn button-modal">Cancelar</button>
-                </div>
-            </div>
+    <div class="tamanho" id="criar">
+        <div class="fundo">
+            <form class="caixa" method="post" action="#">   
+                        <fieldset>
+                            <legend>Criação de Post</legend>
+
+                            <div class="row g-3">
+                                <div class="col-sm-7">
+                                    <label for="autor" class="form-label">Autor: </label><br>
+                                    <input type="text" class="form-control" id="autor" placeholder="Autor" name="autor" required>
+                                </div>
+
+                                <div class="col-sm">
+                                    <label for="data" class="form-label">Data: </label>
+                                    <input type="date" class="form-control" id="data" name="data" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label">Título: </label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" size="100" placeholder="Insira o título" required>
+                                
+                                <label for="descr" class="form-label">Descrição: </label>
+
+                                <div id="descr">
+                                    <textarea class="form-control" rows="6" required placeholder="Insira a descrição"></textarea>
+                                </div>
+
+                                <label for="img" class="form-label">Imagem: </label>
+                                <input class="form-control" type="file" id="img" required><br>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary">Criar</button>
+                                <button type="reset" class="btn btn-primary" onclick="fecharmodal('criar')">Cancelar</button>
+                            </div>
+                        </fieldset>
+                </form>
         </div>
     </div>
-    <!-- Modal visualizar -->
-    <div class="modal fade" id="visualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Visualizar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-<!-- colocar formulario -->
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Autor</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Autor">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data:</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Titulo:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira o título">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Descrição:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Insira a descrição" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Arquivo:</label>
-                        <input type="file" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn button-modal" data-bs-dismiss="modal">Criar</button>
-                    <button type="button" class="btn button-modal">Cancelar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Modal editar -->
-    <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn button-modal" data-bs-dismiss="modal">Editar</button>
-                    <button type="button" class="btn button-modal">Cancelar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Modal  deletar-->
-    <div class="modal fade" id="deletar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Deletar Post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p> Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <br> Tem certeza que deseja deletar esse Post? </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn button-modal" data-bs-dismiss="modal">Deletar</button>
-                    <button type="button" class="btn button-modal">Cancelar</button>
-                </div>
-            </div>
-                
+    <div class="tamanho" id="deletar">
+        <div class="fundo">
+            <form class="caixa" method="post" action="#">   
+                        <fieldset>
+                            <legend>Deletar Post</legend>
+                            <p> Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <br> Tem certeza que deseja deletar esse Post? </p>
+                           
+                            <div>
+                                <button type="submit" class="btn btn-primary">Deletar</button>
+                                <button type="reset" class="btn btn-primary" onclick="fecharmodal('deletar')">Cancelar</button>
+                            </div>
+                        </fieldset>
+                </form>
         </div>
     </div>
 </body>
-
+<script src="/public/js/modal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

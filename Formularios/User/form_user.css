@@ -8,13 +8,18 @@ html, body{
     display: flex;
     width: 100%;
     height: 100%;  
+
+    justify-content: center;
+    align-items: center;
 }
 
-
 .tamanho {
-    margin: auto;
-    width: 29%;
-    margin-top: 5%;
+    display: flex;
+    width: 35%;
+    height: fit-content;
+
+    position: absolute;
+    z-index: 1;
 }
 
 .fundo {
@@ -73,10 +78,17 @@ html, body{
 }
 
 .caixa input:hover{
-    opacity: 90%;
+    opacity: 85%;
 }
 
+@media only screen and (max-width:1024px) {
 
+    .tamanho{
+        width: fit-content;
+        height: fit-content;
+    } 
 
-
-
+    .caixa{
+        border-radius: 0%;
+    }
+}

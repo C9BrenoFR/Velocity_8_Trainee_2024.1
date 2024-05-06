@@ -13,8 +13,7 @@
 <body>
     <div class="tamanho">
         <div class="fundo">
-            <form>   
-                    <div class="caixa">
+            <form class="caixa" method="post" action="#">   
                         <fieldset>
                             <legend>Criação de Post</legend>
 
@@ -25,30 +24,29 @@
                                 </div>
 
                                 <div class="col-sm">
-                                    <label for="data" class="form-label">Data: </label><br>
-                                    <input type="date" class="form-control" id="data" name="data" required><br>
+                                    <label for="data" class="form-label">Data: </label>
+                                    <input type="date" class="form-control" id="data" name="data" required>
                                 </div>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="titulo" class="form-label">Título: </label><br>
-                                <input type="text" class="form-control" id="titulo" name="titulo" size="100" placeholder="Insira o título" required><br>
+                                <label for="titulo" class="form-label">Título: </label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" size="100" placeholder="Insira o título" required>
                                 
-                                <label for="descr" class="form-label">Descrição: </label><br>
+                                <label for="descr" class="form-label">Descrição: </label>
 
                                 <div id="descr">
-                                    <textarea class="form-control" rows="6" required placeholder="Insira a descrição"></textarea><br><br>
+                                    <textarea class="form-control" rows="6" required placeholder="Insira a descrição"></textarea>
                                 </div>
 
                                 <label for="img" class="form-label">Imagem: </label>
                                 <input class="form-control" type="file" id="img" required><br>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-primary">Criar</button>
-                                <button type="button" class="btn btn-primary">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Criar</button>
+                                <button type="reset" class="btn btn-primary">Cancelar</button>
                             </div>
                         </fieldset>
-                    </div>
                 </form>
         </div>
     </div>

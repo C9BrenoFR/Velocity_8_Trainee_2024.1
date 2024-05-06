@@ -14,26 +14,24 @@
 <body>
     <div class="tamanho">
         <div class="fundo">
-            <form>
-                <div class="caixa">
+            <form class="caixa" method="post" action="#">
                     <fieldset>
                         <legend>Criação de Usuario</legend>
 
                         <section class="mb-3">
                             <label for="name" class="form-label">Nome: </label><br>
-                            <input type="text" class="form-control" id="name" name="name" size="100" placeholder="Nome Completo" autofocus><br>
+                            <input type="text" class="form-control" id="name" name="name" size="100" placeholder="Insira o nome" autofocus required><br>
                             
                             <label for="email" class="form-label">Email: </label><br>
-                            <input type="email" class="form-control" id="email" name="email" size="60" placeholder="exemplo@email.com" required><br>
+                            <input type="email" class="form-control" id="email" name="email" size="60" placeholder="Insira o email" required><br>
 
                             <label for="senha" class="form-label">Senha: </label><br>
-                            <input type="password" class="form-control" id="senha" name="senha" size="60" placeholder="Senha" autocomplete="off"><br><br>
+                            <input type="password" class="form-control" id="senha" name="senha" size="60" placeholder="Insira a senha" autocomplete="off" required><br><br>
 
-                            <button type="button" class="btn btn-primary">Criar</button>
-                            <button type="button" class="btn btn-primary">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Criar</button>
+                            <button type="reset" class="btn btn-primary">Cancelar</button>
                         </section>
                     </fieldset>
-                </div>
             </form>
         </div>
     </div>

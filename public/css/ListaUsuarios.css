@@ -1,0 +1,224 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    
+    }
+    body{
+    background: url('/public/assets/imagens/carros.jpg') ;
+    }
+    
+    
+
+    .btn {
+
+        border-radius: 20px;
+    }
+
+
+    .card-title{
+        margin-top: 2%;
+        width: 100%;
+        height: 10vh;
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 50px;
+        color: #F2EBD5;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .card-table{
+        margin-top: 5%;
+        width: 100%;
+        height: fit-content;
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 50px;
+    }
+    .tabela{
+        width: 100%;
+    }
+    
+    tr{
+        width: 100%;
+    }
+    
+    td{
+        
+        height: 9vh;
+        color: #F2EBD5;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        text-align: center;
+        
+        
+    }
+
+    td img {
+
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 5%;
+        border-radius: 50%;
+        vertical-align: middle;
+        
+    }
+
+
+
+    .td1{
+        border-left: 1px solid;
+        width: 5%;
+    }
+    
+    .td2{
+        width: 30%;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        text-align: left;
+        padding-left: 2%;
+        justify-content: center;
+        justify-items: center;
+    }
+    .td3{
+        width: 30%;
+        border-right: 1px solid;
+        
+    
+    }
+
+    .td4{
+        width: 30%;
+        border-right: 1px solid;
+    }
+    
+    body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    #pagination {
+        margin-top: 5%;
+    }
+
+    .paginacao{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #240638;
+        border-radius: 30px;
+        height: 5%;
+        padding: 0 3%;
+        
+    }
+
+    .paginacao .page {
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        background-color: #F2EBD5;
+        margin: 5px;
+        color: #B27FC8;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .2;
+    }
+
+
+.paginacao .page:hover {
+    filter: brightness(1.2);
+}
+
+    .paginacao .control {
+        font-weight: 500;
+        color: #F2EBD5;
+        cursor: pointer;
+    }
+
+    .control-prev {
+        margin-right: 20px;
+        color: #F2EBD5;
+        cursor: pointer;
+    }
+
+
+    .control-next {
+        margin-left: 20px;
+        color: #F2EBD5;
+        cursor: pointer;
+    }
+
+    
+    @media screen and (max-width: 1000px) {
+        .pc{
+            display: none;
+        } 
+      
+       td{
+       
+        height: 12vh;
+       
+       }
+       .btn{
+        margin: 2%;
+       }
+       
+     
+    }
+    @media screen and (min-width: 1001px) {
+        .mobile{
+            display: none;
+        
+        }
+    
+    }
+    
+    @media screen and (max-width: 768px) and (min-width: 420px){
+    
+       
+    
+    .btn{
+        margin: 3% 10% 3% 10%;
+    }
+        
+    }
+    @media screen and (max-height: 1400px) and (min-height: 1100px) {
+    body{
+        background-size: cover;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+} 
+    @media screen and (max-width: 475px) {
+
+
+        td {
+            font-size: 60%;
+        }
+
+        .td3 {
+            font-size: 60%;
+        }
+
+    }
+    
+    
+    

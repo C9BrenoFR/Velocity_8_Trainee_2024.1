@@ -236,7 +236,6 @@ html,body{
 .modal_edicao>h1{
     color: white;
     width: 60%;
-    text-decoration: underline;
 }
 
 .modal_edicao>label{
@@ -263,7 +262,9 @@ html,body{
 .botoes_edicao>button{
     border-radius: 10px;
     padding: 8px;
-    background-color: white;
+    background-color: #22E688;
+    color: #491D66;
+    font-weight: 600;
     border: none;
     margin-left: 5px;
 }
@@ -272,6 +273,8 @@ html,body{
     opacity: 0.7;
     font-size: 15px;
     transition: 0.2s;
+    background-color: #491D66;
+    color: #22E688;
 }
 
 @media screen and (max-width: 900px){
@@ -301,7 +304,6 @@ html,body{
 .modal_vis>h1{
     color: white;
     width: 60%;
-    text-decoration: underline;
     font-size: 36px;
 }
 
@@ -329,12 +331,16 @@ html,body{
     background-color: white;
     border: none;
     margin-left: 5px;
+    background-color: #22E688;
+    color: #491D66;
 }
 
 .botao-close>button:hover{
     opacity: 0.7;
     font-size: 15px;
     transition: 0.2s;
+    background-color: #491D66;
+    color: #22E688;
 }
 
 

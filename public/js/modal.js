@@ -8,7 +8,6 @@ function abrirmodal (idmodal){
 }
 
 
-
 function fecharmodal (idmodal){
     document.getElementById(idmodal).style.display="none";
     filtro.style.display="none";

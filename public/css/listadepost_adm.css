@@ -4,7 +4,7 @@ height: 100%;
 
 }
 body{
-background-image: url('/public/assets/imagens/carros.jpg');
+background-image: url('../assets/imagens/carros.jpg');
 
 }
 .card-title{

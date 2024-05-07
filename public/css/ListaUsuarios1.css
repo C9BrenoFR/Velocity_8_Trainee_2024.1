@@ -250,6 +250,15 @@ html,body{
     border: none;
     padding: 5px;
     outline: 0;
+    transition-duration: 0.3s;
+}
+
+.modal_edicao>input:focus{
+    box-shadow: 0 0 10px #22E688; 
+}
+
+.modal_edicao>input:hover{
+    opacity: 85%;
 }
 
 .botoes_edicao{

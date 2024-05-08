@@ -74,11 +74,7 @@ td{
     color: #240638;
     border: 1px solid #240638;
 }
-#visualizar p{
-    background-color: #FFFFFF;
-    color: black;
-    border-radius: 5px;
-}
+
 
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
     .btn{

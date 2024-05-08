@@ -123,6 +123,28 @@ html, body {
     box-shadow: 0 0 10px #22E688;  
 }
 
+#visualizar p{
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+
+.caixa img{
+    width: 150px;
+    height: 140px;
+    display: block;
+    border-radius: 7px;
+}
+
+#visualizar .fundo {
+    border-radius: 5%;
+    background-image: url('../assets/imagens/Car-Station-Home-page-hero-2_result..jpg');
+    background-size: cover;
+    width: 90%;
+    height: 10%;
+ }
+
 
 @media only screen and (max-width:1024px) {
 

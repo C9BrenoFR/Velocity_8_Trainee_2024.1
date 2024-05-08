@@ -22,7 +22,7 @@ background-image: url('../assets/imagens/carros.jpg');
     justify-content: space-between;
 }
 
-.card-table{
+.card-table {
     margin-top: 5%;
     width: 100%;
     height: fit-content;
@@ -73,6 +73,11 @@ td{
     background-color: #22E688;
     color: #240638;
     border: 1px solid #240638;
+}
+#visualizar p{
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1000px) {

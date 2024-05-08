@@ -34,7 +34,7 @@
                         <td class="td1">1</td>
                         <td class="td2">Paixão Automotiva</td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
@@ -47,7 +47,7 @@
                         <td class="td1">2</td>
                         <td class="td2">Tesla Model 3: Eletrizante!</td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc"onclick="abrirmodal('editar')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
@@ -60,7 +60,7 @@
                         <td class="td1">3</td>
                         <td class="td2">Condução Imbativel: Chevrolet</td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile"><i class="fa-solid fa-eye"></i></button>
@@ -184,6 +184,70 @@
                 </form>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <div class="tamanho" id="visualizar">
+        <div class="fundo">
+            <form class="caixa" method="post" action="#">   
+                    <fieldset>
+                        <legend>Visualizar Post</legend>
+
+                        <div class="row g-3">
+                            <div class="col-sm-7">
+                                <label for="autor" class="form-label">Autor: </label><br>
+                                <p>Zezinho</p>
+                            </div>
+
+                            <div class="col-sm">
+                                <label for="data" class="form-label">Data: </label>
+                                <p>14/05/2024</p> 
+                            </div>
+                        </div>
+
+
+                        <label for="user">Usuário: </label> 
+                        <div class="input-group flex-nowrap">
+                            
+                            <span class="input-group-text" id="addon-wrapping">@</span>
+                            <p>zezinho_silva</p>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Título: </label>
+                            <p>Paixão Automotiva</p>
+
+                            <label for="descr" class="form-label">Descrição: </label>
+
+                            <div id="descr">
+                                <textarea class="form-control" rows="6" required ></textarea>
+                            </div>
+
+                            <label for="img" class="form-label">Imagem: </label>
+                            <input class="form-control" type="file" id="img" required><br>
+                        </div>
+                        <div>
+                            <button type="reset" class="btn btn-primary" onclick="closeModal('visualizar')">Fechar</button>
+                        </div>
+                    </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
 </body>
 <script src="../../../public/js/modal.js"></script>

@@ -80,11 +80,18 @@ html, body {
     font-size: 16px;
 }
 
+#botao {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 8px;
+}
+
 .caixa button {
     background-color: #22E688;
     color: #491D66;
     font-weight: 600;
     border: none;
+    margin-left: 10px;
 }
 
 .caixa button:hover{

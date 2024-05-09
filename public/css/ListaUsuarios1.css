@@ -352,7 +352,13 @@ body {
 
 .modal_delete h1 {
   color: white;
-  text-align: center;
+  text-align: left;
+}
+
+.modal_delete h3 {
+  color: white;
+  text-align: left;
+  font-size: 20px;
 }
 
 .botoes_deletar {
@@ -361,7 +367,7 @@ body {
   width: 100%;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
 
 .botoes_deletar > button {

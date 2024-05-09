@@ -12,6 +12,11 @@ body {
 }
 body {
   background: #240638;
+  background-color: #240638;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .btn {
@@ -74,6 +79,9 @@ td img {
   width: 5%;
 }
 
+
+
+
 .td2 {
   width: 30%;
   border-left: 1px solid;
@@ -101,7 +109,7 @@ body {
 }
 
 #pagination {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .paginacao {
@@ -149,6 +157,12 @@ body {
   margin-left: 20px;
   color: white;
   cursor: pointer;
+}
+
+#usuario2 {
+
+  text-align: center;
+
 }
 
 @media screen and (max-width: 1000px) {

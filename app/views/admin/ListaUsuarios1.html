@@ -16,8 +16,7 @@
     <div class="container">
         <div class="card-title">
              <h1>Lista de Usuários</h1>
-             <button type="button" class="btn btn-outline-info pc">Criar</button>
-             <button type="button" class="btn btn-outline-info mobile">+</button>
+             
         </div>
         <div class="card-table">
             <table class="tabela">
@@ -38,7 +37,7 @@
                         <td class="td4">
                             <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc">Excluir</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
@@ -52,7 +51,7 @@
                         <td class="td4">
                             <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc">Excluir</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
@@ -66,7 +65,7 @@
                         <td class="td4">
                             <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc">Excluir</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
@@ -80,7 +79,7 @@
                         <td class="td4">
                             <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc">Excluir</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
@@ -94,7 +93,7 @@
                         <td class="td4">
                             <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc">Excluir</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
@@ -141,6 +140,18 @@
         <p>email do usuario</p>
         <div class="botao-close">
             <button onclick="fecharModalEditar('m_vis')">Fechar</button>
+        </div>
+    </div>
+
+
+    <!--MODAL DELETAR USUÁRIO-->
+    <div class="modal_delete" id="m_del">
+        <h1>Deseja deletar o usuário?</h1>
+        
+        <div class="botoes_deletar">
+            <button onclick="fecharModalDelete('m_del')">Cancelar</button>
+            <button>Deletar</button>
+            
         </div>
     </div>
 

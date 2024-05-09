@@ -131,13 +131,28 @@ html, body {
     color: black;
     border-radius: 5px;
     padding-left: 3px;
+    width: fit-content;
 }
+
+#visualizar .fundo {
+    border-radius: 5%;
+    background-size: cover;
+    width: 90%;
+    height: 10%;
+}
+
+ #img-d .row.g-3{
+    display: block;
+    width: fit-content;
+}
+ 
 
 .caixa img{
     width: 150px;
     height: 140px;
     display: block;
     border-radius: 7px;
+    margin: 0;
 }
 
 @media only screen and (max-width:1024px) {

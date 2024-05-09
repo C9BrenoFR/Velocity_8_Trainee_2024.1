@@ -201,6 +201,7 @@ body {
   padding: 15px;
   position: absolute;
   z-index: 3;
+  animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .modal_edicao > h1 {
@@ -267,7 +268,7 @@ body {
   }
 }
 
-/*MODAL DE VISUAÇIZAÇÃO DE USUÁRIO*/
+/*MODAL DE VISUALIZAÇÃO DE USUÁRIO*/
 .modal_vis {
   height: fit-content;
   width: 35%;
@@ -278,6 +279,7 @@ body {
   padding: 15px;
   position: absolute;
   z-index: 3;
+  animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .modal_vis > h1 {
@@ -345,6 +347,7 @@ body {
   padding: 15px;
   position: absolute;
   z-index: 3;
+  animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .modal_delete h1 {
@@ -376,6 +379,15 @@ body {
   transition: 0.2s;
   background-color: #491d66;
   color: #22e688;
+}
+
+@keyframes scale-in {
+  0% {
+          transform: scale(0);
+  }
+  100% {
+          transform: scale(1);
+  }
 }
 
 

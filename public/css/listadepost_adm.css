@@ -22,6 +22,10 @@ background-image: url('../assets/imagens/carros.jpg');
     justify-content: space-between;
 }
 
+.btn {
+    border-radius: 20px;
+  }
+
 .card-table {
     margin-top: 5%;
     width: 100%;

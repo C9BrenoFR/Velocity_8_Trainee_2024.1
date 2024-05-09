@@ -29,7 +29,7 @@ body {
   width: 100%;
   height: 10vh;
   backdrop-filter: blur(30px);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   padding: 50px;
@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: fit-content;
   backdrop-filter: blur(30px);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   padding: 50px;
@@ -213,7 +213,7 @@ body {
   display: none;
   flex-direction: column;
   background-color: #491D66;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 15px;
   position: absolute;
   z-index: 3;
@@ -256,7 +256,7 @@ body {
 }
 
 .botoes_edicao > button {
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 8px;
   background-color: #22e688;
   color: #491d66;
@@ -291,7 +291,7 @@ body {
   display: none;
   flex-direction: column;
   background-color: #491D66;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 15px;
   position: absolute;
   z-index: 3;
@@ -323,7 +323,7 @@ body {
 }
 
 .botao-close > button {
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 8px;
   background-color: white;
   border: none;
@@ -349,7 +349,7 @@ body {
   display: none;
   flex-direction: column;
   background-color: #491D66;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 15px;
   position: absolute;
   z-index: 3;
@@ -377,7 +377,7 @@ body {
 }
 
 .botoes_deletar > button {
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 8px;
   background-color: #22e688;
   color: #491d66;

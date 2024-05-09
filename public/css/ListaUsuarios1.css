@@ -266,9 +266,10 @@ body {
 }
 
 .botoes_edicao > button:hover {
-  opacity: 0.7;
+  opacity: 0.9;
   transition: 0.2s;
   background-color: #491d66;
+  border: 1px #22e688 solid;
   color: #22e688;
 }
 
@@ -333,9 +334,10 @@ body {
 }
 
 .botao-close > button:hover {
-  opacity: 0.7;
+  opacity: 0.9;
   transition: 0.2s;
   background-color: #491d66;
+  border: 1px #22e688 solid;
   color: #22e688;
 }
 
@@ -385,9 +387,10 @@ body {
 }
 
 .botoes_deletar > button:hover {
-  opacity: 0.7;
+  opacity: 0.9;
   transition: 0.2s;
   background-color: #491d66;
+  border: 1px #22e688 solid;
   color: #22e688;
 }
 

@@ -21,17 +21,26 @@ html, body {
     display: none;
     z-index: 2;
     opacity: 0.8;
-
 }
 
 .tamanho {
     display: none;
     width: 40%;
+    border-radius: 5%;
+    background-color: #9368A6;
 
     position: absolute;
     z-index: 1051;
 
     animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+#visualizar {
+    width: 40%;
+}
+
+#viz {
+    width: 100%;
 }
 
 @keyframes scale-in {
@@ -44,9 +53,6 @@ html, body {
 }
 
 .fundo {
-   border-radius: 5%;
-   background-color: #9368A6;
-   background-size: cover;
    width: fit-content;
    height: fit-content;
 }
@@ -85,7 +91,7 @@ html, body {
     padding: 8px;
 }
 
-.caixa button {
+.tamanho button {
     background-color: #22E688;
     color: #491D66;
     font-weight: 600;
@@ -93,12 +99,12 @@ html, body {
     margin-left: 10px;
 }
 
-.caixa button:hover{
+.tamanho button:hover{
     background-color: #491D66;
     color: #22E688;
 }
 
-.caixa button:active{
+.tamanho button:active{
     background-color: #240638 !important;
     color: #22E688 !important;
     transform: scale(0.98);
@@ -134,26 +140,20 @@ html, body {
     width: fit-content;
 }
 
-#visualizar .fundo {
-    border-radius: 5%;
-    background-size: cover;
-    width: 90%;
-    height: 10%;
+.tamanho img{
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
 }
 
- #img-d .row.g-3{
-    display: block;
-    width: fit-content;
+#img-d{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 13%;
 }
- 
 
-.caixa img{
-    width: 150px;
-    height: 140px;
-    display: block;
-    border-radius: 7px;
-    margin: 0;
-}
 
 @media only screen and (max-width:1024px) {
 

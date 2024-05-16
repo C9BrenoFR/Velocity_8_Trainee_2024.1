@@ -132,18 +132,13 @@ html, body {
     box-shadow: 0 0 10px #22E688;  
 }
 
-#visualizar p{
-    background-color: #FFFFFF;
-    color: black;
-    border-radius: 5px;
-    padding-left: 3px;
-    width: fit-content;
-}
+
 
 .tamanho img{
     width: 180px;
     height: 100px;
     border-radius: 10px;
+    display: block;
 }
 
 #img-d{

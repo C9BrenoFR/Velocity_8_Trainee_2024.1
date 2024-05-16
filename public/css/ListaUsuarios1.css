@@ -356,13 +356,16 @@ body {
 
 .modal_delete h1 {
   color: white;
+  font-size: 20px;
+  font-weight: 600;
   text-align: left;
 }
 
 .modal_delete h3 {
   color: white;
   text-align: left;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .botoes_deletar {

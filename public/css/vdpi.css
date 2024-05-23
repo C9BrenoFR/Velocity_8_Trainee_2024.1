@@ -17,7 +17,7 @@ z-index: -1;
 
 #container {
 margin-left: 5%;
-margin-top: 10%;
+margin-top: 5%;
 }
 
 #perfil {
@@ -28,8 +28,6 @@ margin-top: 10%;
     width: 7.2%;
     max-width: 102px;
     border-radius: 50%;
-    background: lightgray 50% / cover no-repeat;
-    box-shadow: 0px 0px 4vh 5px rgba(34, 230, 136, 0.90);
 }
 
 #perfil p{
@@ -88,42 +86,97 @@ margin-top: 10%;
     shape-outside: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     float: right;
     margin-left: 2%;
-    
-    max-width: 450px;
+    border-radius: 10px;
+
+    max-width: 40%;
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 767px) {
 
 #perfil img {
-    width: 13%;
+    width: 8%;
     max-width: 102px;
     margin-left: 2%;
 }
 .name, .data_hora {
-    font-size: 12px;
-    padding-top: 5%;
+    font-size: 10px;
+    padding-top: 2%;
     padding-left: 2%;
 }
 .titulo {
-    display: block;
+    display: flex;
     padding-left: 0%;
-    margin-top: 15%;
-    font-size: 20px;
-    padding-top: 10px;
+    margin-top: 10%;
+    font-size: 18px;
+    padding-top: 20px;
 }
+
 .descricao {
     font-size: 15px;
     width: 100%;
     padding-left: 0;
-    padding-top: 300px;
+    padding-top: 0px;
 }
 #postagem {
     padding-left: 2%;
     margin-top: -40px;
 }
-.imagem {
-    width: 5%;
-    max-width: 200px;
+
+.post {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
+
+.post img {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    #perfil img {
+        width: 6%;
+        max-width: 102px;
+        margin-left: 2%;
+    }
+    .name, .data_hora {
+        font-size: 15px;
+        padding-top: 2%;
+        padding-left: 2%;
+    }
+    .titulo {
+        display: flex;
+        padding-left: 0%;
+        margin-top: 8%;
+        font-size: 24px;
+        padding-top: 0px;
+    }
+    
+    .descricao {
+        font-size: 20px;
+        width: 100%;
+        padding-left: 0;
+        padding-top: 0px;
+    }
+    #postagem {
+        padding-left: 2%;
+        margin-top: -40px;
+    }
+    
+    .post {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    
+    .post img {
+        border-radius: 10px;
+        margin-bottom: 30px;
+        max-width: 80%;
+    }
 }

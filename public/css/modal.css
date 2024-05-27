@@ -1,0 +1,170 @@
+*{
+    font-family: 'Montserrat';
+   color: white;
+    
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtro{
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    display: none;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.tamanho {
+    display: none;
+    width: 40%;
+    border-radius: 20px;
+    background-color: #9368A6;
+
+    position: absolute;
+    z-index: 1051;
+
+    animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+#visualizar {
+    width: 40%;
+}
+
+#viz {
+    width: 100%;
+}
+
+@keyframes scale-in {
+    0% {
+            transform: scale(0);
+    }
+    100% {
+            transform: scale(1);
+    }
+}
+
+.fundo {
+   width: fit-content;
+   height: fit-content;
+}
+
+.caixa {
+    width: 100%;
+    height: 100%;
+    padding: 3% 4% 3% 4%;
+    border-radius: 5%;
+}
+
+.caixa #descr{
+    max-height: 100px;
+    min-height: 150px;
+}
+
+#descr textarea {
+    max-height: 140px;
+    min-height: 85px;
+}
+
+.caixa legend {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.caixa label {
+    margin-top: 2%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#botao {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 8px;
+}
+
+.tamanho button {
+    background-color: #22E688;
+    color: #491D66;
+    font-weight: 600;
+    border: none;
+    margin-left: 10px;
+}
+
+.tamanho button:hover{
+    background-color: #491D66;
+    color: #22E688;
+}
+
+.tamanho button:active{
+    background-color: #240638 !important;
+    color: #22E688 !important;
+    transform: scale(0.98);
+}
+
+.caixa input{
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.caixa input:focus {
+    box-shadow: 0 0 10px #22E688;  
+}
+
+.caixa input:hover, textarea:hover{
+    opacity: 85%;
+}
+
+.caixa textarea{
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.caixa textarea:focus{
+    box-shadow: 0 0 10px #22E688;  
+}
+
+
+
+.tamanho img{
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    display: block;
+}
+
+#img-d{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 13%;
+}
+
+
+@media only screen and (max-width:1024px) {
+
+    .tamanho{
+        width: 90%;
+    } 
+
+    .caixa{
+        border-radius: 0%;
+    }
+
+    .caixa legend {
+        font-size: 18px;
+    }
+
+    .caixa label {
+        font-size: 14px;
+    }
+}

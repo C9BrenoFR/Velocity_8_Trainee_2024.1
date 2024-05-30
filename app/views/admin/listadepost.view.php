@@ -20,6 +20,7 @@
              <button type="button" class="btn btn-outline-info pc" onclick="abrirmodal('criar')" >Criar</button>
              <button type="button" class="btn btn-outline-info mobile">+</button>
         </div>
+        <?php foreach($posts as $post): ?>
         <div class="card-table">
             <table class="tabela">
                 <thead>
@@ -31,8 +32,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="td1">1</td>
-                        <td class="td2">Paixão Automotiva</td>
+                        <td class="td1"> <?=$post->id ?> </td>
+                        <td class="td2"> <?= $post->title ?> </td>
                         <td class="td3">
                             <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar')">Editar</button>
@@ -41,41 +42,19 @@
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar')"><i class="fa-solid fa-trash"></i></button>
                         </td>
-                        
+                 
                     </tr>
-                    <tr>
-                        <td class="td1">2</td>
-                        <td class="td2">Tesla Model 3: Eletrizante!</td>
-                        <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc"onclick="abrirmodal('editar')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirmodal('visualizar')"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar')"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar')"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td class="td1">3</td>
-                        <td class="td2">Condução Imbativel: Chevrolet</td>
-                        <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirmodal('visualizar')"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar')" ><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar')"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                       
-                    </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
     </div>
+
+    <!-- Modal de Criação -->
+
     <div class="tamanho" id="criar">
         <div class="fundo">
-            <form class="caixa" method="post" action="#">   
+            <form class="caixa" method="POST" action="/listadepost/create">   
                         <fieldset>
                             <legend>Criação de Post</legend>
 
@@ -93,16 +72,16 @@
                         
                             <div class="mb-3">
                                 <label for="titulo" class="form-label">Título: </label>
-                                <input type="text" class="form-control" id="titulo" name="titulo" size="100" placeholder="Insira o título" required>
+                                <input type="text" class="form-control" id="titulo" name="title" size="100" placeholder="Insira o título" required>
                                 
                                 <label for="descr" class="form-label">Descrição: </label>
 
                                 <div id="descr">
-                                    <textarea class="form-control" rows="6" required placeholder="Insira a descrição"></textarea>
+                                    <textarea class="form-control" rows="6" name="description" required placeholder="Insira a descrição"></textarea>
                                 </div>
 
                                 <label for="img" class="form-label">Imagem: </label>
-                                <input class="form-control" type="file" id="img" required><br>
+                                <input class="form-control" type="file" id="img" name="image" required><br>
                             </div>
                             <div id="botao">
                                 <button type="submit" class="btn btn-primary">Criar</button>
@@ -112,6 +91,9 @@
                 </form>
         </div>
     </div>
+
+    <!-- Modal de Deletar -->
+
     <div class="tamanho" id="deletar">
         <div class="fundo">
             <form class="caixa" method="post" action="#">   
@@ -127,6 +109,8 @@
                 </form>
         </div>
     </div>
+
+    <!-- Modal de Editar -->
 
     <div class="tela" id="tela"></div>
         <div class="tamanho" id="editar">
@@ -171,9 +155,7 @@
 
 
 
-
-
-
+    <!-- Modal de Criação -->
 
     <div class="tamanho" id="visualizar" class="alterar">
             <form class="caixa" id="viz" method="post" action="#">   
@@ -215,7 +197,7 @@
 
         </div>
     </div>
-
+                       
 </body>
 <script src="../../../public/js/modal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

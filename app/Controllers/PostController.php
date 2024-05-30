@@ -34,6 +34,25 @@ class PostController
 
         header('Location: /listadepost');
     }
+
+    public function edit()
+    {
+        $p = new DateTime();
+        $parameters = [
+            'title'=>$_POST['title'],
+            'description'=>$_POST['description'],
+            'data'=>$_POST['data'],
+            'image'=>$_POST['image'],
+            'idUser'=>$_POST['autor']
+        ];
+
+        $id = $_POST['id'];
+        App::get('database')->edit('posts', $parameters);
+
+        header('Location: /listadepost');
+    }
+
 }
+
 
 ?>

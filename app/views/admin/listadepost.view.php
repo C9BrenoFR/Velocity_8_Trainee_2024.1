@@ -131,7 +131,12 @@
                             <div class="row g-3">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
-                                    <input type="text" class="form-control" id="autor" value="Lorem ipsum dolor" name="autor" required>
+                                    <select name="autor" id="1" required>
+                                        <option value="">Selecione um Autor: </option>
+                                        <?php foreach($users as $user): ?>
+                                            <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                                            <?php endforeach; ?>
+                                    </select>
                                 </div>
 
                                 <div class="col-sm">
@@ -142,12 +147,12 @@
                             
                             <div class="mb-3">
                                 <label for="titulo" class="form-label">Título: </label>
-                                <input type="text" class="form-control" id="titulo" name="titulo" value="Lorem ipsum dolor sit amet" size="100" required>
+                                <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $post->title ?>" size="100" required>
                                 
                                 <label for="descr" class="form-label">Descrição: </label> 
 
                                 <div id="descr">
-                                    <textarea class="form-control" rows="6" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, tempora iste illum cupiditate veniam dolores asperiores voluptas sint officia magni voluptatum cumque quidem sed quas ab. Et ducimus impedit commodi odio sapiente sequi autem dolor ea placeat, non molestiae aperiam totam ipsum at odit doloribus accusantium nesciunt. Dolores, alias maiores.</textarea>
+                                    <textarea class="form-control" rows="6" name='description' required><?= $post->title ?>  </textarea>
                                 </div>
 
                                 <label for="img" class="form-label">Imagem: </label>

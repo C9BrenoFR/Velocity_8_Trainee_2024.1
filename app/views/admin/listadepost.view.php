@@ -20,7 +20,7 @@
              <button type="button" class="btn btn-outline-info pc" onclick="abrirmodal('criar')" >Criar</button>
              <button type="button" class="btn btn-outline-info mobile">+</button>
         </div>
-        <?php foreach($posts as $post): ?>
+        <?php $idPost = 1; ?>
         <div class="card-table">
             <table class="tabela">
                 <thead>
@@ -31,19 +31,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($posts as $post): ?>
                     <tr>
-                        <td class="td1"> <?=$post->id ?> </td>
+                        <td class="td1"> <?= $idPost ?> </td>
                         <td class="td2"> <?= $post->title ?> </td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar')">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar')">Deletar</button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar-<?= $post->id ?>')">Visualizar</button>
+                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar-<?= $post->id ?>')">Editar</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar-<?= $post->id ?>')">Deletar</button>
                             <button type="button" class="btn btn-outline-light mobile"onclick="abrirmodal('visualizar')" ><i class="fa-solid fa-eye"></i></button>
                             <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar')"><i class="fa-solid fa-pen-to-square"></i></button>
                             <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar')"><i class="fa-solid fa-trash"></i></button>
                         </td>
                  
                     </tr>
+                    <?php $idPost++; ?>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -52,6 +54,7 @@
 
     <!-- Modal de Criação -->
 
+    
     <div class="tamanho" id="criar">
         <div class="fundo">
             <form class="caixa" method="POST" action="/listadepost/create">   
@@ -61,7 +64,12 @@
                             <div class="row g-3">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
-                                    <input type="text" class="form-control" id="autor" placeholder="Autor" name="autor" required>
+                                    <select name="autor" id="1" required>
+                                        <option value="">Selecione um Autor: </option>
+                                        <?php foreach($users as $user): ?>
+                                            <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                                            <?php endforeach; ?>
+                                    </select>
                                 </div>
 
                                 <div class="col-sm">
@@ -94,7 +102,8 @@
 
     <!-- Modal de Deletar -->
 
-    <div class="tamanho" id="deletar">
+    <?php foreach( $posts as $post ): ?>
+    <div class="tamanho" id="deletar-<?= $post->id ?>">
         <div class="fundo">
             <form class="caixa" method="post" action="#">   
                         <fieldset>
@@ -103,7 +112,7 @@
                            
                             <div id="botao">
                                 <button type="submit" class="btn btn-primary">Deletar</button>
-                                <button type="reset" class="btn btn-primary" onclick="fecharmodal('deletar')">Cancelar</button>
+                                <button type="reset" class="btn btn-primary" onclick="fecharmodal('deletar-<?= $post->id ?>')">Cancelar</button>
                             </div>
                         </fieldset>
                 </form>
@@ -113,7 +122,7 @@
     <!-- Modal de Editar -->
 
     <div class="tela" id="tela"></div>
-        <div class="tamanho" id="editar">
+        <div class="tamanho" id="editar-<?= $post->id ?>">
             <div class="fundo">
                 <form class="caixa" method="post" action="#">   
                         <fieldset>
@@ -146,7 +155,7 @@
                             </div>
                             <div id="botao">
                                 <button type="submit" class="btn btn-primary">Salvar</button>
-                                <button type="reset" class="btn btn-primary" onclick="fecharmodal('editar')">Cancelar</button>
+                                <button type="reset" class="btn btn-primary" onclick="fecharmodal('editar-<?= $post->id ?>')">Cancelar</button>
                             </div>
                         </fieldset>
                 </form>
@@ -155,9 +164,9 @@
 
 
 
-    <!-- Modal de Criação -->
+    <!-- Modal de Visualização -->
 
-    <div class="tamanho" id="visualizar" class="alterar">
+    <div class="tamanho" id="visualizar-<?= $post->id ?>" class="alterar">
             <form class="caixa" id="viz" method="post" action="#">   
                     <fieldset>
                         <legend>Visualizar Post</legend>
@@ -165,11 +174,23 @@
                         <div class="row g-3" id="aut">
                             <div class="col-sm-7">
                                 <label for="autor" class="form-label">Autor: </label>
-                                <p class="form-control" id="autor">Zezinho</p>
+                                <p class="form-control" id="autor">
+                                    
+                                <?php 
+                                
+                                foreach( $users as $user ) {
+                                    if( $user->id == $post->idUser ) {
+                                        echo $user->name;
+                                    }
+                                }
+                                
+                                ?>
+                            
+                            </p>
                             </div>
                             <div class="col-sm">
                                 <label for="data" class="form-label">Data: </label>
-                                <p class="form-control" id="data">14/05/2024</p> 
+                                <p class="form-control" id="data"><?= $post->data ?></p> 
                             </div>
                         </div>
                        
@@ -184,19 +205,19 @@
                             </div>
 
                             <label for="img" class="form-label"> Imagem: </label>
-                            <img src="../../../public/assets/imagens/Car-Station-Home-page-hero-2_result..jpg" alt="imagem do post">
+                            <img src="<?= $post->image ?>" alt="imagem do post">
                         
 
                             <div id="botao"> 
-                                <button type="reset" class="btn btn-primary" onclick="closeModal('visualizar')">Fechar</button>
+                                <button type="reset" class="btn btn-primary" onclick="closeModal('visualizar-<?= $post->id ?>')">Fechar</button>
                             </div>   
                             
                     </fieldset>
             
             </form>
-
         </div>
     </div>
+    <?php endforeach; ?>
                        
 </body>
 <script src="../../../public/js/modal.js"></script>

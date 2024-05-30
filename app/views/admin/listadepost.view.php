@@ -64,7 +64,7 @@
                             <div class="row g-3">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
-                                    <select name="autor" id="1" required>
+                                    <select name="autor" class="form-select" id="1" required>
                                         <option value="">Selecione um Autor: </option>
                                         <?php foreach($users as $user): ?>
                                             <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
@@ -124,14 +124,14 @@
     <div class="tela" id="tela"></div>
         <div class="tamanho" id="editar-<?= $post->id ?>">
             <div class="fundo">
-                <form class="caixa" method="post" action="#">   
+                <form class="caixa" method="post" action="/listadepost/edit">   
                         <fieldset>
                             <legend>Editar Post</legend>
 
                             <div class="row g-3">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
-                                    <select name="autor" id="1" required>
+                                    <select name="autor" class="form-select" id="1" required>
                                         <option value="">Selecione um Autor: </option>
                                         <?php foreach($users as $user): ?>
                                             <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
@@ -147,18 +147,19 @@
                             
                             <div class="mb-3">
                                 <label for="titulo" class="form-label">Título: </label>
-                                <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $post->title ?>" size="100" required>
+                                <input type="text" class="form-control" id="titulo" name="title" value="<?= $post->title ?>" size="100" required>
                                 
                                 <label for="descr" class="form-label">Descrição: </label> 
 
                                 <div id="descr">
-                                    <textarea class="form-control" rows="6" name='description' required><?= $post->title ?>  </textarea>
+                                    <textarea class="form-control" rows="6" name='description' required><?= $post->description ?>  </textarea>
                                 </div>
 
                                 <label for="img" class="form-label">Imagem: </label>
                                 <input class="form-control" type="file" id="img" value="src.exe" required><br>
                             </div>
                             <div id="botao">
+                                <input type="hidden" value="<?= $post->id ?>" name="id">
                                 <button type="submit" class="btn btn-primary">Salvar</button>
                                 <button type="reset" class="btn btn-primary" onclick="fecharmodal('editar-<?= $post->id ?>')">Cancelar</button>
                             </div>

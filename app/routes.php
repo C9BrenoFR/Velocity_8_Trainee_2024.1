@@ -7,4 +7,5 @@ use App\Core\Router;
     $router->get('listadepost', 'PostController@index');
     $router->post('listadepost/create', 'PostController@create');
     $router->post('listadepost/edit', 'PostController@edit');
+    $router->post('listadepost/delete', 'PostController@delete');
 ?>

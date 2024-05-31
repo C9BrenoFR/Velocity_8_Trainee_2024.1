@@ -105,7 +105,7 @@
     <?php foreach( $posts as $post ): ?>
     <div class="tamanho" id="deletar-<?= $post->id ?>">
         <div class="fundo">
-            <form class="caixa" method="post" action="#">   
+            <form class="caixa" method="post" action="listadepost/delete">   
                         <fieldset>
                             <legend>Deletar Post</legend>
                             <p> Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <br> Tem certeza que deseja deletar esse Post? </p>
@@ -124,7 +124,7 @@
     <div class="tela" id="tela"></div>
         <div class="tamanho" id="editar-<?= $post->id ?>">
             <div class="fundo">
-                <form class="caixa" method="post" action="#">   
+                <form class="caixa" method="post" action="listadepost/edit">   
                         <fieldset>
                             <legend>Editar Post</legend>
 

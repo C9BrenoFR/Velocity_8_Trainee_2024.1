@@ -47,9 +47,19 @@ class PostController
         ];
 
         $id = $_POST['id'];
-        App::get('database')->edit('posts', $parameters);
+        App::get('database')->edit('posts',$id, $parameters );
 
         header('Location: /listadepost');
+    }
+
+    public function delete(){
+
+        $id = $_POST['id'];
+    
+        App::get('database')->delete('posts', 2);
+
+        header('Location: /listadepost');
+
     }
 
 }

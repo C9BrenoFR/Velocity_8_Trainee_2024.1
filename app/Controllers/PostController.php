@@ -20,12 +20,27 @@ class PostController
 
     public function create()
     {
+        if(isset($_FILES['image']))
+        {
+            $arquivo = $_FILES['image'];
+            $pasta = 'public/img/';
+
+            if($arquivo['error'])
+                die('Falha ao enviar arquivo');
+
+            $nomeDoArquivo = $arquivo['name'];
+            $novoNomeDoArquivo= uniqid();
+            $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+            $caminho = $pasta . $novoNomeDoArquivo . "." . $extensao;
+            move_uploaded_file($arquivo['tmp_name'], $caminho);
+        }
+
         $data = new DateTime();
         $parameters = [
             'title'=>$_POST['title'],
             'description'=>$_POST['description'],
             'data'=>$_POST['data'],
-            'image'=>$_POST['image'],
+            'image'=> $caminho,
             'idUser'=>$_POST['autor']
         ];
 
@@ -37,6 +52,7 @@ class PostController
 
     public function edit()
     {
+
         $p = new DateTime();
         $parameters = [
             'title'=>$_POST['title'],
@@ -56,7 +72,7 @@ class PostController
 
         $id = $_POST['id'];
     
-        App::get('database')->delete('posts', 2);
+        App::get('database')->delete('posts', $id);
 
         header('Location: /listadepost');
 

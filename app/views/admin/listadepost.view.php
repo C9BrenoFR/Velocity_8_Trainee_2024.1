@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
     
     <div class="tamanho" id="criar">
         <div class="fundo">
-            <form class="caixa" method="POST" action="/listadepost/create">   
+            <form class="caixa" method="POST" action="/listadepost/create" enctype="multipart/form-data">   
                         <fieldset>
                             <legend>Criação de Post</legend>
 
@@ -105,12 +105,13 @@
     <?php foreach( $posts as $post ): ?>
     <div class="tamanho" id="deletar-<?= $post->id ?>">
         <div class="fundo">
-            <form class="caixa" method="post" action="listadepost/delete">   
+            <form class="caixa" method="POST" action="listadepost/delete">   
                         <fieldset>
                             <legend>Deletar Post</legend>
                             <p> Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <br> Tem certeza que deseja deletar esse Post? </p>
                            
                             <div id="botao">
+                                <input type="hidden" value="<?= $post->id ?>" name="id">
                                 <button type="submit" class="btn btn-primary">Deletar</button>
                                 <button type="reset" class="btn btn-primary" onclick="fecharmodal('deletar-<?= $post->id ?>')">Cancelar</button>
                             </div>
@@ -124,7 +125,7 @@
     <div class="tela" id="tela"></div>
         <div class="tamanho" id="editar-<?= $post->id ?>">
             <div class="fundo">
-                <form class="caixa" method="post" action="/listadepost/edit">   
+                <form class="caixa" method="post" action="/listadepost/edit" enctype="multipart/form-data">   
                         <fieldset>
                             <legend>Editar Post</legend>
 
@@ -157,6 +158,7 @@
 
                                 <label for="img" class="form-label">Imagem: </label>
                                 <input class="form-control" type="file" id="img" value="src.exe" required><br>
+                                
                             </div>
                             <div id="botao">
                                 <input type="hidden" value="<?= $post->id ?>" name="id">
@@ -202,12 +204,12 @@
                        
                         <div class="mb-3">
                             <label for="titulo" class="form-label">Título: </label>
-                            <p class="form-control" id="titulo">Paixão Automotiva</p>
+                            <p class="form-control" id="titulo"><?= $post->title ?></p>
 
                             <label for="descr" class="form-label">Descrição: </label>
 
                             <div id="descr">
-                                <textarea disabled class="form-control" rows="6" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, tempora iste illum cupiditate veniam dolores asperiores voluptas sint officia magni voluptatum cumque quidem sed quas ab. Et ducimus impedit commodi odio sapiente sequi autem dolor ea placeat, non molestiae aperiam totam ipsum at odit doloribus accusantium nesciunt. Dolores, alias maiores.</textarea>
+                                <textarea disabled class="form-control" rows="6" required><?= $post->description?></textarea>
                             </div>
 
                             <label for="img" class="form-label"> Imagem: </label>

@@ -51,7 +51,7 @@ class QueryBuilder
 
     public function edit($table, $id, $parameters)
     {
-        $sql = sprintf('UPDATE %s SET %s  WHERE id=%s',
+        $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
         $table,
         implode (', ', array_map(function($param){
             return $param . ' = :' . $param;

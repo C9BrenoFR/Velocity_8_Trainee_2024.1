@@ -47,7 +47,7 @@ class PostController
         ];
 
         $id = $_POST['id'];
-        App::get('database')->edit('posts',$id, $parameters );
+        App::get('database')->edit('posts', $id, $parameters);
 
         header('Location: /listadepost');
     }

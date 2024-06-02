@@ -1,3 +1,27 @@
+<?php
+    if(isset($_FILES['image'])){
+        $arq = $_FILES['image'];
+        
+        if($arq['error'])
+            die("Falha ao enviar o arquivo");
+        
+        $pasta = "img/";
+        $name_arq = $arq['name'];
+        $newName_arq = uniqid();
+        $extensao = strtolower(pathinfo($newName_arq, PATHINFO_EXTENSION));
+
+        if($extensao != "jpg" && $extensao != "png")
+            die("Tipo de arquivo não aceito.");
+
+        $path = $pasta . $newName_arq . "." . $extensao;
+        $certo = move_uploaded_file($arq["tmp_name"], $path );
+        
+        if($certo){
+            $mysqli ->query("INSERT INTO  post(id, data, description, image, title, post, idUser) VALUES('$name_arq', '$path')") or die($mysqli->error);
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,7 +77,6 @@
     </div>
 
     <!-- Modal de Criação -->
-
     
     <div class="tamanho" id="criar">
         <div class="fundo">
@@ -133,16 +156,16 @@
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
                                     <select name="autor" class="form-select" id="1" required>
-                                        <option value="">Selecione um Autor: </option>
+                                        <option value=""> Selecione o Autor:</option>
                                         <?php foreach($users as $user): ?>
-                                            <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                                            <option value="<?php echo $user->id ?>" <?= $user->id == $post->idUser ? 'selected' : ' ' ?> ><?php echo $user->name ?></option>
                                             <?php endforeach; ?>
                                     </select>
                                 </div>
 
                                 <div class="col-sm">
                                     <label for="data" class="form-label">Data: </label>
-                                    <input type="date" class="form-control" id="data" name="data" required>
+                                    <input type="date" value="<?php echo $post->data ?>" class="form-control" id="data" name="data" required>
                                 </div>
                             </div>
                             
@@ -157,7 +180,8 @@
                                 </div>
 
                                 <label for="img" class="form-label">Imagem: </label>
-                                <input class="form-control" type="file" id="img" value="src.exe" required><br>
+                                <input class="form-control" type="file" id="img" name="image"><br>
+                                <input type="text" hidden value="<?= $post->image ?>" name="imgAntiga">
                                 
                             </div>
                             <div id="botao">
@@ -198,7 +222,8 @@
                             </div>
                             <div class="col-sm">
                                 <label for="data" class="form-label">Data: </label>
-                                <p class="form-control" id="data"><?= $post->data ?></p> 
+                                <input type="date" value="<?php echo $post->data ?>" class="form-control" id="data" name="data" readonly>
+                                
                             </div>
                         </div>
                        

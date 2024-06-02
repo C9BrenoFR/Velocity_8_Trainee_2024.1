@@ -52,13 +52,31 @@ class PostController
 
     public function edit()
     {
+        if(!empty($_FILES['image']['tmp_name']))
+        {
+            unlink($_POST['imgAntiga']);
+            $arquivo = $_FILES['image'];
+            $pasta = 'public/img/';
+
+            if($arquivo['error'])
+                die('Falha ao enviar arquivo');
+        
+
+            $nomeDoArquivo = $arquivo['name'];
+            $novoNomeDoArquivo= uniqid();
+            $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+            $caminho = $pasta . $novoNomeDoArquivo . "." . $extensao;
+            move_uploaded_file($arquivo['tmp_name'], $caminho);
+        }else{
+            $caminho = $_POST['imgAntiga'];
+        }
 
         $p = new DateTime();
         $parameters = [
             'title'=>$_POST['title'],
             'description'=>$_POST['description'],
             'data'=>$_POST['data'],
-            'image'=>$_POST['image'],
+            'image'=>$caminho,
             'idUser'=>$_POST['autor']
         ];
 

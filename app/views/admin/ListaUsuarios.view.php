@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,12 +39,12 @@
                         <td class="td2"><?= $user->pfp; ?> <?= $user->name; ?></td>
                         <td class="td3"><?= $user->email; ?></td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis')">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del')">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis')"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit')"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')">Visualizar</button>
+                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit-<?= $user->id ?>')">Editar</button>
+                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del-<?= $user->id ?>')">Deletar</button>
+                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit-<?= $user->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirModalDelete('m_del-<?= $user->id ?>')"><i class="fa-solid fa-trash"></i></button>
                         </td>    
                     </tr>
                     <?php endforeach; ?>
@@ -63,7 +63,8 @@
     </div>
 
     <!--MODAL EDIÇÃO USUÁRIO-->
-    <div class="modal_edicao" id="m_edit">
+    <?php foreach($users as $user): ?>
+    <div class="modal_edicao" id="m_edit-<?= $user->id ?>">
         <h1>Edição de Usuários</h1>
 
         <label for="nome">Nome:</label>
@@ -77,36 +78,37 @@
         
         <div class="botoes_edicao">
             <button>Salvar</button>
-            <button onclick="fecharModalEditar('m_edit')">Cancelar</button>
+            <button onclick="fecharModalEditar('m_edit-<?= $user->id ?>')">Cancelar</button>
         </div>
     </div>
 
     <!--MODAL VISUALIZAÇÃO DE USUÁRIO-->
-    <div class="modal_vis" id="m_vis">
+    <div class="modal_vis" id="m_vis-<?= $user->id ?>">
         <h1>Visualizar Usuário</h1>
         <h2>Nome:</h2>
         <p><?= $user->name; ?></p>
         <h2>Email:</h2>
         <p><?= $user->email; ?></p>
         <div class="botao-close">
-            <button onclick="fecharModalEditar('m_vis')">Cancelar</button>
+            <button onclick="fecharModalEditar('m_vis-<?= $user->id ?>')">Cancelar</button>
         </div>
     </div>
 
 
     <!--MODAL DELETAR USUÁRIO-->
-    <div class="modal_delete" id="m_del">
+    <div class="modal_delete" id="m_del-<?= $user->id ?>">
         <h1>Deseja deletar o usuário?</h1>
         <br>
         <h3>Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la!<br>
             Tem certeza que deseja deletar esse usuário?</h3>
         
         <div class="botoes_deletar">
-            <button onclick="fecharModalDelete('m_del')">Cancelar</button>
+            <button onclick="fecharModalDelete('m_del-<?= $user->id ?>')">Cancelar</button>
             <button>Deletar</button>
             
         </div>
     </div>
+    <?php endforeach; ?>
 
     <script src="/public/js/ListaUsuarios1.js"></script>
 </body>

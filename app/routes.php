@@ -5,3 +5,4 @@ use App\Controllers\ExampleController;
 use App\Core\Router;
 
     $router->get('users', 'PostController@index');
+    $router->post('users/edit', 'PostController@edit');

@@ -13,4 +13,19 @@ class PostController
         $users = App::get('database')->selectAll('users');
         return view('admin/ListaUsuarios', compact('users'));
     }
+
+    public function edit(){
+        $parameters = [
+            'name' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'img' => $_POST['pfp']
+        ];
+
+        $id = $_POST['id'];
+
+        App::get('database')->update('users', $id, $parameters);
+        
+        header('Location: /users');
+    }
 }

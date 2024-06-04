@@ -65,23 +65,25 @@
     <!--MODAL EDIÇÃO USUÁRIO-->
     <?php foreach($users as $user): ?>
     <div class="modal_edicao" id="m_edit-<?= $user->id ?>">
+    <form method="POST" action="/users/edit">
         <h1>Edição de Usuários</h1>
 
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" value="<?= $user->name; ?>">
+        <input type="text" name="nome" value="<?= $user->name; ?>">
         <label for="email">Email:</label>
-        <input type="email" id="email" value="<?= $user->email; ?>">
+        <input type="email" name="email" value="<?= $user->email; ?>">
         <label for="senha">Senha:</label>
-        <input type="password" id="senha">
+        <input type="password" name="senha">
         <label for="img" class="form-label">Imagem: </label>
-        <input type="file" id="img" required><br>
+        <input type="file" name="img" required><br>
         
         <div class="botoes_edicao">
             <button>Salvar</button>
             <button onclick="fecharModalEditar('m_edit-<?= $user->id ?>')">Cancelar</button>
         </div>
+    </form>
     </div>
-
+    
     <!--MODAL VISUALIZAÇÃO DE USUÁRIO-->
     <div class="modal_vis" id="m_vis-<?= $user->id ?>">
         <h1>Visualizar Usuário</h1>

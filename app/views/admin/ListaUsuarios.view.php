@@ -68,9 +68,9 @@
         <h1>Edição de Usuários</h1>
 
         <label for="nome">Nome:</label>
-        <input type="text" id="nome">
+        <input type="text" id="nome" value="<?= $user->name; ?>">
         <label for="email">Email:</label>
-        <input type="email" id="email">
+        <input type="email" id="email" value="<?= $user->email; ?>">
         <label for="senha">Senha:</label>
         <input type="password" id="senha">
         <label for="img" class="form-label">Imagem: </label>
@@ -89,6 +89,8 @@
         <p><?= $user->name; ?></p>
         <h2>Email:</h2>
         <p><?= $user->email; ?></p>
+        <h2>Foto de perfil:</h2>
+        <p class="pfp-modal"><?= $user->pfp ?></p>
         <div class="botao-close">
             <button onclick="fecharModalEditar('m_vis-<?= $user->id ?>')">Cancelar</button>
         </div>

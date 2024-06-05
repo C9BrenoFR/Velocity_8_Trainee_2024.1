@@ -325,6 +325,10 @@ body {
   font-size: 24px;
 }
 
+.pfp-modal{
+  width: 50%;
+}
+
 .botao-close {
   margin-top: 10px;
   display: flex;

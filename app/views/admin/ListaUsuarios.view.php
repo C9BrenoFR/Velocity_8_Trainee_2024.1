@@ -97,7 +97,7 @@
         <h2>Email:</h2>
         <p><?= $user->email; ?></p>
         <h2>Foto de perfil:</h2>
-        <p class="pfp-modal"><img src="<?= $user->pfp ?>" alt="imgperfil"></p>
+        <p><img class="pfp-modal" src="<?= $user->pfp ?>" alt="imgperfil"></p>
         <div class="botao-close">
             <button onclick="fecharModalEditar('m_vis-<?= $user->id ?>')">Cancelar</button>
         </div>

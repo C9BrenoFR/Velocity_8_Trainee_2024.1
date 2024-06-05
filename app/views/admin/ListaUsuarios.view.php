@@ -89,7 +89,9 @@
     
     <!--MODAL VISUALIZAÇÃO DE USUÁRIO-->
     <div class="modal_vis" id="m_vis-<?= $user->id ?>">
-        <h1>Visualizar Usuário</h1>
+        <div class="modal_vis_titulo">
+            <h1>Visualizar Usuário</h1>
+        </div>
         <h2>Nome:</h2>
         <p><?= $user->name; ?></p>
         <h2>Email:</h2>

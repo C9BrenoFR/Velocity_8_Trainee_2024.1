@@ -304,12 +304,16 @@ body {
   animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.modal_vis > h1 {
+.modal_vis_titulo {
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.modal_vis_titulo > h1{
   color: white;
   width: 60%;
   font-size: 36px;
 }
-
 .modal_vis > h2 {
   color: white;
   width: 60%;
@@ -318,7 +322,7 @@ body {
 
 .modal_vis > p {
   color: white;
-  font: 24px;
+  font-size: 24px;
 }
 
 .botao-close {

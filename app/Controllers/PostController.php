@@ -18,8 +18,8 @@ class PostController
         $parameters = [
             'name' => $_POST['nome'],
             'email' => $_POST['email'],
-            'password' => $_POST['password'],
-            'img' => $_POST['pfp']
+            'password' => $_POST['senha'],
+            'pfp' => $_POST['img']
         ];
 
         $id = $_POST['id'];

@@ -207,7 +207,7 @@ body {
 
 /*MODAL EDIÇÃO DE USUARIO*/
 
-.modal_edicao {
+.modal_edicao_content {
   height: fit-content;
   width: 35%;
   display: none;
@@ -218,6 +218,13 @@ body {
   position: absolute;
   z-index: 3;
   animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.modal_edicao {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal_edicao > h1 {

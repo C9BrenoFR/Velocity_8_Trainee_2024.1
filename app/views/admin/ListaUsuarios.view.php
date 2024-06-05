@@ -64,8 +64,8 @@
 
     <!--MODAL EDIÇÃO USUÁRIO-->
     <?php foreach($users as $user): ?>
-    <div class="modal_edicao" id="m_edit-<?= $user->id ?>">
-    <form method="POST" action="/users/edit">
+    <div class="modal_edicao_content" id="m_edit-<?= $user->id ?>">
+    <form class="modal_edicao" method="POST" action="/users/edit" enctype="multipart/form-data">
         <h1>Edição de Usuários</h1>
 
         <label for="nome">Nome:</label>
@@ -76,7 +76,10 @@
         <input type="password" name="senha">
         <label for="img" class="form-label">Imagem: </label>
         <input type="file" name="img" required><br>
-        
+
+        <input type="text" name="id" value="<?= $user->id ?>" hidden>
+        <input type="text" name="pfp_antigo" value="<?= $user->pfp ?>" hidden>
+
         <div class="botoes_edicao">
             <button>Salvar</button>
             <button onclick="fecharModalEditar('m_edit-<?= $user->id ?>')">Cancelar</button>

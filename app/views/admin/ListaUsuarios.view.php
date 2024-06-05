@@ -1,3 +1,26 @@
+<?php
+
+if(isset($_FILES['img'])){
+    $arquivo = $_FILES['img'];  
+    //verificando se há erro
+    if($arquivo['error']){
+        die('Falha ao enviar arquivo.');
+    }
+    //definindo tamanho
+    if($arquivo['size'] > 2097152){
+        die('Arquivo muito grande. Max: 2MB.');
+    }
+    //definindo pasta de destino
+    $pasta = "./public/img/";
+    //gerando nome pro arquivo (para nao sobrescrever)
+    $nomeDoArquivo = $arquivo["name"];
+    $novoNomeArquivo = uniqid();
+    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+    
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

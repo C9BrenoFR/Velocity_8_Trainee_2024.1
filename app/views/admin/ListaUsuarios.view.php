@@ -11,11 +11,23 @@ if(isset($_FILES['img'])){
         die('Arquivo muito grande. Max: 2MB.');
     }
     //definindo pasta de destino
-    $pasta = "./public/img/";
+    $pasta = "img/";
     //gerando nome pro arquivo (para nao sobrescrever)
-    $nomeDoArquivo = $arquivo["name"];
+    $nomeDoArquivo = $arquivo['name'];
     $novoNomeArquivo = uniqid();
     $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+    //verificando extensao
+    if($extensao != "jpg" && $extensao != 'png'){
+        die("Tipo de arquivo imcompátivel.");
+
+        $deu_certo = move_uploaded_file($arquivo["tmp_name"], $pasta . $novoNomeArquivo . "." . $extensao);
+        
+        if($deu_certo){
+            echo "<p> Arquivo enviado com sucesso. </p>";
+        }else{
+            echo "<p> Falha ao enviar arquivo. </p>";
+        }
+    }
     
 }
 

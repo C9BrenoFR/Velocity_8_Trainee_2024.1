@@ -1,38 +1,3 @@
-<?php
-
-if(isset($_FILES['img'])){
-    $arquivo = $_FILES['img'];  
-    //verificando se há erro
-    if($arquivo['error']){
-        die('Falha ao enviar arquivo.');
-    }
-    //definindo tamanho
-    if($arquivo['size'] > 2097152){
-        die('Arquivo muito grande. Max: 2MB.');
-    }
-    //definindo pasta de destino
-    $pasta = "img/";
-    //gerando nome pro arquivo (para nao sobrescrever)
-    $nomeDoArquivo = $arquivo['name'];
-    $novoNomeArquivo = uniqid();
-    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-    //verificando extensao
-    if($extensao != "jpg" && $extensao != 'png'){
-        die("Tipo de arquivo imcompátivel.");
-
-        $deu_certo = move_uploaded_file($arquivo["tmp_name"], $pasta . $novoNomeArquivo . "." . $extensao);
-        
-        if($deu_certo){
-            echo "<p> Arquivo enviado com sucesso. </p>";
-        }else{
-            echo "<p> Falha ao enviar arquivo. </p>";
-        }
-    }
-    
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -71,7 +36,7 @@ if(isset($_FILES['img'])){
                     <?php foreach($users as $user): ?>
                     <tr>
                         <td class="td1"><?= $user->id; ?></td>
-                        <td class="td2"><?= $user->pfp; ?> <?= $user->name; ?></td>
+                        <td class="td2"> <img src="<?= $user->pfp; ?>" alt="imagemperfil"> <?= $user->name; ?></td>
                         <td class="td3"><?= $user->email; ?></td>
                         <td class="td4">
                             <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')">Visualizar</button>
@@ -104,11 +69,11 @@ if(isset($_FILES['img'])){
         <h1>Edição de Usuários</h1>
 
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" value="<?= $user->name; ?>">
+        <input type="text" name="nome" id="nome" value="<?= $user->name; ?>">
         <label for="email">Email:</label>
-        <input type="email" name="email" value="<?= $user->email; ?>">
+        <input type="email" name="email" id="email" value="<?= $user->email; ?>">
         <label for="senha">Senha:</label>
-        <input type="password" name="senha">
+        <input type="password" id="senha" name="senha">
         <label for="img" class="form-label">Imagem: </label>
         <input type="file" name="img" required><br>
 
@@ -132,7 +97,7 @@ if(isset($_FILES['img'])){
         <h2>Email:</h2>
         <p><?= $user->email; ?></p>
         <h2>Foto de perfil:</h2>
-        <p class="pfp-modal"><?= $user->pfp ?></p>
+        <p class="pfp-modal"><img src="<?= $user->pfp ?>" alt="imgperfil"></p>
         <div class="botao-close">
             <button onclick="fecharModalEditar('m_vis-<?= $user->id ?>')">Cancelar</button>
         </div>

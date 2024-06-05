@@ -7,7 +7,6 @@ use Exception;
 
 class PostController
 {
-
     public function index()
     {
         $users = App::get('database')->selectAll('users');
@@ -15,16 +14,37 @@ class PostController
     }
 
     public function edit(){
-        $parameters = [
-            'name' => $_POST['nome'],
-            'email' => $_POST['email'],
-            'password' => $_POST['senha'],
-            'pfp' => $_POST['img']
-        ];
+
+        if(isset($_FILES['img'])){
+            $arquivo = $_FILES['img'];  
+            //verificando se há erro
+            if($arquivo['error']){
+                die('Falha ao enviar arquivo.');
+            }
+            //definindo tamanho
+            if($arquivo['size'] > 2097152){
+                die('Arquivo muito grande. Max: 2MB.');
+            }
+            //definindo pasta de destino
+            $pasta = "public/img/";
+            //gerando nome pro arquivo (para nao sobrescrever)
+            $nomeDoArquivo = $arquivo['name'];
+            $novoNomeArquivo = uniqid();
+            $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+            $caminho = $pasta . $novoNomeArquivo . "." . $extensao;
+            move_uploaded_file($arquivo["tmp_name"], $caminho);
+        }
 
         $id = $_POST['id'];
 
-        App::get('database')->update('users', $id, $parameters);
+        $parameters = [
+            'email' => $_POST['email'],
+            'name' => $_POST['nome'],
+            'password' => $_POST['senha'],
+            'pfp' => $caminho,
+        ];
+
+        App::get('database')->edit('users', $id, $parameters);
         
         header('Location: /users');
     }

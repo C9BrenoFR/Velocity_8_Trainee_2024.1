@@ -33,6 +33,10 @@ body{
     border-radius: 20px;
   }
 
+.btn-outline-warning {
+    margin: 0 8px 0 8px;
+}
+
 .card-table {
     background-color: #3F1859;
     margin-top: 5%;

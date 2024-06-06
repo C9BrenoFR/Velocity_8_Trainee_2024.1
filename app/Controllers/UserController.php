@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class PostController
+class UserController
 {
     public function index()
     {

@@ -12,14 +12,14 @@ body{
 }
 
 i{
-    color: #f2ebd5;
+    color: #22E688;
     margin-left: 10px;
 }
 
 nav.sidebar{
     width: 80px;
     height: 100%;
-    background-color: #9368a6;
+    background-color: #3f1859;
     padding: 40px 0px 40px 1%;
     box-shadow: 3px 0 0 #f2ebd5;
 
@@ -50,7 +50,7 @@ ul{
 }
 
 ul li.item-menu:hover{
-    background-color: #3f1859;
+    background-color: #9368A6;
     border-radius: 10px 0 0 10px;
 }
 
@@ -64,7 +64,7 @@ ul li.ativo{
 }
 
 ul li.item-menu a{
-    color: #f2ebd5;
+    color: #22E688;
     text-decoration: none;
     font-size: 20px;
     padding: 20px 4%;

@@ -325,6 +325,17 @@ body {
   font-size: 24px;
 }
 
+.modal_vis > input {
+  width: 60%;
+  border-radius: 7px;
+  padding: 5px;
+  background-color: white;
+  border: none;
+  outline: 0;
+  transition-duration: 0.3s;
+  margin-bottom: 5px;
+}
+
 .pfp-modal{
   width: 50%;
 }

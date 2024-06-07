@@ -93,9 +93,9 @@
             <h1>Visualizar Usuário</h1>
         </div>
         <h2>Nome:</h2>
-        <p><?= $user->name; ?></p>
+        <input type="text" name="nome" id="nome" value="<?= $user->name; ?>" readonly>
         <h2>Email:</h2>
-        <p><?= $user->email; ?></p>
+        <input type="email" name="email" id="email" value="<?= $user->email; ?>" readonly>
         <h2>Foto de perfil:</h2>
         <p><img class="pfp-modal" src="<?= $user->pfp ?>" alt="imgperfil"></p>
         <div class="botao-close">

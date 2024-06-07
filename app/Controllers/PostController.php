@@ -35,7 +35,7 @@ class PostController
             move_uploaded_file($arquivo['tmp_name'], $caminho);
         }
 
-        $data = new DateTime();
+        
         $parameters = [
             'title'=>$_POST['title'],
             'description'=>$_POST['description'],
@@ -71,7 +71,7 @@ class PostController
             $caminho = $_POST['imgAntiga'];
         }
 
-        $p = new DateTime();
+        
         $parameters = [
             'title'=>$_POST['title'],
             'description'=>$_POST['description'],
@@ -89,6 +89,8 @@ class PostController
     public function delete(){
 
         $id = $_POST['id'];
+
+        unlink($_POST['imgAntiga']);
     
         App::get('database')->delete('posts', $id);
 

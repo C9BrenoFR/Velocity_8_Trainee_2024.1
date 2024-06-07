@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class PostController
+class UserController
 {
     public function index()
     {
@@ -47,5 +47,13 @@ class PostController
         App::get('database')->edit('users', $id, $parameters);
         
         header('Location: /users');
+    }
+
+    public function delete(){
+        $id=$_POST['delete'];
+        unlink($_POST['imagem']);
+        App::get('database')->delete('users', $id);
+
+    header('Location: /users');
     }
 }

@@ -93,7 +93,7 @@ body, html{
 
 .posts:hover{
     height: fit-content;
-    
+    margin-bottom: 0;
     .desc{
         display: block;
         animation: forwards anima 4s;
@@ -102,6 +102,7 @@ body, html{
     .divona{
         display: block;
         animation: forwards anima 4s;
+        
     }
 
 }

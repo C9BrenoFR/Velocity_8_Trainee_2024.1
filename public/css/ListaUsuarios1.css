@@ -130,15 +130,24 @@ body {
   justify-content: center;
   border-radius: 25px;
   background-color: white;
-  margin: 5px;
   color: #b27fc8;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2;
+  margin: 1px;
 }
 
 .paginacao .page:hover {
   filter: brightness(1.2);
+}
+
+.paginacao .page>a{
+  text-decoration: none;
+}
+
+.paginacao .active{
+  background-color: #9368A6;
+  color: #240638;
 }
 
 .paginacao .control {

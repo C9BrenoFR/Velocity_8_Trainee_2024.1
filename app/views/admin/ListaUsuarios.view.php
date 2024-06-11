@@ -52,13 +52,14 @@
             </table>
         </div>
     </div>
-
+    
+    <!--PAGINAÇÃO-->
     <div id="pagination"   class="paginacao">
         <div class="control-prev"><i class="fa-solid fa-arrow-left"></i></div>
-        <div class="page">1</div>
-        <div class="page">2</div>
-        <div class="page">3</div>
-        <div class="page">4</div>
+
+        <?php for($page_number = 1; $page_number <= 8; $page_number++): ?>
+            <li class="page"><a class="page <?= $page_number == 3 ? "active" : "" ?>" href="#">1</a></li>
+        <?php endfor ?>
         <div class="control-next"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
 

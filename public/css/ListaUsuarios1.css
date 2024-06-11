@@ -108,6 +108,7 @@ body {
   flex-direction: column;
 }
 
+/* PAGINAÇÃO */
 #pagination {
   margin-top: 2%;
 }
@@ -117,9 +118,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #240638;
-  border-radius: 30px;
   height: 5%;
   padding: 0 3%;
+  gap: 5px;
 }
 
 .paginacao .page {
@@ -134,7 +135,6 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: 0.2;
-  margin: 1px;
 }
 
 .paginacao .page:hover {
@@ -146,8 +146,10 @@ body {
 }
 
 .paginacao .active{
-  background-color: #9368A6;
-  color: #240638;
+  width: 40px;
+  height: 40px;
+  background-color: #3F1859;
+  color: #22e688;
 }
 
 .paginacao .control {
@@ -157,21 +159,22 @@ body {
 }
 
 .control-prev {
-  margin-right: 20px;
   color: white;
   cursor: pointer;
 }
 
 .control-next {
-  margin-left: 20px;
   color: white;
   cursor: pointer;
 }
 
+.paginacao .disabled{
+  pointer-events: none;
+}
+
+
 #usuario2 {
-
   text-align: center;
-
 }
 
 @media screen and (max-width: 1000px) {

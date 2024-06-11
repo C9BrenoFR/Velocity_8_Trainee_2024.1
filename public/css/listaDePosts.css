@@ -91,6 +91,15 @@ body, html{
     transition: height 0.5s ease-in-out;
 }
 
+a{
+    color: white;
+    font-size: 14.5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
 .posts:hover{
     height: fit-content;
     
@@ -98,6 +107,10 @@ body, html{
         display: block;
         animation: forwards anima 4s;
         margin-bottom: 4%;
+        white-space: nowrap;
+        width: 15em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .divona{
         display: block;

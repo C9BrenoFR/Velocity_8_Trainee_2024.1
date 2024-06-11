@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\ExampleController;
+use App\Controllers\VizController;
 use App\Core\Router;
 
-    $router->get('users', 'AdminController@index');
+    $router->get('landingPage', 'VizController@index');
+    $router->get('listaDePosts', 'VizController@lista');
+    $router->get('vdpi','VizController@exibir');
+    

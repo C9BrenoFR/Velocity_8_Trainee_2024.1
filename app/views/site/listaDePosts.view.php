@@ -26,44 +26,27 @@
 
     <div class="divona">
 
+    <?php foreach($posts as $post): ?>
         <div class="posts">
             <img src="/By my car-amico (1).svg" alt="carro do post 1">
             <div class="usuario">
                 <span> <img src="/usuario3.svg" alt="usuário 1"> </span>
-                <h1>Nome do Usuário</h1>
+                <h1>
+                    <?php foreach($users as $user): 
+                        if($user->id == $post->idUser)
+                          echo $user->name;
+                    
+                    endforeach; ?>
+                
+                </h1>
             </div>
-            <p>Paixão automotiva: Ford Mustang</p>
+            <a href="vdpi?id=<?php echo $post->id ?>"><?= $post->title ?></a>
             <p class="desc">
-                Descubra a emoção de dirigir o lendário Ford Mustang...
+               <?= $post->description ?>
             </p>
-
         </div>
-
-        <div class="posts">
-            <img src="/By my car-rafiki.svg" alt="carro do post 2">
-            <div class="usuario">
-                <span> <img src="/usuario2.svg" alt="usuário 2"> </span>
-                <h1>Nome do Usuário</h1>
-            </div>
-            <p>Tesla Model 3: Eletrizante!</p>
-            <p class="desc">
-                Descubra a emoção de dirigir o lendário Tesla Model 3...
-            </p>
-
-        </div>
-
-        <div class="posts">
-            <img src="/post 3.svg" alt="carro do post 3">
-            <div class="usuario">
-                <span> <img src="/usuario3.svg" alt="usuário 3"> </span>
-                <h1>Nome do Usuário</h1>
-            </div>
-            <p>O Ford Mustang: Paixão em ação</p>
-            <p class="desc">
-                Descubra a emoção de dirigir o lendário Ford Mustang...
-            </p>
-
-        </div>
+        
+    <?php endforeach; ?>
     </div>
 
     <div class="divinha">
@@ -80,30 +63,6 @@
             </p>
 
         </div>
-
-        <div class="posts">
-            <img src="/By my car-rafiki.svg" alt="carro do post 5">
-            <div class="usuario">
-                <span> <img src="/usuario3.svg" alt="usuário 5"> </span>
-                <h1>Nome do Usuário</h1>
-            </div>
-            <p>Condução imbatível: O Chevrolet</p>
-            <p class="desc">
-                Descubra a emoção de dirigir o lendário Chevrolet...
-            </p>
-
-        </div>
-
-        <div class="posts">
-            <img src="/post 3.svg" alt="carro do post 6">
-            <div class="usuario">
-                <span> <img src="/usuario3.svg" alt="usuário 6"> </span>
-                <h1>Nome do Usuário</h1>
-            </div>
-            <p>O Toyota Prius: Insuperável</p>
-            <p class="desc">
-                Descubra a emoção de dirigir o lendário Toyota Prius...
-            </p>
 
         </div>
 

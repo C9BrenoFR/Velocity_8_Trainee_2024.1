@@ -14,7 +14,7 @@
     <div class="container1">
         <h1> FIQUE POR DENTRO DO MELHOR DO MUNDO DOS CARROS. </h1>
         <h2> Você está a um clique de distância do que há de melhor. </h2>
-        <a href="#">Saiba Mais</a>
+        <a href="/listaDePosts">Saiba Mais</a>
     </div>
 
     <div class="container2">

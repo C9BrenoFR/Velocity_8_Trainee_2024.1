@@ -28,4 +28,19 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function select($table)
+    {
+        $sql = "select * from {$table} WHERE id=?";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

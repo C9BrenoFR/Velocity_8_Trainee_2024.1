@@ -9,4 +9,5 @@ use App\Core\Router;
     $router->post('users/edit', 'UserController@edit');
     $router->post('users/delete', 'UserController@delete');
     $router->get('login', 'LoginController@index');
-    
+    $router->post('login', 'LoginController@login');
+    $router->get('logout', 'LoginController@delete');

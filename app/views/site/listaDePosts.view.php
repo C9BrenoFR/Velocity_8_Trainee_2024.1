@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Khula:wght@400;600&display=swap" rel="stylesheet">
-
+    <link rel="shortcut icon" href="../../../public/assets/imagens/V8_SF_RC.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -40,7 +40,7 @@
                 
                 </h1>
             </div>
-            <a href="vdpi?id=<?php echo $post->id ?>"><?= $post->title ?></a>
+            <a href="V8?<?= $post->title ?>?id=<?php echo $post->id ?>"><?= $post->title ?></a>
             <p class="desc">
                <?= $post->description ?>
             </p>

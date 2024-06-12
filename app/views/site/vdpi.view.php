@@ -13,20 +13,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post</title>
     <link rel="stylesheet" href="../../../public/css/vdpi.css">
+    <link rel="shortcut icon" href="../../../public/assets/imagens/V8_SF_RC.ico" type="image/x-icon">
 </head>
 <body>
+<?php foreach($posts as $post): ?>
     <div id="container">
         <div id="fundo"></div>
         <div id="perfil">
              
             <img src="../../../public/assets/Image.svg" alt="">
             <p class="name">
+                
                 <?php foreach($users as $user): 
                     if($user->id == $post->idUser)
                        echo $user->name;
                 endforeach; ?>
             </p>
-            <p class="data_hora"><?= $posts->data ?></p>
+            <p class="data_hora"><?= $post->data ?></p>
+            
             
         </div>
 
@@ -42,5 +46,6 @@
             </div>
         </div>
     </div>
+    <?php endforeach; ?>
 </body>
 </html>

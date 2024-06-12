@@ -6,5 +6,5 @@ use App\Core\Router;
 
     $router->get('landingPage', 'VizController@index');
     $router->get('listaDePosts', 'VizController@lista');
-    $router->get('vdpi','VizController@exibir');
+    $router->get('V8','VizController@exibir');
     

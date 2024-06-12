@@ -24,6 +24,7 @@ class PostController
         {
             $arquivo = $_FILES['image'];
             $pasta = 'public/img/';
+            $pasta2 = '../../';
 
             if($arquivo['error'])
                 die('Falha ao enviar arquivo');
@@ -33,6 +34,7 @@ class PostController
             $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
             $caminho = $pasta . $novoNomeDoArquivo . "." . $extensao;
             move_uploaded_file($arquivo['tmp_name'], $caminho);
+            $caminho = $pasta2 . $caminho;
         }
 
         
@@ -97,6 +99,7 @@ class PostController
         header('Location: /listadepost');
 
     }
+    
 
 }
 

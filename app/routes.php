@@ -8,4 +8,6 @@ use App\Core\Router;
     $router->post('listadepost/create', 'PostController@create');
     $router->post('listadepost/edit', 'PostController@edit');
     $router->post('listadepost/delete', 'PostController@delete');
+    $router->get('posts/search', 'SiteController@busca');
+    $router->get('posts', 'SiteController@lista');
 ?>

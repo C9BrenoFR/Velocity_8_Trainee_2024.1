@@ -86,6 +86,19 @@ public function delete($table, $id){
     }
 }
 
+public function search($table, $dados){
+    $sql = "SELECT * FROM posts WHERE title LIKE '%$dados%'";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
 }
 
 

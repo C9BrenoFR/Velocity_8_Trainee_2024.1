@@ -9,8 +9,28 @@ class UserController
 {
     public function index()
     {
-        $users = App::get('database')->selectAll('users');
-        return view('admin/ListaUsuarios', compact('users'));
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0){
+                return redirect('/users');
+            }
+        }
+
+        $itensPage = 4;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('users');
+
+        if($inicio > $rows_count){
+            return redirect('/users');
+        }
+
+        $users = App::get('database')->selectAll('users', $inicio, $itensPage);
+
+        $total_pages = ceil($rows_count/$itensPage);
+        
+        return view('admin/ListaUsuarios', compact('users', 'page', 'total_pages'));
     }
 
     public function edit(){

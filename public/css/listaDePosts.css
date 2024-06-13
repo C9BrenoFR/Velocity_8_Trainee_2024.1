@@ -82,7 +82,7 @@ body, html{
 
 .posts{
     width: 20.7%;
-    height: 55vh;
+    height: 74%;
     background-color: #240638;
     box-shadow: 15px 5px 80px 0px rgba(34, 230, 136, 0.50);
     display: inline-block;
@@ -92,6 +92,7 @@ body, html{
     margin-bottom: 20px;
     opacity: 1;
     transition: height 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .posts:hover{

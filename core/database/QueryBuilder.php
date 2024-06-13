@@ -99,6 +99,34 @@ public function search($table, $dados){
     }
 }
 
+public function select($table,$id)
+{
+    $sql = "Select * FROM {$table} WHERE id = {$id}";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+public function recente($table)
+{
+    $sql = "Select * FROM {$table} ORDER BY data DESC LIMIT 5";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
 }
 
 

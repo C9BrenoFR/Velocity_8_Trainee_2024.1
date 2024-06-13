@@ -10,4 +10,6 @@ use App\Core\Router;
     $router->post('listadepost/delete', 'PostController@delete');
     $router->get('posts/search', 'SiteController@busca');
     $router->get('posts', 'SiteController@lista');
+    $router->get('vdpi', 'SiteController@exibir');
+    $router->get('landingPage','SiteController@landing');
 ?>

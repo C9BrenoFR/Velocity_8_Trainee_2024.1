@@ -26,8 +26,10 @@ margin-top: 5%;
 
 #perfil img{
     width: 7.2%;
+    min-height: 102px;
     max-width: 102px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 #perfil p{

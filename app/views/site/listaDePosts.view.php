@@ -33,23 +33,39 @@
     <div class="divona">
 
         <?php foreach($posts as $post): ?>
-        <div class="posts">
+        <form class="posts" action="/vdpi" method="get" onclick="abrirPost(this)">
             <img src="<?= $post->image ?>" alt="carro do post 1">
             <div class="usuario">
-                <span> <img src="/usuario3.svg" alt="usuário 1"> </span>
-                <h1>Nome do Usuário</h1>
+                <span> <img src="<?php foreach($users as $user): 
+                        if($user->id == $post->idUser)
+                        echo $user->pfp;
+                        endforeach; ?>" alt="usuário 1"> </span>
+                <h1>
+                    <?php foreach($users as $user):
+                    if($user->id == $post->idUser)
+                        echo $user->name;
+                    
+                    endforeach; ?>
+                </h1>
             </div>
             <p> <?= $post->title ?> </p>
             <p class="desc">
                 <?= substr($post->description , 0 , 59).'...' ?>
             </p>
-
-        </div>
+            <input hidden name="id" value="<?= $post->id ?>">
+        </form>
 
         <?php endforeach; ?>
 
     </div>
 
+
 </body>
+<script>
+    function abrirPost(form)
+    {
+        form.submit();
+    }
+</script>
 </html>
 

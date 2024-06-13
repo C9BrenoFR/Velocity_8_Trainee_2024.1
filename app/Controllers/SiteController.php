@@ -38,4 +38,9 @@ class SiteController
 
         return view('site/landingPage', compact('posts','users'));
     }
+
+    public function dashboard()
+    {
+        return view('admin/dashboard');
+    }
 }

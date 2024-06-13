@@ -11,5 +11,6 @@ use App\Core\Router;
     $router->get('posts/search', 'SiteController@busca');
     $router->get('posts', 'SiteController@lista');
     $router->get('vdpi', 'SiteController@exibir');
-    $router->get('landingPage','SiteController@landing');
+    $router->get('','SiteController@landing');
+    $router->get('dashboard', 'SiteController@dashboard');
 ?>

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../public/assets/imagens/V8_SF_RC.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container1">
@@ -18,9 +19,9 @@
     </div>
 
     <div class="container2">
-
+        
         <?php foreach($posts as $post): ?>
-        <div class="post">
+        <form class="post" action="/vdpi" method="get" onclick="abrirPost(this)">
             <div class="descricao">
             <?= substr($post->description , 0 , 59).'...' ?>
             </div>
@@ -35,7 +36,7 @@
                         if($user->id == $post->idUser)
                         echo $user->pfp;
                         endforeach; ?>" alt="usuário 1">
-                    <h1><?php foreach($users as $user):
+                    <h1 class="username"><?php foreach($users as $user):
                     if($user->id == $post->idUser)
                         echo $user->name;
                     
@@ -43,13 +44,14 @@
                 </div>
                 <p> <?= $post->title ?> </p>
             </div>
-            
-        </div>
+            <input hidden name="id" value="<?= $post->id ?>">
+        </form>
 
         <?php endforeach; ?>
 
-        </div>
     </div>
+    
 
 </body>
+<script src="/public/js/landingpage.js"></script>
 </html>

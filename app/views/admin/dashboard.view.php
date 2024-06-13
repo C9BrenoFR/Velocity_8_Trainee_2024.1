@@ -27,12 +27,12 @@
       
     <div class="divonica">
         <div class="icones">
-            <a href="#" class="img">
+            <a href="/" class="img">
                 <img src="/public/assets/house-chimney-solid (1).svg" alt="imagem da página home" class="icone">
                 <div class="p">Home</div>
             </a>
         
-            <a href="#" class="img">
+            <a href="/listadepost" class="img">
                 <img src="/public/assets/envelope-solid.svg" alt="imagem da página dos posts" class="icone">
                 <div class="p">Posts</div>
             </a>

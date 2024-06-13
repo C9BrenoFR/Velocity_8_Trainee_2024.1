@@ -1,3 +1,7 @@
+:root{
+    --height-img: 0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -89,10 +93,12 @@ body{
     border-radius: 10px;
     flex-direction: row;
     z-index: 1;
+    cursor: pointer;
 }
 
+
 .post h1{
-    margin: 9px;
+    margin-left: 3px;
     color: white;
     font-size: 12px;
 }
@@ -112,6 +118,7 @@ body{
 
 .usuario p{
     font-size: 15px;
+    padding-top: 5px;
 }
 
 .imagemCar{
@@ -121,25 +128,33 @@ body{
     max-width: 50%;
     height: 100%;
     justify-content: center;
+    margin-left: 5%;
+    
+}
+
+.imagemCar img{
+    border-radius: 10px;
+    height: calc(var(--height-img) - 30px);
     object-fit: cover;
 }
 
 .esp img{
     display: flex;
-    width: 15px;
-    height: 15px;
-    max-width: 15px;
-    max-height: 15px;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
     border-radius: 10px;
-    margin-left: 20px;
     margin-right: 0px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .esp{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .descricao{
@@ -199,7 +214,20 @@ body{
     .post{
         margin-bottom: 20px;
         margin-top: 20px;
-        width: 80%;
+        width: 90%;
+    }
+
+    .usuario{
+        padding-top: 50px;
+    }
+
+    .esp{
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagemCar{
+        margin: 10px;
     }
 
     .descricao{

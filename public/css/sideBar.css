@@ -44,9 +44,10 @@ nav.sidebar.expandir{
     cursor: pointer;
 }
 
-ul{
+.ul-sidebar{
     height: 100%;
     list-style-type: none;
+    padding: 0;
 }
 
 ul li.item-menu:hover{

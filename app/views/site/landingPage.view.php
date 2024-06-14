@@ -12,6 +12,13 @@
     <link rel="shortcut icon" href="../../../public/assets/imagens/V8_SF_RC.ico" type="image/x-icon">
 </head>
 <body>
+    <?php
+        require('navbar.html');
+   
+    ?>
+
+<div class="page">
+
     <div class="container1">
         <h1> FIQUE POR DENTRO DO MELHOR DO MUNDO DOS CARROS. </h1>
         <h2> Você está a um clique de distância do que há de melhor. </h2>
@@ -50,8 +57,10 @@
         <?php endforeach; ?>
 
     </div>
-    
-
+    </div>
+    <?php
+        require('footer.html');
+    ?>
 </body>
 <script src="/public/js/landingpage.js"></script>
 </html>

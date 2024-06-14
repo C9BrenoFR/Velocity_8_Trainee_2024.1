@@ -4,26 +4,39 @@ body{
     font-family: "Montserrat", sans-serif;
     color: white;
     margin: 0;
-    height: fit-content;
+    
 }
 body, html{
     width: 100%;
 }
 
+.page {
+    padding-top: 120px;
+    
+}
+
+
+
 /*BARRA DE PESQUISA*/
+
+.search-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
 .search-box{
-    position: absolute;
-    top: 7%;
+    
+    
     width: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+   
     background-color: #d9d9d9;
     height: 7%;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1%;
+   
 }
 
 .search-txt{

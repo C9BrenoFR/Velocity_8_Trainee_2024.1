@@ -17,8 +17,9 @@ class SiteController
     public function busca(){
         $posts = App::get('database')->search('posts', $_GET['busca']);
         $users = App::get('database')->selectAll('users');
-
+        
         return view('site/listaDePosts', compact('posts', 'users'));
+
         
     }
 

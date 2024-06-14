@@ -38,6 +38,8 @@
     <title>V8 - Lista de Post</title>
 </head>
 <body>
+    <?php require('sideBar.html')
+    ?>
         <div class="filtro" id="filtro"></div>
     <div class="container">
         <div class="card-title">

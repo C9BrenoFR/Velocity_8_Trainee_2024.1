@@ -18,8 +18,12 @@
 
 </head>
 <body>
-
-    <form class="search-box" action="/posts/search" method="get">
+    <?php
+        require('navbar.html');
+    ?>
+<div class="page">
+<div class="search-container">
+<form class="search-box" action="/posts/search" method="get">
         <input name="busca" type="text" class="search-txt" placeholder="Qual título você quer pesquisar?" id="pesquisar">
         <button class="search-bton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -29,7 +33,7 @@
 
         <!--<img src="/search.svg" alt="Lupa"  > -->
 </form>
-
+</div>
     <div class="divona">
 
         <?php foreach($posts as $post): ?>
@@ -59,7 +63,10 @@
 
     </div>
 
-
+    </div>
+    <?php
+        require('footer.html');
+    ?>
 </body>
 <script>
     function abrirPost(form)

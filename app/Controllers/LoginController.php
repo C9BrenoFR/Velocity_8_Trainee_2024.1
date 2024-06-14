@@ -36,7 +36,7 @@ class LoginController
         if  ($logged){
             session_start();
             $_SESSION['logado'] = true;
-            header('location: /users');
+            header('location: /dashboard');
         }
         else{
             $error = ['error' => "Senha ou Email Inválidos"]; 

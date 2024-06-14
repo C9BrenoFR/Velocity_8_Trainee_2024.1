@@ -45,10 +45,10 @@
             <form action="login" method="post">
                 <h1>Entrar</h1>
                 <label>
-                    <input type="email" placeholder="Email"/>
+                    <input type="email" placeholder="Email" name="email"/>
                 </label>
                 <label class="senha">
-                    <input id="senhaEntrar" type="password" placeholder="Senha"/>
+                    <input id="senhaEntrar" type="password" placeholder="Senha" name="password"/>
 
                 </label>
                 <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaEntrar')"></i>

@@ -42,16 +42,23 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="login" method="post">
                 <h1>Entrar</h1>
                 <label>
-                    <input type="email" placeholder="Email"/>
+                    <input type="email" placeholder="Email" name="email"/>
                 </label>
                 <label class="senha">
-                    <input id="senhaEntrar" type="password" placeholder="Senha"/>
+                    <input id="senhaEntrar" type="password" placeholder="Senha" name="password"/>
 
                 </label>
                 <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaEntrar')"></i>
+                <div class="error">
+                    <p style="color: red">
+                 <?php if(isset($error)){
+                    echo $error;
+                 } ?>
+                    </p>
+                </div>
                 <button>Entrar</button>
             </form>
         </div>

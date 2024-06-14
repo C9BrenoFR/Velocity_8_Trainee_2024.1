@@ -59,7 +59,7 @@ class UserController
 
         $parameters = [
             'email' => $_POST['email'],
-            'name' => $_POST['nome'],
+            'name' => $_POST['name'],
             'password' => $_POST['senha'],
             'pfp' => $caminho,
         ];

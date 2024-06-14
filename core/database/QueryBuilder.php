@@ -148,14 +148,25 @@ public function recente($table)
     }
 
     
+    function login($table, $email, $password){
 
-    
+        $sql = sprintf('SELECT * FROM %s WHERE email = :email', $table);
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        $user = $stmt->fetch();
 
+        if ($user && $password == $user['password']){
+            return true;
+        }else{
+            return false;
+        }
 
-    
-
-
-
-
-
+    }
 }
+
+
+
+
+
+

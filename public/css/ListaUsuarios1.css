@@ -108,6 +108,7 @@ body {
   flex-direction: column;
 }
 
+/* PAGINAÇÃO */
 #pagination {
   margin-top: 2%;
 }
@@ -117,9 +118,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #240638;
-  border-radius: 30px;
   height: 5%;
   padding: 0 3%;
+  gap: 5px;
 }
 
 .paginacao .page {
@@ -130,7 +131,6 @@ body {
   justify-content: center;
   border-radius: 25px;
   background-color: white;
-  margin: 5px;
   color: #b27fc8;
   font-weight: 600;
   cursor: pointer;
@@ -141,6 +141,17 @@ body {
   filter: brightness(1.2);
 }
 
+.paginacao .page>a{
+  text-decoration: none;
+}
+
+.paginacao .active{
+  width: 40px;
+  height: 40px;
+  background-color: #3F1859;
+  color: #22e688;
+}
+
 .paginacao .control {
   font-weight: 500;
   color: white;
@@ -148,21 +159,22 @@ body {
 }
 
 .control-prev {
-  margin-right: 20px;
   color: white;
   cursor: pointer;
 }
 
 .control-next {
-  margin-left: 20px;
   color: white;
   cursor: pointer;
 }
 
+.paginacao .disabled{
+  pointer-events: none;
+}
+
+
 #usuario2 {
-
   text-align: center;
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -207,7 +219,7 @@ body {
 
 /*MODAL EDIÇÃO DE USUARIO*/
 
-.modal_edicao {
+.modal_edicao_content {
   height: fit-content;
   width: 35%;
   display: none;
@@ -218,6 +230,13 @@ body {
   position: absolute;
   z-index: 3;
   animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.modal_edicao {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal_edicao > h1 {
@@ -297,12 +316,16 @@ body {
   animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.modal_vis > h1 {
+.modal_vis_titulo {
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.modal_vis_titulo > h1{
   color: white;
   width: 60%;
   font-size: 36px;
 }
-
 .modal_vis > h2 {
   color: white;
   width: 60%;
@@ -311,7 +334,22 @@ body {
 
 .modal_vis > p {
   color: white;
-  font: 24px;
+  font-size: 24px;
+}
+
+.modal_vis > input {
+  width: 60%;
+  border-radius: 7px;
+  padding: 5px;
+  background-color: white;
+  border: none;
+  outline: 0;
+  transition-duration: 0.3s;
+  margin-bottom: 5px;
+}
+
+.pfp-modal{
+  width: 50%;
 }
 
 .botao-close {

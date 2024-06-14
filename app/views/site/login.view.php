@@ -25,17 +25,17 @@
    <selection class="area-login">
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="/users/create" method="POST">
                 <h1>Criar conta</h1>
                 
                 <label>
-                    <input type="text" placeholder="Nome"/>
+                    <input name="nome" type="text" placeholder="Nome"/>
                 </label>
                 <label>
-                    <input type="email" placeholder="Email"/>
+                    <input name="email" type="email" placeholder="Email"/>
                 </label>
                 <label>
-                    <input id="senhaCriar"type="password" placeholder="Senha"/>
+                    <input name="senha" id="senhaCriar"type="password" placeholder="Senha"/>
                 </label>
                 <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaCriar')"></i>
                 <button style="margin-top: 9px">Criar</button>

@@ -28,6 +28,8 @@ nav.sidebar{
     left: 0;
     overflow: hidden;
     transition: .4s;
+
+    z-index: 100;
 }
 
 nav.sidebar.expandir{

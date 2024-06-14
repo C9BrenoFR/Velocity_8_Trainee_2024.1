@@ -69,11 +69,28 @@ class UserController
         header('Location: /users');
     }
 
+
+
     public function delete(){
         $id=$_POST['delete'];
-        unlink($_POST['imagem']);
+        $user=App::get('database')->select('users', $id);
+        
+        if($user[0]->pfp != "public/img/defaultpfp.png"){
+            unlink($_POST['imagem']); 
+        }
+        $posts = App::get('database')->selectAll('posts');
+        foreach($posts as $post){
+            if($post->idUser == $id){
+                unlink($post->image);
+                App::get('database')->delete('posts', $post->id);
+            }
+
+        }
         App::get('database')->delete('users', $id);
 
     header('Location: /users');
     }
+
+
+
 }

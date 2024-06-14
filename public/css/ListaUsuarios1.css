@@ -113,6 +113,10 @@ body {
   margin-top: 2%;
 }
 
+.btn-outline-warning {
+  margin: 0 8px 0 8px;
+}
+
 .paginacao {
   display: flex;
   align-items: center;

@@ -13,7 +13,7 @@
 
 </head>
 <body>
-
+<?php require('sideBar.html')?>
     <div class="tela" id="tela"></div>
 
     <div class="container">
@@ -121,7 +121,7 @@
         
         <form action="/users/delete" method="POST">
             <div class="botoes_deletar">
-                <button onclick="fecharModalDelete('m_del-<?= $user->id ?>')">Cancelar</button>
+                <button type="button" onclick="fecharModalDelete('m_del-<?= $user->id ?>')">Cancelar</button>
                 <button>Deletar</button>
                 <input name="delete"  hidden value="<?= $user->id ?>"  type="text">
                 <input name="imagem"  hidden value="<?= $user->pfp ?>"  type="text">

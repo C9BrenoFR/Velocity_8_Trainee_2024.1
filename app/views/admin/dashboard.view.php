@@ -37,12 +37,12 @@
                 <div class="p">Posts</div>
             </a>
         
-            <a href="#" class="img">
+            <a href="/users" class="img">
                 <img src="/public/assets/user-solid.svg" alt="imagem da página dos usuários" class="icone">
                 <div class="p">Usuário</div>
             </a>
        
-            <a href="#" class="img">
+            <a href="/logout" class="img">
                 <img src="/public/assets/arrow-right-from-bracket-solid.svg" alt="imagem da página de logout" class="icone">
                 <div class="p">Logout</div>
             </a>

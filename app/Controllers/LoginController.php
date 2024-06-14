@@ -40,7 +40,7 @@ class LoginController
         }
         else{
             $error = ['error' => "Senha ou Email Inválidos"]; 
-            return view('/login', $error);
+            return view('site/login', compact('error'));
         }
 
 
@@ -49,7 +49,6 @@ class LoginController
 
         session_start();
         session_destroy();
-
         header('location: /login');
     }
 }

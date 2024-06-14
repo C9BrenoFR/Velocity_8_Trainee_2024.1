@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if (isset($_SESSION['logado'])){
+    return redirect('dashboard');
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -55,7 +64,7 @@
                 <div class="error">
                     <p style="color: red">
                  <?php if(isset($error)){
-                    echo $error;
+                    echo $error['error'];
                  } ?>
                     </p>
                 </div>

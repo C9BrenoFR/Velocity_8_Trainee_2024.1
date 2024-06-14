@@ -92,7 +92,7 @@ if (!$_SESSION['logado']){
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha">
         <label for="img" class="form-label">Imagem: </label>
-        <input type="file" name="img"><br>
+        <input type="file" name="img" required><br>
 
         <input type="text" name="id" value="<?= $user->id ?>" hidden>
         <input type="text" name="pfp_antigo" value="<?= $user->pfp ?>" hidden>

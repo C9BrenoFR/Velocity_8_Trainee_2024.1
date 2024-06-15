@@ -11,11 +11,29 @@ class PostController
 
     public function index()
     {
-        $posts = App::get('database')->selectAll('posts');
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0){
+                return redirect('/listadepost');
+            }
+        }
+
+        $itensPage = 6;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('posts');
+
+        if($inicio > $rows_count){
+            return redirect('/listadepost');
+        }
+
+        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
         $users = App::get('database')->selectAll('users');
 
-        return view('admin/listadepost', compact('posts','users'));
+        $total_pages = ceil($rows_count/$itensPage);
 
+        return view('admin/listadepost', compact('posts','users', 'page', 'total_pages'));
     }
 
     public function create()

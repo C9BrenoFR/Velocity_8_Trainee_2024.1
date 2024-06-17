@@ -4,7 +4,6 @@ body{
     font-family: "Montserrat", sans-serif;
     color: white;
     margin: 0;
-    
 }
 body, html{
     width: 100%;
@@ -12,7 +11,6 @@ body, html{
 
 .page {
     padding-top: 120px;
-    
 }
 
 
@@ -33,7 +31,6 @@ body, html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .search-txt{
@@ -195,7 +192,8 @@ and (min-height: 600px) and (max-height: 600px){
 
     .divona{
         margin-bottom: 25px;
-        margin-top: 35%;
+        margin-top: 20%;
+        justify-content: center;
     }
     .posts{
         width: 85%;
@@ -210,11 +208,10 @@ and (min-height: 600px) and (max-height: 600px){
         margin: 0;
         margin-left: 6%;
         margin-top: 10px;
-        
     }
     
     .search-box{
-        width: 70%;
+        width: 73%;
     }
     .desc{
         display: block;

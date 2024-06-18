@@ -90,3 +90,19 @@ nav.sidebar.expandir .txt-link{
 ul li.item-menu a .icon > i{
     font-size: 30px;
 }
+
+@media only screen and (max-width: 800px){
+    .item-menu{
+        display: none;
+    }
+
+    nav.sidebar{
+        width: 50px;
+        box-shadow: 0 0 0 #f2ebd5;
+    }
+
+    i{
+        width: 5px;
+        margin-left: 5px;
+    }
+}

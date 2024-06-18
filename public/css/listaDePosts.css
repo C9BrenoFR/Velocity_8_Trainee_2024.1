@@ -4,7 +4,6 @@ body{
     font-family: "Montserrat", sans-serif;
     color: white;
     margin: 0;
-    
 }
 body, html{
     width: 100%;
@@ -12,7 +11,6 @@ body, html{
 
 .page {
     padding-top: 120px;
-    
 }
 
 
@@ -26,17 +24,13 @@ body, html{
     justify-content: center;
 }
 .search-box{
-    
-    
     width: 35%;
-   
     background-color: #d9d9d9;
-    height: 7%;
+    height: 6.5%;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .search-txt{
@@ -63,7 +57,7 @@ body, html{
     background-color: #d9d9d9;
 }
 .search-box:hover > .search-bton {
-    background: #dcc5e6;
+    background: #d6d1d8;
 }
 
 /*POSTS*/
@@ -73,7 +67,7 @@ body, html{
     justify-content: space-evenly;
     width: 100%;
     height: 60%;
-    margin-top: 120px;
+    margin-top: 70px;
     margin-bottom: 50px;
     transition: margin-bottom 0.5s ease-in-out;;
     padding: 0;
@@ -88,7 +82,7 @@ body, html{
     background-color: #240638;
     box-shadow: 15px 5px 80px 0px rgba(34, 230, 136, 0.50);
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 15px;
     flex-direction: column;
     margin-top: 0;
     margin-bottom: 20px;
@@ -127,13 +121,12 @@ body, html{
 }
 
 .posts img{
-    margin-top: 10px;
+    margin-top: 15px;
     width: 86%;
     height: 190px; /* 60% */
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #f2ebd5;
     object-fit: cover;
 }
 
@@ -185,6 +178,7 @@ p{
         width: 100%;
 }
 
+
 /* NEST HUB */
 @media screen and (min-width: 1024px)and (max-width: 1024px) 
 and (min-height: 600px) and (max-height: 600px){
@@ -198,7 +192,8 @@ and (min-height: 600px) and (max-height: 600px){
 
     .divona{
         margin-bottom: 25px;
-        margin-top: 35%;
+        margin-top: 20%;
+        justify-content: center;
     }
     .posts{
         width: 85%;
@@ -213,11 +208,10 @@ and (min-height: 600px) and (max-height: 600px){
         margin: 0;
         margin-left: 6%;
         margin-top: 10px;
-        
     }
     
     .search-box{
-        width: 70%;
+        width: 73%;
     }
     .desc{
         display: block;

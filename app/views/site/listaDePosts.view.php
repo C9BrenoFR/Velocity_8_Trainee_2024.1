@@ -24,14 +24,13 @@
 <div class="page">
 <div class="search-container">
 <form class="search-box" action="/posts/search" method="get">
-        <input name="busca" type="text" class="search-txt" placeholder="Qual título você quer pesquisar?" id="pesquisar">
+        <input name="busca" type="text" class="search-txt" autocomplete="off" placeholder="Qual título você quer pesquisar?" id="pesquisar">
         <button class="search-bton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                 </svg>
         </button>
 
-        <!--<img src="/search.svg" alt="Lupa"  > -->
 </form>
 </div>
     <div class="divona">
@@ -40,17 +39,14 @@
         <form class="posts" action="/vdpi" method="get" onclick="abrirPost(this)">
             <img src="<?= $post->image ?>" alt="carro do post 1">
             <div class="usuario">
-                <span> <img src="<?php foreach($users as $user): 
-                        if($user->id == $post->idUser)
-                        echo $user->pfp;
-                        endforeach; ?>" alt="usuário 1"> </span>
+                <?php foreach($users as $user):
+                if($user->id == $post->idUser): ?>
+                <span> <img src="<?= $user->pfp ?>" alt="usuário"> </span>
                 <h1>
-                    <?php foreach($users as $user):
-                    if($user->id == $post->idUser)
-                        echo $user->name;
-                    
-                    endforeach; ?>
+                    <?= $user->name ?>
                 </h1>
+                <?php endif;
+                endforeach; ?>
             </div>
             <p class="titulo-post"> <?= substr($post->title , 0 , 30).'...' ?> </p>
             <p class="desc">
@@ -61,9 +57,22 @@
 
         <?php endforeach; ?>
 
-    </div>
+        <?php if(empty($posts)): ?>
+            <div class="posts">
+            <img src="/public/assets/not-found.png" alt="imagem de post não encontrado">
+            <div class="usuario">
+                <h1>
+                    Nenhum post encontrado. Tente outro título 
+                </h1>
+            </div>
+        </div>
+        <?php endif ?>
 
     </div>
+
+    
+
+</div>
     <?php
         require('footer.html');
     ?>

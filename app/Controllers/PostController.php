@@ -27,7 +27,7 @@ class PostController
         if($inicio > $rows_count){
             return redirect('/listadepost');
         }
-
+        
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
         $users = App::get('database')->selectAll('users');
 

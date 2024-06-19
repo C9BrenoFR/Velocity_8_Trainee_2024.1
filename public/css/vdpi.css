@@ -17,7 +17,8 @@ z-index: -1;
 
 #container {
 margin-left: 5%;
-margin-top: 5%;
+margin-top: 10%;
+margin-bottom: 10%;
 }
 
 #perfil {
@@ -62,7 +63,7 @@ margin-top: 5%;
 }
 
 #postagem {
-    margin-top: -5%;
+    margin-top: -3%;
     width: 90%;
 }
 
@@ -73,6 +74,7 @@ margin-top: 5%;
     font-weight: 700;
 
     padding-left: 10%;
+    padding-bottom: 2%;
 }
 
 .post {
@@ -103,6 +105,10 @@ margin-top: 5%;
 
 
 @media only screen and (max-width: 767px) {
+
+#container{
+    margin-top: 30%;
+}
 
 #perfil img {
     width: 50px;
@@ -160,6 +166,10 @@ margin-top: 5%;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    #container {
+        margin-top: 15%;
+    }
 
     #perfil img {
         width: 80px;

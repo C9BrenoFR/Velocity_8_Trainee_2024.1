@@ -17,7 +17,9 @@ $data = new DateTime($post[0]->data);
     <link rel="shortcut icon" href="../../../public/assets/imagens/V8_SF_RC.ico" type="image/x-icon">
 </head>
 <body>
-
+<?php
+    require('navbar.html');
+    ?>
     <div id="container">
         <div id="fundo"></div>
         <div id="perfil">
@@ -34,10 +36,13 @@ $data = new DateTime($post[0]->data);
                 <img src="<?= $post[0]->image ?>" alt="">
                 
                 <p class="descricao">
-                <?= $post[0]->description ?>
+                <?= nl2br($post[0]->description) ?>
                 </p>
             </div>
         </div>
     </div>
+    <?php
+    require('footer.html');
+    ?>
 </body>
 </html>

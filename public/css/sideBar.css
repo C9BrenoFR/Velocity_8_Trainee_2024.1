@@ -92,17 +92,32 @@ ul li.item-menu a .icon > i{
 }
 
 @media only screen and (max-width: 800px){
-    .item-menu{
-        display: none;
+    
+    nav.sidebar-mobile{
+        margin: 5px;
+        height: 20px;
+        border-radius: 45%;
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #22E688;
     }
 
-    nav.sidebar{
-        width: 50px;
-        box-shadow: 0 0 0 #f2ebd5;
+    nav.sidebar.expandir{
+        width: 100%;
     }
 
-    i{
-        width: 5px;
+    .btn-expandir-mobile{
         margin-left: 5px;
+        margin-top: 20px;
+    }
+
+    .btn-expandir-mobile > i{
+        font-size: 36px;
+    }
+    
+    .ul-sidebar-mobile{
+        display: none;
     }
 }

@@ -56,9 +56,7 @@
                     </p>
                     <input hidden name="id" value="<?= $post->id ?>">
                 </form>
-
             <?php endforeach; ?>
-
 
             <?php if (empty($posts)) : ?>
                 <div class="posts">
@@ -71,28 +69,28 @@
                 </div>
             <?php endif ?>
 
+            <!--PAGINAÇÃO-->
+            <div id="pagination" class="paginacao">
+
+                <li class="page-item  <?= $page <= 1 ? "disabled" : "" ?>">
+                    <a class="control-prev" href="?paginacaoNumero=<?= $page - 1 ?>"><i class="fa-solid fa-arrow-left"></i></a>
+                </li>
+
+                <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++) : ?>
+                    <li class="page"><a class="page <?= $page_number == $page ? "active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>"><?= $page_number ?></a></li>
+                <?php endfor ?>
+
+                <li class="page-item  <?= $page >= $total_pages ? "disabled" : "" ?>">
+                    <a class="control-next" href="?paginacaoNumero=<?= $page + 1 ?>"><i class="fa-solid fa-arrow-right"></i></a>
+                </li>
+
+            </div>
+
         </div>
-
-        <!--PAGINAÇÃO-->
-        <div id="pagination" class="paginacao">
-
-            <li class="page-item  <?= $page <= 1 ? "disabled" : "" ?>">
-                <a class="control-prev" href="?paginacaoNumero=<?= $page - 1 ?>"><i class="fa-solid fa-arrow-left"></i></a>
-            </li>
-
-            <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++) : ?>
-                <li class="page"><a class="page <?= $page_number == $page ? "active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>"><?= $page_number ?></a></li>
-            <?php endfor ?>
-
-            <li class="page-item  <?= $page >= $total_pages ? "disabled" : "" ?>">
-                <a class="control-next" href="?paginacaoNumero=<?= $page + 1 ?>"><i class="fa-solid fa-arrow-right"></i></a>
-            </li>
-
-        </div>
-
-
-
     </div>
+
+
+
     <?php
     require('footer.html');
     ?>

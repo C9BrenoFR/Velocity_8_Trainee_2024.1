@@ -8,15 +8,16 @@
 }
 
 body{
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    
+    font-family: Montserrat, Arial, Helvetica, sans-serif; 
 }
+
 .page{
     width: 100%;
     height: 100%;
-   padding-top: 100px;
+    padding-top: 100px;
     display: flex;
 }
+
 .container1{
     display: flex;
     flex-direction: column;
@@ -190,15 +191,15 @@ body{
 
 @media only screen and (max-width: 800px){
     body{
-        flex-direction: column;
+        flex-flow: column nowrap;
     }
 
     .container1{
         width: 100%;
-        padding: 0;
+        height: 100%;
+        padding: 10px;
 
         background-image: url(/public/assets/fundobk.svg);
-        background-size: auto;
     }
 
     .container1 h1{
@@ -223,7 +224,7 @@ body{
     }
 
     .usuario{
-        padding-top: 50px;
+        padding-top: 10px;
     }
 
     .esp{
@@ -237,5 +238,13 @@ body{
 
     .descricao{
         width: 80%;
+    }
+
+    .page{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
     }
 } 

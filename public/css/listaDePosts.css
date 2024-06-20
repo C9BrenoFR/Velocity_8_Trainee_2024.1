@@ -14,6 +14,7 @@ body, html{
 
 .page {
     padding-top: 120px;
+    padding-bottom: 5%;
 }
 
 /*BARRA DE PESQUISA*/
@@ -188,14 +189,13 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #240638;
     height: 5%;
     padding: 0 3% 10px;
     gap: 5px;
     
   }
   
-  .paginacao .page {
+  .paginacao .pagi {
     height: 35px;
     width: 35px;
     display: flex;
@@ -207,6 +207,7 @@ p{
     font-weight: 600;
     cursor: pointer;
     transition: 0.2;
+    text-decoration: none;
   }
   
   .paginacao .page:hover {

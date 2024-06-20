@@ -44,14 +44,14 @@
         <div class="form-container sign-in-container">
             <form action="#">
                 <h1>Entrar</h1>
-                <label>
+                <div>
                     <input type="email" placeholder="Email"/>
-                </label>
-                <label class="senha">
+                </div>
+                <div class="senha">
                     <input id="senhaEntrar" type="password" placeholder="Senha"/>
-
-                </label>
-                <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaEntrar')"></i>
+                    <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaEntrar')"></i>
+                </div>
+               
                 <button>Entrar</button>
             </form>
         </div>

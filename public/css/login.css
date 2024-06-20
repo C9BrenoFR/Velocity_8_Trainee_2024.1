@@ -89,6 +89,7 @@ body {
     input::placeholder{
     color: #22E688;
         font-size: 14px;
+  
        
 
     }
@@ -191,7 +192,9 @@ margin-left: 10px;
     .sign-up-container>form>i{
         position: absolute;    
         top: 62%;
-        left: 80%;
+        right: 10px;
+        cursor: pointer;
+
 
     }
     
@@ -221,19 +224,19 @@ margin-left: 10px;
         background: #3F1859;
         border: none;
         border-radius: 50px;
-        padding: 12px 15px;
+        padding: 12px 25px;
         margin: 8px 0;
-        width: 100%;
+        
+        color: aliceblue;
     }
-    .form-container input:hover {
-        transform: scale(101%);
-    }
+    
 
-
-    .sign-in-container>form>i{
+    .sign-in-container form i{
         position: absolute;
         top:57%;
-        left: 80%;
+        left:72%;
+        cursor: pointer;
+        color: #9368A6;
     }
     
     button {

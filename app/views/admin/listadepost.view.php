@@ -1,25 +1,11 @@
-<?php
-    if(isset($_FILES['image'])){
-        $arq = $_FILES['image'];
-        
-        if($arq['error'])
-            die("Falha ao enviar o arquivo");
-        
-        $pasta = "img/";
-        $name_arq = $arq['name'];
-        $newName_arq = uniqid();
-        $extensao = strtolower(pathinfo($newName_arq, PATHINFO_EXTENSION));
+<?php 
+session_start();
+if (!$_SESSION['logado']){
+    return redirect('login');
 
-        if($extensao != "jpg" && $extensao != "png")
-            die("Tipo de arquivo não aceito.");
+}
 
-        $path = $pasta . $newName_arq . "." . $extensao;
-        $certo = move_uploaded_file($arq["tmp_name"], $path );
-        
-        if($certo){
-            $mysqli ->query("INSERT INTO  post(id, data, description, image, title, post, idUser) VALUES('$name_arq', '$path')") or die($mysqli->error);
-        }
-    }
+
 ?>
 
 <!DOCTYPE html>
@@ -79,6 +65,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!--PAGINAÇÃO-->
     <div id="pagination"   class="paginacao">
         
@@ -96,6 +83,8 @@
         
     </div>
 
+=======
+>>>>>>> ListaUsuariosCRUD
     <!-- Modal de Criação -->
     
     <div class="tamanho" id="criar">

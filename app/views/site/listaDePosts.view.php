@@ -21,7 +21,7 @@
 
 <body>
     <?php
-    require('navbar.html');
+    require('navbar.php');
     ?>
     <div class="page">
         <div class="search-container">

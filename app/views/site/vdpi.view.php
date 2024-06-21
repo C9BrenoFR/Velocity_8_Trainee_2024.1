@@ -18,7 +18,7 @@ $data = new DateTime($post[0]->data);
 </head>
 <body>
 <?php
-    require('navbar.html');
+    require('navbar.php');
     ?>
     <div id="container">
         <div id="fundo"></div>

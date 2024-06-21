@@ -1,3 +1,9 @@
+
+<?php 
+  session_start();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +35,15 @@
         
       </div>
       <div class="logo">
-        <a class="a-nav" id="login" href="/login">Log-in</a>
+        <a class="a-nav" id="login" href="/login">
+          <?php
+      if(isset($_SESSION{'logado'})){
+        echo "Dashboard";
+      }else{
+        echo "Log-in";
+      }
+          ?>
+        </a>
       </div>
      
     </nav>

@@ -13,7 +13,7 @@
 </head>
 <body>
     <?php
-        require('navbar.html');
+        require('navbar.php');
    
     ?>
 

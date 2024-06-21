@@ -10,7 +10,7 @@
     position: fixed;
     padding-left: 9%;
     padding-right: 9%;
-    height: 14%;
+    height: 100px;
     background: rgb(36, 6, 56);
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@
   .ul-nav {
     list-style: none;
     display: flex;
-    padding-left: 30%;
+    padding-left: 40%;
     gap: 60%;
     justify-content: space-around;
     
@@ -82,7 +82,7 @@
   #NAV {
     padding-left: 2%;
     padding-right: 6%;
-    height: 12%;
+    height: 14%;
     padding-right: 0%;
 
     background: rgb(36, 6, 56);
@@ -93,7 +93,7 @@
   .ul-nav {
     list-style: none;
     display: flex;
-    padding-left: 6%;
+    padding-left: 20%;
     gap: 40%;
     justify-content: space-around;
     
@@ -108,9 +108,9 @@
 
 
   #NAV {
-    padding-left: 2%;
+    padding-left: 5%;
     padding-right: 6%;
-    height: 10%;
+    height: 12%;
     background: rgb(36, 6, 56);
     display: flex;
     justify-content: space-between;
@@ -119,7 +119,7 @@
   .ul-nav {
     list-style: none;
     display: flex;
-    padding-left: 6%;
+    padding-left: 30%;
     gap: 40%;
     justify-content: space-around;
     

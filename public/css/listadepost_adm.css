@@ -11,7 +11,84 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
+
+    display: flex;
+    flex-direction: column;
 }
+
+/* PAGINAÇÃO */
+#pagination {
+    margin-top: 2%;
+  }
+  
+  .btn-outline-warning {
+    margin: 0 8px 0 8px;
+  }
+  
+  .paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #240638;
+    height: 5%;
+    padding: 0 3% 10px;
+    gap: 5px;
+    
+  }
+  
+  .paginacao .page {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: white;
+    color: #b27fc8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2;
+  }
+  
+  .paginacao .page:hover {
+    filter: brightness(1.2);
+  }
+  
+  .paginacao .page>a{
+    text-decoration: none;
+  }
+  
+  .paginacao .active{
+    width: 40px;
+    height: 40px;
+    background-color: #3F1859;
+    color: #22e688;
+  }
+  
+  .paginacao .page-item{
+    list-style-type: none;
+  }
+  
+  .paginacao .control {
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .control-prev {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .control-next {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .paginacao .disabled{
+    pointer-events: none;
+    display: none;
+  }
 
 .card-title{
     background-color: #3F1859;

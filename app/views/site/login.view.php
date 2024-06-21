@@ -14,6 +14,7 @@ if (isset($_SESSION['logado'])){
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <link rel="stylesheet" href="../../../public/css/login.css">
+<link rel="shortcut icon" href="../../../public/assets/imagens/V8_SF_RC.ico" type="image/x-icon">
 <title>V8 - Login</title>
 
 </head>

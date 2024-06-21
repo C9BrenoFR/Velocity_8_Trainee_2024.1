@@ -123,8 +123,9 @@ body {
   justify-content: center;
   background-color: #240638;
   height: 5%;
-  padding: 0 3%;
+  padding: 0 3% 10px;
   gap: 5px;
+  
 }
 
 .paginacao .page {
@@ -154,6 +155,10 @@ body {
   height: 40px;
   background-color: #3F1859;
   color: #22e688;
+}
+
+.paginacao .page-item{
+  list-style-type: none;
 }
 
 .paginacao .control {

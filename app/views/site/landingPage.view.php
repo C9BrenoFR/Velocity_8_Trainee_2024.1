@@ -49,7 +49,8 @@
                     
                     endforeach; ?></h1>
                 </div>
-                <p> <?= $post->title ?> </p>
+                <!--<p> <?/*= $post->title */?> </p> -->
+                <p class="titulo-post"> <?= substr($post->title, 0, 30) . '...' ?> </p>
             </div>
             <input hidden name="id" value="<?= $post->id ?>">
         </form>

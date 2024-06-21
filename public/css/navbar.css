@@ -10,7 +10,7 @@
     position: fixed;
     padding-left: 9%;
     padding-right: 9%;
-    height: 100px;
+    height: 14%;
     background: rgb(36, 6, 56);
     display: flex;
     justify-content: space-between;
@@ -74,27 +74,64 @@
   opacity: 0.8;
 }
 
-
-@media screen and (max-width: 472px) {
+/* CELULAR  EM PÉ */
+@media screen and (max-width: 390px) {
   
 
   #NAV {
     padding-left: 2%;
-    padding-right: 0%;
-    height: 0%;
+    padding-right: 6%;
+    height: 12%;
     background: rgb(36, 6, 56);
     display: flex;
     justify-content: space-between;
   }
 
-  ul {
+  .ul-nav {
     list-style: none;
     display: flex;
-    padding-left: 10%;
+    padding-left: 6%;
     gap: 40%;
     justify-content: space-around;
     
   }
 
+}
+@media screen and (min-width: 390px) and (max-width: 500px) {
+  
 
+  #NAV {
+    padding-left: 2%;
+    padding-right: 6%;
+    height: 10%;
+    background: rgb(36, 6, 56);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ul-nav {
+    list-style: none;
+    display: flex;
+    padding-left: 6%;
+    gap: 40%;
+    justify-content: space-around;
+    
+  }
+
+}
+
+/* TABLET  EM PÉ */
+@media screen and (min-width:500px) and (max-width: 1024px) and (min-height:500px) and (max-height:1400px){
+
+  #NAV {
+    height: 10%;
+  }
+
+}
+
+/* NEST HUB */
+@media screen and (min-width: 1024px) and (max-width:1024px) and (min-height:600px) and (max-height:600px){
+  #NAV {
+    height: 15%;
+  }
 }

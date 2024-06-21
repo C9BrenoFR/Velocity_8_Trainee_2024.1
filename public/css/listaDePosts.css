@@ -185,6 +185,9 @@ and (min-height: 600px) and (max-height: 600px){
   .posts{
     width: 27.5%;
   }
+  .search-box{
+    margin-top: 1%;
+  }
 }
 
 /* CELULAR  EM PÉ */
@@ -301,7 +304,6 @@ and (min-height: 600px) and (max-height: 600px){
 @media screen and (min-width:700px) and (max-width:900px) and (min-height:500px) and (max-height:1366px) {
 
     .divona{
-        margin-top: 160px;
         width: 100%;
         margin-bottom: 0px;
         margin-left: 0%;
@@ -326,7 +328,7 @@ and (min-height: 600px) and (max-height: 600px){
     }
     .search-box{
         width: 70%;
-        margin-top: 0%;
+        margin-top: 3%;
         height: 5%;
     }
     .desc{
@@ -337,46 +339,6 @@ and (min-height: 600px) and (max-height: 600px){
     .posts:hover{
         transition: none;
         animation: none;
-    }
-    .posts:hover .desc,
-    .posts:hover .divona{
-        display: block;
-        animation: none;
-    }
-
- }
-
- /* TABLET GRANDE EM PÉ (IPAD PRO) */
-@media screen and (min-width:900px) and (max-width:1050px) and (min-height:932px) and (max-height:1400px) {
-
-    .divona{
-        margin-top: 190px;
-        margin-bottom: 0px;
-        margin-left: 0%;
-        transition: none;
-        column-gap: 1%;
-        transition: none;
-    }
-    .posts{
-        width: 35%;
-        height: 25vh;
-        margin: 0px;
-        padding-top: 5px;
-        padding-bottom: 2%;
-        transition: none;
-    }
-    .search-box{
-        width: 70%;
-        margin-top: 0%;
-        height: 4.8%;
-    }
-    .desc{
-        display: block;
-        opacity: 1;
-        animation: none;
-    }
-    .posts:hover{
-        height: 25vh;
     }
     .posts:hover .desc,
     .posts:hover .divona{
@@ -414,6 +376,46 @@ and (min-height: 600px) and (max-height: 600px){
         display: block;
         opacity: 1;
         animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+
+ }
+
+ /* TABLET GRANDE EM PÉ (IPAD PRO) */
+@media screen and (min-width:900px) and (max-width:1050px) and (min-height:932px) and (max-height:1400px) {
+
+    .divona{
+        margin-top: 100px;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        transition: none;
+        column-gap: 1%;
+        transition: none;
+    }
+    .posts{
+        width: 35%;
+        height: 25vh;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 2%;
+        transition: none;
+    }
+    .search-box{
+        width: 70%;
+        margin-top: 5%;
+        height: 4.8%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover{
+        height: 25vh;
     }
     .posts:hover .desc,
     .posts:hover .divona{
@@ -480,7 +482,7 @@ and (min-height: 600px) and (max-height: 600px){
 @media screen and (min-width:912px) and (max-width:912px) and (min-height:1368px) and (max-height:1368px) {
 
     .divona{
-        margin-top: 175px;
+        margin-top: 80px;
     }
     .posts{
         width: 34%;
@@ -547,4 +549,16 @@ and (min-height: 600px) and (max-height: 600px){
         display: block;
         animation: none;
     }
+ } 
+
+/* NEST HUB MAX*/
+@media screen and (min-width:1280px) and (max-width:1280px) and (min-height:800px) and (max-height:800px) {
+
+    .posts{
+        width: 22%;
+    }
+    .search-box{
+        margin-top: 1.5%;
+    }
+    
  } 

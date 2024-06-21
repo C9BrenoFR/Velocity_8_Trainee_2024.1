@@ -62,7 +62,7 @@
             <img src="/public/assets/not-found.png" alt="imagem de post não encontrado">
             <div class="usuario">
                 <h1>
-                    Nenhum post encontrado. Tente outro título 
+                    Nenhum post encontrado. Tente outro título :)
                 </h1>
             </div>
         </div>

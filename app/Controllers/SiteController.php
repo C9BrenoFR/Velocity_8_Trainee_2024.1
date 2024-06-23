@@ -58,7 +58,7 @@ class SiteController
         $rows_count = count($posts);
         $total_pages = ceil($rows_count/$itensPage);
         $posts = array_slice($posts, $inicio, $itensPage);
-        session_abort();
+        
         
         return view('site/listaDePosts', compact('posts', 'users', 'page', 'total_pages'));
     }

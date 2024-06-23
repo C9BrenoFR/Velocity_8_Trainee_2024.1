@@ -90,9 +90,24 @@ public function delete($table, $id){
     }
 }
 
-public function search($table, $dados){
-    $sql = "SELECT * FROM posts WHERE title LIKE '%$dados%'";
-
+public function search($table, $dados, $users=null){
+    if($table == 'users'){
+        $sql = "SELECT id FROM $table WHERE name LIKE '%$dados%'";
+    }
+    else{
+        $usersIds = [];
+        foreach($users as $user){
+            $usersIds[] = $user->id;
+        }
+        if(count($usersIds) > 0){
+            $usersIds = implode(',', $usersIds);
+            $sql = "SELECT * FROM $table WHERE title LIKE '%$dados%' OR idUser IN ($usersIds)";
+        }
+        else{
+            $sql = "SELECT * FROM $table WHERE title LIKE '%$dados%'";
+        }
+    }
+    
     try {
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();

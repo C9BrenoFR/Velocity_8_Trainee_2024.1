@@ -65,7 +65,6 @@ if (!$_SESSION['logado']){
         </div>
     </div>
 
-<<<<<<< HEAD
     <!--PAGINAÇÃO-->
     <div id="pagination"   class="paginacao">
         
@@ -83,8 +82,6 @@ if (!$_SESSION['logado']){
         
     </div>
 
-=======
->>>>>>> ListaUsuariosCRUD
     <!-- Modal de Criação -->
     
     <div class="tamanho" id="criar">

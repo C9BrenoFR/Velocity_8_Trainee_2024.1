@@ -31,7 +31,7 @@ if (!$_SESSION['logado']){
         <div class="card-title">
              <h1>Lista de Posts</h1>
              <button type="button" class="btn btn-outline-info pc" onclick="abrirmodal('criar')" >Criar</button>
-             <button type="button" class="btn btn-outline-info mobile">+</button>
+             <button type="button" class="btn btn-outline-info mobile" onclick="abrirmodal('criar')">+</button>
         </div>
         <?php $idPost = 1; ?>
         <div class="card-table">
@@ -52,9 +52,9 @@ if (!$_SESSION['logado']){
                             <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar-<?= $post->id ?>')">Visualizar</button>
                             <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar-<?= $post->id ?>')">Editar</button>
                             <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar-<?= $post->id ?>')">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile"onclick="abrirmodal('visualizar')" ><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar')"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar')"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn btn-outline-light mobile"onclick="abrirmodal('visualizar-<?= $post->id ?>')" ><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar-<?= $post->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar-<?= $post->id ?>')"><i class="fa-solid fa-trash"></i></button>
                         </td>
                  
                     </tr>
@@ -132,7 +132,7 @@ if (!$_SESSION['logado']){
     <!-- Modal de Deletar -->
 
     <?php foreach( $posts as $post ): ?>
-    <div class="tamanho" id="deletar-<?= $post->id ?>">
+    <div class="deleta" id="deletar-<?= $post->id ?>">
         <div class="fundo">
             <form class="caixa" method="POST" action="listadepost/delete">   
                         <fieldset>
@@ -247,7 +247,7 @@ if (!$_SESSION['logado']){
                             <img src="<?= $post->image ?>" alt="imagem do post">
                         
 
-                            <div id="botao"> 
+                            <div id="botao-viz"> 
                                 <button type="reset" class="btn btn-primary" onclick="closeModal('visualizar-<?= $post->id ?>')">Fechar</button>
                             </div>   
                             

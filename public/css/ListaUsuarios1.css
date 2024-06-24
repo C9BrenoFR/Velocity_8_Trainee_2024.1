@@ -231,7 +231,7 @@ body {
 
 .modal_edicao_content {
   height: fit-content;
-  width: 35%;
+  width: fit-content;
   display: none;
   flex-direction: column;
   background-color: #9368A6;
@@ -307,7 +307,6 @@ body {
   }
 
   .botoes_edicao {
-    flex-direction: column;
     width: fit-content;
   }
 }
@@ -315,7 +314,7 @@ body {
 /*MODAL DE VISUALIZAÇÃO DE USUÁRIO*/
 .modal_vis {
   height: fit-content;
-  width: 35%;
+  width: fit-content;
   display: none;
   flex-direction: column;
   background-color: #9368A6;
@@ -359,7 +358,8 @@ body {
 }
 
 .pfp-modal{
-  width: 50%;
+  width: 40%;
+  border-radius: 50%;
 }
 
 .botao-close {
@@ -391,7 +391,7 @@ body {
 
 .modal_delete {
   height: fit-content;
-  width: 35%;
+  width: fit-content;
   display: none;
   flex-direction: column;
   background-color: #9368A6;

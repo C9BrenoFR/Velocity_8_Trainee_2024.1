@@ -90,9 +90,9 @@ if (!$_SESSION['logado']){
                         <fieldset>
                             <legend>Criação de Post</legend>
 
-                            <div class="row g-3">
+                            <div class="row g-3" id="aut">
                                 <div class="col-sm-7">
-                                    <label for="autor" class="form-label">Autor: </label><br>
+                                    <label for="autor" class="form-label">Autor: </label><br>   
                                     <select name="autor" class="form-select" id="1" required>
                                         <option value="">Selecione um Autor: </option>
                                         <?php foreach($users as $user): ?>
@@ -136,7 +136,7 @@ if (!$_SESSION['logado']){
         <div class="fundo">
             <form class="caixa" method="POST" action="listadepost/delete">   
                         <fieldset>
-                            <legend>Deletar Post</legend>
+                            <legend id="del">Deletar Post</legend>
                             <p> Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <br> Tem certeza que deseja deletar esse Post? </p>
                            
                             <div id="botao">
@@ -158,7 +158,7 @@ if (!$_SESSION['logado']){
                         <fieldset>
                             <legend>Editar Post</legend>
 
-                            <div class="row g-3">
+                            <div class="row g-3" id="aut">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
                                     <select name="autor" class="form-select" id="1" required>

@@ -33,7 +33,7 @@ if (!$_SESSION['logado']){
              <button type="button" class="btn btn-outline-info pc" onclick="abrirmodal('criar')" >Criar</button>
              <button type="button" class="btn btn-outline-info mobile" onclick="abrirmodal('criar')">+</button>
         </div>
-        <?php $idPost = 1; ?>
+        <?php $idPost = 1+($page-1) * 6 ?>
         <div class="card-table">
             <table class="tabela">
                 <thead>

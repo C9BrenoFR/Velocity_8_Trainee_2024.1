@@ -93,6 +93,18 @@ body, html{
     cursor: pointer;
 }
 
+.posts-naoencontrado{
+    width: 20.7%;
+    height: 90%;
+    background-color: #240638;
+    box-shadow: 15px 5px 80px 0px rgba(34, 230, 136, 0.50);
+    display: inline-block;
+    border-radius: 15px;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 .titulo-post{
     margin-bottom: 10px;
 }
@@ -123,6 +135,16 @@ body, html{
 }
 
 .posts img{
+    margin-top: 15px;
+    width: 86%;
+    height: 190px; /* 60% */
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.posts-naoencontrado img{
     margin-top: 15px;
     width: 86%;
     height: 190px; /* 60% */

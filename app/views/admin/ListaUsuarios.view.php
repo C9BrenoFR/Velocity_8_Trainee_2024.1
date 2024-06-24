@@ -24,6 +24,8 @@ if (!$_SESSION['logado']){
 </head>
 <body>
 <?php require('sideBar.html')?>
+
+<?php $idUser = 1+($page - 1) * 6 ?>
     <div class="tela" id="tela"></div>
 
     <div class="container">
@@ -45,7 +47,7 @@ if (!$_SESSION['logado']){
                 <tbody>
                     <?php foreach($users as $user): ?>
                     <tr>
-                        <td class="td1"><?= $user->id; ?></td>
+                        <td class="td1"><?= $idUser; ?></td>
                         <td class="td2"> <img src="<?= $user->pfp; ?>" alt="imagemperfil"> <?= $user->name; ?></td>
                         <td class="td3"><?= $user->email; ?></td>
                         <td class="td4">
@@ -57,6 +59,7 @@ if (!$_SESSION['logado']){
                             <button type="button" class="btn btn-outline-danger mobile" onclick="abrirModalDelete('m_del-<?= $user->id ?>')"><i class="fa-solid fa-trash"></i></button>
                         </td>    
                     </tr>
+                    <?php $idUser++; ?>
                     <?php endforeach; ?>
                 </tbody>
             </table>

@@ -1,5 +1,5 @@
 
-<?php 
+<div?php 
   if(session_status() == PHP_SESSION_NONE){
     session_start();
   }
@@ -31,7 +31,11 @@
             <a href="/posts" class="footer-link"> <i class="fa-solid fa-list"></i></a>
           </li>
           <li>
-            <a  href="#" class="footer-link"> <i class="fa-solid fa-magnifying-glass"></i></a>
+            <form class="footer-link" id="form-nav" action="/posts/search" method="get"> 
+              <input type="text" placeholder="Digite sua Pesquisa" name="busca" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass" onclick="pesquisa()"></i>
+          
+            </form>
           </li>
         </ul>
         
@@ -50,4 +54,6 @@
      
     </nav>
   </body>
+
+  <script src="/public/js/navbar.js"></script>
 </html>

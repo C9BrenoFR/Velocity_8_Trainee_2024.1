@@ -25,7 +25,9 @@ if (isset($_SESSION['logado'])){
         
         </div> 
         <div>
+            <a href="/">
             <img class="imagem" src="../../../public/assets/imagens/fundobranco.png">
+            </a>
         </div>
             
         

@@ -19,7 +19,7 @@ class LoginController
             'email'=> $_POST['email'],
             'name'=> $_POST['nome'],
             'password'=> $_POST['senha'],
-            'pfp'=>'public/img/defaultpfp.png',
+            'pfp'=>'/public/img/defaultpfp.png',
             
         ];
         App::get('database')->create('users',$parameters);

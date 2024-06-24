@@ -59,7 +59,7 @@
             <?php endforeach; ?>
 
             <?php if (empty($posts)) : ?>
-                <div class="posts">
+                <div class="posts-naoencontrado">
                     <img src="/public/assets/not-found.png" alt="imagem de post não encontrado">
                     <div class="usuario">
                         <h1>

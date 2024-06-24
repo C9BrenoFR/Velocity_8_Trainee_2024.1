@@ -38,9 +38,9 @@ if (isset($_SESSION['logado'])){
             <form action="/users/create" method="POST">
                 <h1>Criar conta</h1>
                 
-                <label>
+                <div>
                     <input name="nome" type="text" placeholder="Nome"/>
-                </label>
+                </div>
                 <label>
                     <input name="email" type="email" placeholder="Email"/>
                 </label>
@@ -61,7 +61,7 @@ if (isset($_SESSION['logado'])){
                     <input id="senhaEntrar" type="password" placeholder="Senha" name="password"/>
 
                 </label>
-                <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaEntrar')"></i>
+                <i class="bi bi-eye-fill eye" id="btn-senha2" onclick="mostrarSenha2('senhaEntrar')"></i>
                 <div class="error">
                     <p style="color: red">
                  <?php if(isset($error)){

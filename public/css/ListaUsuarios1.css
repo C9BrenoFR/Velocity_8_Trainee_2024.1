@@ -306,6 +306,7 @@ body {
     width: 100%;
   }
 
+
   .botoes_edicao {
     width: fit-content;
   }
@@ -450,23 +451,41 @@ body {
   }
 }
 
-
+/* CELULAR */
 @media screen and (max-width: 900px) {
 
-  .modal_viz{
-    width: 50%;
+  .modal_vis{
+    width: 80%;
   }
+  
+  .modal_vis_titulo > h1{
+    color: white;
+    width: 60%;
+    font-size: 26px;
+  }
+  .modal_vis > h2 {
+    color: white;
+    width: 60%;
+    font-size: 22px;
+  }
+
+  .modal_edicao_content {
+    width: 90%;
+  }
+
 
   .modal_delete > input {
-    width: 100%;
+    width: 90%;
   }
 
+  .modal_delete{
+    width: 90%;
+  }
   .botoes_deletar {
-
     flex-direction: row;
-    
     width: fit-content;
   }
+  
 }
 
 /*ALTERANDO TELA DE FUNDO QUANDO ABRIR O MODAL*/

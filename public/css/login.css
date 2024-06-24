@@ -1,7 +1,7 @@
 body {
     background: rgb(36,6,56);
     background: linear-gradient(90deg, rgba(36,6,56,1) 0%, rgba(37,105,91,1) 35%, rgba(37,130,100,1) 44%, rgba(37,151,108,1) 56%, rgba(38,230,136,1) 100%);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Montserrat';
         overflow: hidden;
     
     }

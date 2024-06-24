@@ -143,6 +143,7 @@ if (!$_SESSION['logado']){
                                 <input type="hidden" value="<?= $post->id ?>" name="id">
                                 <button type="submit" class="btn btn-primary">Deletar</button>
                                 <button type="reset" class="btn btn-primary" onclick="fecharmodal('deletar-<?= $post->id ?>')">Cancelar</button>
+                                <input type="hidden" value="<?= $post->image ?>" name="imgAntiga">
                             </div>
                         </fieldset>
                 </form>
@@ -194,6 +195,7 @@ if (!$_SESSION['logado']){
                                 <input type="hidden" value="<?= $post->id ?>" name="id">
                                 <button type="submit" class="btn btn-primary">Salvar</button>
                                 <button type="reset" class="btn btn-primary" onclick="fecharmodal('editar-<?= $post->id ?>')">Cancelar</button>
+                                <input type="hidden" value="<?= $post->image ?>" name="imgAntiga">
                             </div>
                         </fieldset>
                 </form>

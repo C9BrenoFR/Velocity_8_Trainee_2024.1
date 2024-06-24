@@ -35,24 +35,25 @@ class UserController
 
     public function edit(){
 
-        if(isset($_FILES['img'])){
-            $arquivo = $_FILES['img'];  
-            //verificando se há erro
-            if($arquivo['error']){
-                die('Falha ao enviar arquivo.');
+        if(!empty($_FILES['img']['tmp_name'])){
+            if($_POST['imgAntiga'] != "/public/img/defaultpfp.png")
+            {
+                unlink($_POST['imgAntiga']);
             }
-            //definindo tamanho
-            if($arquivo['size'] > 2097152){
-                die('Arquivo muito grande. Max: 2MB.');
-            }
-            //definindo pasta de destino
-            $pasta = "public/img/";
-            //gerando nome pro arquivo (para nao sobrescrever)
+            $arquivo = $_FILES['img'];
+            $pasta = 'public/img/';
+
+            if($arquivo['error'])
+                die('Falha ao enviar arquivo');
+        
+
             $nomeDoArquivo = $arquivo['name'];
-            $novoNomeArquivo = uniqid();
+            $novoNomeDoArquivo= uniqid();
             $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-            $caminho = $pasta . $novoNomeArquivo . "." . $extensao;
-            move_uploaded_file($arquivo["tmp_name"], $caminho);
+            $caminho = $pasta . $novoNomeDoArquivo . "." . $extensao;
+            move_uploaded_file($arquivo['tmp_name'], $caminho);
+        } else{
+            $caminho = $_POST['imgAntiga'];
         }
 
         $id = $_POST['id'];

@@ -314,7 +314,7 @@ body {
 /*MODAL DE VISUALIZAÇÃO DE USUÁRIO*/
 .modal_vis {
   height: fit-content;
-  width: fit-content;
+  width: 35%;
   display: none;
   flex-direction: column;
   background-color: #9368A6;
@@ -359,7 +359,6 @@ body {
 
 .pfp-modal{
   width: 40%;
-  border-radius: 50%;
 }
 
 .botao-close {
@@ -453,6 +452,11 @@ body {
 
 
 @media screen and (max-width: 900px) {
+
+  .modal_viz{
+    width: 50%;
+  }
+
   .modal_delete > input {
     width: 100%;
   }

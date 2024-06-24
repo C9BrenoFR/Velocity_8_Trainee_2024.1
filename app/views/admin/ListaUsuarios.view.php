@@ -99,7 +99,7 @@ if (!$_SESSION['logado']){
         <input type="file" name="img" required><br>
 
         <input type="text" name="id" value="<?= $user->id ?>" hidden>
-        <input type="text" name="pfp_antigo" value="<?= $user->pfp ?>" hidden>
+        <input type="hidden" value="<?= $user->pfp ?>" name="imgAntiga">
 
         <div class="botoes_edicao">
             <button>Salvar</button>

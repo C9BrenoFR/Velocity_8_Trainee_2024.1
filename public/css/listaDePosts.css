@@ -229,19 +229,13 @@ p{
     list-style-type: none;
   }
   
-  .paginacao .control {
-    font-weight: 500;
-    color: white;
-    cursor: pointer;
-  }
-  
   .control-prev {
-    color: white;
+    color: #22e688;
     cursor: pointer;
   }
   
   .control-next {
-    color: white;
+    color: #22e688;
     cursor: pointer;
   }
   

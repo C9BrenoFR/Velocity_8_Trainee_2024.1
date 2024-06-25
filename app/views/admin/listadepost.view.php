@@ -49,12 +49,12 @@ if (!$_SESSION['logado']){
                         <td class="td1"> <?= $idPost ?> </td>
                         <td class="td2"> <?= $post->title ?> </td>
                         <td class="td3">
-                            <button type="button" class="btn btn-outline-light pc" onclick="openModal('visualizar-<?= $post->id ?>')">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirmodal('editar-<?= $post->id ?>')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirmodal('deletar-<?= $post->id ?>')">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile"onclick="abrirmodal('visualizar-<?= $post->id ?>')" ><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirmodal('editar-<?= $post->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirmodal('deletar-<?= $post->id ?>')"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn b btn-outline-light pc" onclick="openModal('visualizar-<?= $post->id ?>')">Visualizar</button>
+                            <button type="button" class="btn b btn-outline-warning pc" onclick="abrirmodal('editar-<?= $post->id ?>')">Editar</button>
+                            <button type="button" class="btn b btn-outline-danger pc" onclick="abrirmodal('deletar-<?= $post->id ?>')">Deletar</button>
+                            <button type="button" class="btn a btn-outline-light mobile"onclick="abrirmodal('visualizar-<?= $post->id ?>')" ><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn a btn-outline-warning mobile" onclick="abrirmodal('editar-<?= $post->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn a btn-outline-danger mobile" onclick="abrirmodal('deletar-<?= $post->id ?>')"><i class="fa-solid fa-trash"></i></button>
                         </td>
                  
                     </tr>

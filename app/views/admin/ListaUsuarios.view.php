@@ -51,12 +51,12 @@ if (!$_SESSION['logado']){
                         <td class="td2"> <img src="<?= $user->pfp; ?>" alt="imagemperfil"> <?= $user->name; ?></td>
                         <td class="td3"><?= $user->email; ?></td>
                         <td class="td4">
-                            <button type="button" class="btn btn-outline-light pc" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')">Visualizar</button>
-                            <button type="button" class="btn btn-outline-warning pc" onclick="abrirModalEditar('m_edit-<?= $user->id ?>')">Editar</button>
-                            <button type="button" class="btn btn-outline-danger pc" onclick="abrirModalDelete('m_del-<?= $user->id ?>')">Deletar</button>
-                            <button type="button" class="btn btn-outline-light mobile" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')"><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn btn-outline-warning mobile" onclick="abrirModalEditar('m_edit-<?= $user->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn btn-outline-danger mobile" onclick="abrirModalDelete('m_del-<?= $user->id ?>')"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn b btn-outline-light pc" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')">Visualizar</button>
+                            <button type="button" class="btn b btn-outline-warning pc" onclick="abrirModalEditar('m_edit-<?= $user->id ?>')">Editar</button>
+                            <button type="button" class="btn b btn-outline-danger pc" onclick="abrirModalDelete('m_del-<?= $user->id ?>')">Deletar</button>
+                            <button type="button" class="btn a btn-outline-light mobile" onclick="abrirModalEditar('m_vis-<?= $user->id ?>')"><i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="btn a btn-outline-warning mobile" onclick="abrirModalEditar('m_edit-<?= $user->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn a btn-outline-danger mobile" onclick="abrirModalDelete('m_del-<?= $user->id ?>')"><i class="fa-solid fa-trash"></i></button>
                         </td>    
                     </tr>
                     <?php $idUser++; ?>

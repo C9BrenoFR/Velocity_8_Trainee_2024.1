@@ -11,7 +11,7 @@ body{
     height: 100vh;
 }
 
-i{
+.bi{
     color: #22E688;
     margin-left: 10px;
 }
@@ -95,7 +95,9 @@ ul li.item-menu a .icon > i{
     
     nav.sidebar-mobile{
         margin: 5px;
-        height: 20px;
+        padding: 0;
+        height: 50px;
+        width: 50px;
         border-radius: 45%;
         box-shadow: none;
         display: flex;
@@ -109,12 +111,14 @@ ul li.item-menu a .icon > i{
     }
 
     .btn-expandir-mobile{
-        margin-left: 5px;
-        margin-top: 20px;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
     }
 
     .btn-expandir-mobile > i{
-        font-size: 36px;
+        font-size: 24px;
+        margin-right: 10px;
     }
     
     .ul-sidebar-mobile{

@@ -54,13 +54,22 @@ class PostController
             
         }
 
+        if(session_status() == PHP_SESSION_NONE){
+            session_start();
+        }
+
+        if($_SESSION['user']->isAdmin){
+            $idUser = $_POST['autor'];
+        }else{
+            $idUser = $_SESSION['user']->id;
+        }
         
         $parameters = [
             'title'=>$_POST['title'],
             'description'=>$_POST['description'],
             'data'=>$_POST['data'],
             'image'=> $caminho,
-            'idUser'=>$_POST['autor']
+            'idUser'=>$idUser,
         ];
 
 
@@ -90,15 +99,24 @@ class PostController
             $caminho = $_POST['imgAntiga'];
         }
 
+        if(session_status() == PHP_SESSION_NONE){
+            session_start();
+        }
+        
+        if($_SESSION['user']->isAdmin){
+            $idUser = $_POST['autor'];
+        }else{
+            $idUser = $_SESSION['user']->id;
+        }
         
         $parameters = [
             'title'=>$_POST['title'],
             'description'=>$_POST['description'],
             'data'=>$_POST['data'],
-            'image'=>$caminho,
-            'idUser'=>$_POST['autor']
+            'image'=> $caminho,
+            'idUser'=>$idUser,
         ];
-
+        
         $id = $_POST['id'];
         App::get('database')->edit('posts', $id, $parameters);
 

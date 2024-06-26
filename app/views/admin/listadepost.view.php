@@ -1,11 +1,12 @@
 <?php 
+
 session_start();
 if (!$_SESSION['logado']){
     return redirect('login');
-
 }
 
-
+$data = new DateTime();
+$data->setTimezone(new DateTimeZone('America/Sao_Paulo'));
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +50,12 @@ if (!$_SESSION['logado']){
                         <td class="td1"> <?= $idPost ?> </td>
                         <td class="td2"> <?= $post->title ?> </td>
                         <td class="td3">
-                            <button type="button" class="btn b btn-outline-light pc" onclick="openModal('visualizar-<?= $post->id ?>')">Visualizar</button>
-                            <button type="button" class="btn b btn-outline-warning pc" onclick="abrirmodal('editar-<?= $post->id ?>')">Editar</button>
-                            <button type="button" class="btn b btn-outline-danger pc" onclick="abrirmodal('deletar-<?= $post->id ?>')">Deletar</button>
-                            <button type="button" class="btn a btn-outline-light mobile"onclick="abrirmodal('visualizar-<?= $post->id ?>')" ><i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="btn a btn-outline-warning mobile" onclick="abrirmodal('editar-<?= $post->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button type="button" class="btn a btn-outline-danger mobile" onclick="abrirmodal('deletar-<?= $post->id ?>')"><i class="fa-solid fa-trash"></i></button>
+                            <button <?= !$_SESSION['user']->isAdmin && $post->idUser != $_SESSION['user']->id ? 'disabled' : '' ?> type="button" class="btn b btn-outline-light pc" onclick="openModal('visualizar-<?= $post->id ?>')">Visualizar</button>
+                            <button <?= !$_SESSION['user']->isAdmin && $post->idUser != $_SESSION['user']->id ? 'disabled' : '' ?> type="button" class="btn b btn-outline-warning pc" onclick="abrirmodal('editar-<?= $post->id ?>')">Editar</button>
+                            <button <?= !$_SESSION['user']->isAdmin && $post->idUser != $_SESSION['user']->id ? 'disabled' : '' ?> type="button" class="btn b btn-outline-danger pc" onclick="abrirmodal('deletar-<?= $post->id ?>')">Deletar</button>
+                            <button <?= !$_SESSION['user']->isAdmin && $post->idUser != $_SESSION['user']->id ? 'disabled' : '' ?> type="button" class="btn a btn-outline-light mobile"onclick="abrirmodal('visualizar-<?= $post->id ?>')" ><i class="fa-solid fa-eye"></i></button>
+                            <button <?= !$_SESSION['user']->isAdmin && $post->idUser != $_SESSION['user']->id ? 'disabled' : '' ?> type="button" class="btn a btn-outline-warning mobile" onclick="abrirmodal('editar-<?= $post->id ?>')"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button <?= !$_SESSION['user']->isAdmin && $post->idUser != $_SESSION['user']->id ? 'disabled' : '' ?> type="button" class="btn a btn-outline-danger mobile" onclick="abrirmodal('deletar-<?= $post->id ?>')"><i class="fa-solid fa-trash"></i></button>
                         </td>
                  
                     </tr>
@@ -93,17 +94,21 @@ if (!$_SESSION['logado']){
                             <div class="row g-3" id="aut">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>   
+                                    <?php if($_SESSION['user']->isAdmin) :  ?>
                                     <select name="autor" class="form-select" id="1" required>
-                                        <option value="">Selecione um Autor: </option>
+                                        <option value=""> Selecione o Autor:</option>
                                         <?php foreach($users as $user): ?>
-                                            <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                                            <option value="<?php echo $user->id ?>" <?= $user->id == $post->idUser ? 'selected' : ' ' ?> ><?php echo $user->name ?></option>
                                             <?php endforeach; ?>
                                     </select>
+                                    <?php else : ?>
+                                    <input type="text" class="form-control" id="autor" name="autor" readonly value="<?= $_SESSION['user']->name ?>">
+                                    <?php endif ?>
                                 </div>
 
                                 <div class="col-sm">
                                     <label for="data" class="form-label">Data: </label>
-                                    <input type="date" class="form-control" id="data" name="data" required>
+                                    <input type="text" class="form-control" id="data" name="data" readonly value="<?= $data->format('d/m/Y') ?>">
                                 </div>
                             </div>
                         
@@ -162,17 +167,21 @@ if (!$_SESSION['logado']){
                             <div class="row g-3" id="aut">
                                 <div class="col-sm-7">
                                     <label for="autor" class="form-label">Autor: </label><br>
+                                    <?php if($_SESSION['user']->isAdmin) :  ?>
                                     <select name="autor" class="form-select" id="1" required>
                                         <option value=""> Selecione o Autor:</option>
                                         <?php foreach($users as $user): ?>
                                             <option value="<?php echo $user->id ?>" <?= $user->id == $post->idUser ? 'selected' : ' ' ?> ><?php echo $user->name ?></option>
                                             <?php endforeach; ?>
                                     </select>
+                                    <?php else : ?>
+                                    <input type="text" class="form-control" id="autor" name="autor" readonly value="<?= $_SESSION['user']->name ?>">
+                                    <?php endif ?>
                                 </div>
 
                                 <div class="col-sm">
                                     <label for="data" class="form-label">Data: </label>
-                                    <input type="date" value="<?php echo $post->data ?>" class="form-control" id="data" name="data" required>
+                                    <input type="text" class="form-control" id="data" name="data" readonly value="<?= $data->format('d/m/Y') ?>">
                                 </div>
                             </div>
                             

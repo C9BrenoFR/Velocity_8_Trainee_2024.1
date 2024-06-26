@@ -33,17 +33,17 @@ class LoginController
 
         $logged = App::get('database')->login('users',$email, $password);
 
-        if  ($logged){
+        if ($logged){
             session_start();
+            $user = App::get('database')->selectOnLogin($email);
             $_SESSION['logado'] = true;
+            $_SESSION['user'] = $user[0];
             header('location: /dashboard');
         }
         else{
             $error = ['error' => "Senha ou Email Inválidos"]; 
             return view('site/login', compact('error'));
         }
-
-
     }
     public function delete(){
 

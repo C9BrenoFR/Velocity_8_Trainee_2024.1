@@ -120,7 +120,21 @@ public function search($table, $dados, $users=null){
 
 public function select($table,$id)
 {
-    $sql = "Select * FROM {$table} WHERE id = {$id}";
+    $sql = "SELECT * FROM {$table} WHERE id = {$id}";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+public function selectOnLogin($email)
+{
+    $sql = "SELECT * FROM users WHERE email LIKE '%$email%'";
 
     try {
         $stmt = $this->pdo->prepare($sql);

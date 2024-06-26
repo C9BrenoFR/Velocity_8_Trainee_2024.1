@@ -2,7 +2,6 @@
 session_start();
 if (!$_SESSION['logado']){
     return redirect('login');
-
 }
 
 

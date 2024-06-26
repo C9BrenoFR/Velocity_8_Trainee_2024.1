@@ -49,15 +49,17 @@ if (isset($_SESSION['logado'])){
                 <h1>Criar conta</h1>
                 
                 <div>
-                    <input name="nome" type="text" placeholder="Nome"/>
+                    <input class="input" name="nome" type="text" placeholder="Nome"/>
                 </div>
                 <label>
-                    <input name="email" type="email" placeholder="Email"/>
+                    <input class="input" name="email" type="email" placeholder="Email"/>
                 </label>
                 <label>
-                    <input name="senha" id="senhaCriar"type="password" placeholder="Senha"/>
+                    <div class="input">
+                    <input class="input-senha" name="senha" id="senhaCriar"type="password" placeholder="Senha"/>
+                    <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaCriar')"></i>
+                    </div>
                 </label>
-                <i class="bi bi-eye-fill eye" id="btn-senha" onclick="mostrarSenha('senhaCriar')"></i>
                 <button style="margin-top: 9px">Criar</button>
             </form>
         </div>
@@ -65,13 +67,17 @@ if (isset($_SESSION['logado'])){
             <form action="login" method="post">
                 <h1>Entrar</h1>
                 <label>
-                    <input type="email" placeholder="Email" name="email"/>
+                    <input class="input" type="email" placeholder="Email" name="email"/>
                 </label>
                 <label class="senha">
-                    <input id="senhaEntrar" type="password" placeholder="Senha" name="password"/>
+                    <div class="input">
+
+                   
+                        <input class="input-senha" id="senhaEntrar" type="password" placeholder="Senha" name="password"/>
+                        <i class="bi bi-eye-fill eye" id="btn-senha2" onclick="mostrarSenha2('senhaEntrar')"></i>
+                    </div>
 
                 </label>
-                <i class="bi bi-eye-fill eye" id="btn-senha2" onclick="mostrarSenha2('senhaEntrar')"></i>
                 <div class="error">
                     <p style="color: red">
                  <?php if(isset($error)){

@@ -221,7 +221,9 @@ margin-left: 10px;
         border: 1px solid #0e263d;
     }
     
-    .form-container input {
+    .input {
+        display: flex;
+        flex-direction: row;
         background: #3F1859;
         border: none;
         border-radius: 50px;
@@ -230,12 +232,17 @@ margin-left: 10px;
         
         color: aliceblue;
     }
+    .input-senha{
+
+        outline: none;
+        border: none;
+        background: none;
+
+    }
     
 
     .sign-in-container form i{
-        position: absolute;
-        top:55%;
-        left:72%;
+       
         cursor: pointer;
         color: #9368A6;
     }

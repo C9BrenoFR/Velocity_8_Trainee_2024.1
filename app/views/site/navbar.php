@@ -43,7 +43,6 @@
       <div class="logo">
         <a class="a-nav" id="login" href="/login">
           <?php
-            session_start(); 
 
               if(isset($_SESSION['logado'])){
                 echo "Dashboard";

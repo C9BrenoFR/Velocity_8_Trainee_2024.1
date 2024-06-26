@@ -154,7 +154,7 @@ html, body {
     box-shadow: 0 0 10px #22E688;  
 }
 
-.caixa input:hover, textarea:hover{
+.caixa input:hover, textarea:hover, select:hover{
     opacity: 85%;
 }
 
@@ -164,6 +164,10 @@ html, body {
 }
 
 .caixa textarea:focus{
+    box-shadow: 0 0 10px #22E688;  
+}
+
+.caixa select:focus{
     box-shadow: 0 0 10px #22E688;  
 }
 

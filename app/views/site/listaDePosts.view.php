@@ -39,11 +39,11 @@
 
             <?php foreach ($posts as $post) : ?>
                 <form class="posts" action="/vdpi" method="get" onclick="abrirPost(this)">
-                    <img src="<?= $post->image ?>" alt="carro do post 1">
+                    <img src="<?= "/".$post->image ?>" alt="carro do post 1">
                     <div class="usuario">
                         <?php foreach ($users as $user) :
                             if ($user->id == $post->idUser) : ?>
-                                <span> <img src="<?= $user->pfp ?>" alt="usuário"> </span>
+                                <span> <img src="<?= "/".$user->pfp ?>" alt="usuário"> </span>
                                 <h1>
                                     <?= $user->name ?>
                                 </h1>

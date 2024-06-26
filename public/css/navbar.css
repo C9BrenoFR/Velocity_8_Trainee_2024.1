@@ -28,8 +28,8 @@
   .ul-nav {
     list-style: none;
     display: flex;
-    padding-left: 40%;
-    gap: 60%;
+    padding-left: 60%;
+    gap: 80%;
     justify-content: space-around;
     
   }

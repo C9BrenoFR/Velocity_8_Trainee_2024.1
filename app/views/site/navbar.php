@@ -31,7 +31,7 @@
             <a href="/posts" class="footer-link"> <i class="fa-solid fa-list"></i></a>
           </li>
           <li>
-            <form class="footer-link" id="form-nav" action="/posts/search" method="get"> 
+            <form    class="footer-link" id="form-nav" action="/posts/search" method="get"> 
               <input type="text" placeholder="Digite sua Pesquisa" name="busca" autocomplete="off">
             <i class="fa-solid fa-magnifying-glass" onclick="pesquisa()"></i>
           
@@ -43,12 +43,15 @@
       <div class="logo">
         <a class="a-nav" id="login" href="/login">
           <?php
-      if(isset($_SESSION{'logado'})){
-        echo "Dashboard";
-      }else{
-        echo "Log-in";
-      }
+            session_start(); 
+
+              if(isset($_SESSION['logado'])){
+                echo "Dashboard";
+              } else {
+                echo "Log-in";
+              }
           ?>
+
         </a>
       </div>
      

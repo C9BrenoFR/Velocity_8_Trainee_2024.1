@@ -111,16 +111,15 @@ body, html{
 }
 
 .icone{
-    width: 40px;
-    height: 35px;
+    width: 100%;
+    height: 600%;
     transition: width 0.3s ease-in-out;
     transition: height 0.3s ease-in-out;
 
 }
 
 .icone:hover{
-    width: 40px;
-    height: 40px;
+    height: 670%;
 }
 .p{
     color: #240638;

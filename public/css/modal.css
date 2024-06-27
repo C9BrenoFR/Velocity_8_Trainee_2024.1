@@ -13,19 +13,11 @@ html, body {
     align-items: center;
 }
 
-.filtro{
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(2px);
-    position: absolute;
-    display: none;
-    z-index: 2;
-    opacity: 0.8;
-}
-
 .tamanho {
     display: none;
     width: 40%;
+    height: fit-content;
+    
     border-radius: 20px;
     background-color: #9368A6;
 
@@ -33,6 +25,24 @@ html, body {
     z-index: 1051;
 
     animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.deleta{
+    display: none;
+    width: 40%;
+    
+    border-radius: 20px;
+    background-color: #9368A6;
+
+    position: absolute;
+    z-index: 1051;
+
+    animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+
+.tamanho option {
+    color: black;
 }
 
 #visualizar {
@@ -52,16 +62,10 @@ html, body {
     }
 }
 
-.fundo {
-   width: fit-content;
-   height: fit-content;
-}
-
 .caixa {
     width: 100%;
     height: 100%;
     padding: 3% 4% 3% 4%;
-    border-radius: 5%;
 }
 
 .caixa #descr{
@@ -79,6 +83,10 @@ html, body {
     font-size: 20px;
 }
 
+#del {
+    margin-bottom: 15px;
+}
+
 .caixa label {
     margin-top: 2%;
     font-weight: 500;
@@ -89,6 +97,14 @@ html, body {
     display: flex;
     flex-direction: row-reverse;
     padding: 8px;
+    margin-top: -20px;
+}
+
+#botao-viz {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 8px;
+    margin-top: -70px;
 }
 
 .tamanho button {
@@ -110,6 +126,25 @@ html, body {
     transform: scale(0.98);
 }
 
+.deleta button {
+    background-color: #22E688;
+    color: #491D66;
+    font-weight: 600;
+    border: none;
+    margin-left: 10px;
+}
+
+.deleta button:hover{
+    background-color: #491D66;
+    color: #22E688;
+}
+
+.deleta button:active{
+    background-color: #240638 !important;
+    color: #22E688 !important;
+    transform: scale(0.98);
+}
+
 .caixa input{
     border: none;
     transition-duration: 0.3s;
@@ -119,7 +154,7 @@ html, body {
     box-shadow: 0 0 10px #22E688;  
 }
 
-.caixa input:hover, textarea:hover{
+.caixa input:hover, textarea:hover, select:hover{
     opacity: 85%;
 }
 
@@ -132,13 +167,18 @@ html, body {
     box-shadow: 0 0 10px #22E688;  
 }
 
+.caixa select:focus{
+    box-shadow: 0 0 10px #22E688;  
+}
+
 
 
 .tamanho img{
-    width: 180px;
-    height: 100px;
+    max-width: 180px;
+    max-height: 100px;
     border-radius: 10px;
     display: block;
+    object-fit: contain;
 }
 
 #img-d{
@@ -150,10 +190,15 @@ html, body {
 }
 
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:768px) {
 
     .tamanho{
-        width: 90%;
+        width: 95%;
+        height: fit-content;
+    } 
+
+    .deleta{
+        width: 95%;
     } 
 
     .caixa{
@@ -167,4 +212,38 @@ html, body {
     .caixa label {
         font-size: 14px;
     }
+
+    #aut p{
+       margin-bottom: -15px;
+    }
+
+    #aut select{
+        margin-bottom: -15px;
+     }
+
+}
+
+    @media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+        .tamanho{
+            width: 80%;
+            height: fit-content;
+        } 
+    
+        .deleta{
+            width: 70%;
+            height: fit-content;
+        } 
+    
+        .caixa{
+            border-radius: 0%;
+        }
+    
+        .caixa legend {
+            font-size: 18px;
+        }
+    
+        .caixa label {
+            font-size: 14px;
+        }
 }

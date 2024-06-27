@@ -4,22 +4,31 @@ body{
     font-family: "Montserrat", sans-serif;
     color: white;
     margin: 0;
-    
+
+    display: flex;
+    flex-direction: column;
 }
 body, html{
     width: 100%;
-    height: fit-content;
+}
+
+.page {
+    padding-top: 120px;
+    padding-bottom: 5%;
 }
 
 /*BARRA DE PESQUISA*/
+
+.search-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
 .search-box{
-    position: absolute;
-    top: 7%;
     width: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #d9d9d9;
-    height: 7%;
+    height: 6.5%;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
@@ -36,64 +45,73 @@ body, html{
     width: 490px;
 }
 
-
-
 .search-bton{
-    width: 30px;
-    height: 30px;
+    border: none;
+    width: 40px;
+    height: 35px;
     margin-right: 2%;
     padding: 1%;
-    border-radius: 40px;
+    border-radius: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .1s;
+    background-color: #d9d9d9;
 }
 .search-box:hover > .search-bton {
-    background: #d3b0e2;
+    background: #d6d1d8;
 }
 
 /*POSTS*/
 .divona{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-    height: 40%;
-    margin-top: 120px;
+    height: 60%;
+    margin-top: 70px;
     margin-bottom: 50px;
     transition: margin-bottom 0.5s ease-in-out;;
     padding: 0;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 5.75%;
 }
-.divinha{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-self: flex-start;
-    width: 100%;
-    height: 40%;
-    margin-bottom: 50px;
-    padding: 0;
-}
-
 
 .posts{
     width: 20.7%;
-    height: 55vh;
+    height: 90%;
     background-color: #240638;
     box-shadow: 15px 5px 80px 0px rgba(34, 230, 136, 0.50);
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 15px;
     flex-direction: column;
     margin-top: 0;
     margin-bottom: 20px;
     opacity: 1;
     transition: height 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.posts-naoencontrado{
+    width: 20.7%;
+    height: 90%;
+    background-color: #240638;
+    box-shadow: 15px 5px 80px 0px rgba(34, 230, 136, 0.50);
+    display: inline-block;
+    border-radius: 15px;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.titulo-post{
+    margin-bottom: 10px;
 }
 
 .posts:hover{
     height: fit-content;
-    
+    margin-bottom: 0;
     .desc{
         display: block;
         animation: forwards anima 4s;
@@ -102,6 +120,7 @@ body, html{
     .divona{
         display: block;
         animation: forwards anima 4s;
+        
     }
 
 }
@@ -115,17 +134,28 @@ body, html{
     }
 }
 
-
-
-
 .posts img{
-    margin-top: 10px;
+    margin-top: 7%;
     width: 86%;
-    height: 190px;
+    height: 190px; /* 60% */
+    border-radius: 10px;
+    margin-left: 7%;
+    
+    object-fit: cover;
+
+}
+
+
+
+
+.posts-naoencontrado img{
+    margin-top: 15px;
+    width: 86%;
+    height: 190px; /* 60% */
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #f2ebd5;
+    object-fit: cover;
 }
 
 .posts span img{
@@ -137,8 +167,7 @@ body, html{
     margin-left: 20px;
     margin-right: 0px;
     border-radius: 300px;
-    
-    
+    object-fit: cover;
 }
 
 .divona h1{
@@ -175,103 +204,454 @@ p{
 }
 .divinha, .divinha{
         width: 100%;
-    }
+}
+
+/* PAGINAÇÃO */
+#pagination {
+    margin-top: 2%;
+  }
+    
+  .paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    padding: 0 3% 10px;
+    gap: 5px;
+    
+  }
+  
+  .paginacao .pagi {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: white;
+    color: #b27fc8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2;
+    text-decoration: none;
+  }
+  
+  .paginacao .page:hover {
+    filter: brightness(1.2);
+  }
+  
+  .paginacao .page>a{
+    text-decoration: none;
+  }
+  
+  .paginacao .active{
+    width: 40px;
+    height: 40px;
+    background-color: #3F1859;
+    color: #22e688;
+  }
+  
+  .paginacao .page-item{
+    list-style-type: none;
+  }
+  
+  .control-prev {
+    color: #22e688;
+    cursor: pointer;
+  }
+  
+  .control-next {
+    color: #22e688;
+    cursor: pointer;
+  }
+  
+  .paginacao .disabled{
+    pointer-events: none;
+    display: none;
+  }
 
 
-    @media screen and (max-width:375px){
 
-        .divona{
-            flex-direction: column;
-            margin-top: 110px;
-            transition: none;
-            margin-bottom: 0;
-        }
-        .divinha{
-               flex-direction: column;
-               margin-top: 10px;
-        }
-        
-        .search-bton{
-            width: 25px;
-            height: 25px;
-        }
+/* NEST HUB */
+@media screen and (min-width: 1024px)and (max-width: 1024px) 
+and (min-height: 600px) and (max-height: 600px){
+  .posts{
+    width: 27.5%;
+  }
+  .search-box{
+    margin-top: 1%;
+  }
+}
 
-        .divona:hover{
-            transition: none;
-        }
-     }
-
-@media screen and (max-width:850px){
+/* CELULAR  EM PÉ */
+@media screen and (max-width:500px) and (max-height:940px) {
 
     .divona{
-        flex-direction: column;
-        margin-top: 110px;
-        width: 80%;
-        margin-bottom: 0px;
-        margin-left: 10%;
-        transition: none;
-    }
-    .divinha{
-           flex-direction: column;
-           width: 80%;
-           margin-left: 10%;
+        margin-bottom: 25px;
+        margin-top: 20%;
+        justify-content: center;
     }
     .posts{
-     width: 70%;
-     margin-left: 15%;
-     height: auto;
+        width: 85%;
+        height: fit-content;
+        padding-bottom: 5%;
+        margin: 0;
+        display: flex;
+        transition: none;
+    }
+    .posts img{
+        width: 88%;
+        margin: 0;
+        margin-left: 6%;
+        margin-top: 10px;
+    }
+    
+    .search-box{
+        width: 73%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+}
+
+/* CELULAR DEITADO */
+@media screen and (max-width:940px) and (max-height:500px) {
+
+    .divona{
+        margin-bottom: 0;
+        margin-top: 11%;
+    }
+    .posts{
+        width: 40%;
+        height: fit-content;
+        padding-bottom: 3%;
+        margin: 0;
+        display: flex;
+        transition: none;
+    }
+    .posts img{
+        width: 88%;
+        margin: 0;
+        margin-left: 6%;
+        margin-top: 10px;
+        
     }
     .search-box{
-        width: 74%;
+        width: 60%;
+        height: 10%;
     }
-    .divona:hover{
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+}
+
+/* IPHONE SE DEITADO */
+@media screen and (min-width:667px) and (max-width:667px) and (min-height:375px) and (max-height:375px) {
+    .posts{
+        width: 43%;
+    }
+}
+
+/*GERAL */
+
+@media screen and (min-width:912px) and (max-width:1024px) and (min-height:1366px) and (max-height:1368px) {
+    
+    .divona{
+        margin: 0px;
+        margin-top: 180px;
+        width: 100%;
+    }
+    .posts{
+        width: 35%;
+        height: 25vh;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .posts img{
+        margin-right: 0px;
+        width: 88%;
+    }
+    .search-box{
+        width: 70%;
+        margin-top: 0%;
+        height: 5%;
+    }
+
+}
+
+/* TABLET EM PÉ*/
+@media screen and (min-width:700px) and (max-width:900px) and (min-height:500px) and (max-height:1366px) {
+
+    .divona{
+        width: 100%;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        transition: none;
+        column-gap: 1%;
+    }
+    .divinha{
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .posts{
+        width: 40%;
+        height: fit-content;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 2%;
         transition: none;
     }
+    .post img{
+        margin-right: 0;
+    }
+    .search-box{
+        width: 70%;
+        margin-top: 3%;
+        height: 5%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover{
+        transition: none;
+        animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
 
  }
 
- @media screen and (min-width: 1280px)and (max-width: 1280px) 
-  and (min-height: 800px) and (max-height: 800px){
+ /* TABLETS DEITADOS */
+@media screen and (min-width:900px) and (max-width:1200px) and (min-height:700px) and (max-height:1400px) {
+
+    .divona{
+        margin-top: 140px;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        transition: none;
+        column-gap: 1%;
+        transition: none;
+    }
     .posts{
-        height: 40vh;
+        width: 28%;
+        height: fit-content;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 2%;
+        transition: none;
+    }
+    .search-box{
+        width: 70%;
+        margin-top: 0%;
+        height: 4.8%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+
+ }
+
+ /* TABLET GRANDE EM PÉ (IPAD PRO) */
+@media screen and (min-width:900px) and (max-width:1050px) and (min-height:932px) and (max-height:1400px) {
+
+    .divona{
+        margin-top: 100px;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        transition: none;
+        column-gap: 1%;
+        transition: none;
+    }
+    .posts{
+        width: 35%;
+        height: 25vh;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 2%;
+        transition: none;
+    }
+    .search-box{
+        width: 70%;
+        margin-top: 5%;
+        height: 4.8%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover{
+        height: 25vh;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+
+ }
+
+ /* TABLET DEITADO IPAD MINI */
+@media screen and (min-width:1024px) and (max-width:1024px) and (min-height:768px) and (max-height:768px) {
+
+    .posts:hover{
+        height: 46vh;
     }
  }
 
- 
+  /* TABLET DEITADO IPAD AIR*/
+@media screen and (min-width:1180px) and (max-width:1180px) and (min-height:820px) and (max-height:820px) {
+
+    .posts:hover{
+        height: 43vh;
+    }
+ }
+
+   /* TABLET DEITADO IPAD PRO*/
+@media screen and (min-width:1366px) and (max-width:1366px) and (min-height:1024px) and (max-height:1024px) {
+
+    .divona{
+        margin-top: 140px;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        transition: none;
+        column-gap: 2.7%;
+    }
+    .posts{
+        height: fit-content;
+        padding-top: 5px;
+        padding-bottom: 2%;
+        transition: none;
+        width: 23%;
+    }
+    .posts:hover{
+        height: 34.5vh;
+    }
+    .search-box{
+        width: 60%;
+        margin-top: 0%;
+        height: 5%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+ }
+
+ /* TABLET SURFACE PRO 7 EM PÉ*/
+@media screen and (min-width:912px) and (max-width:912px) and (min-height:1368px) and (max-height:1368px) {
+
+    .divona{
+        margin-top: 80px;
+    }
+    .posts{
+        width: 34%;
+    }
+    .posts:hover{
+        height: 26vh;
+    }
+ }
+
+/* TABLET DEITADO SURFACE PRO 7*/
+@media screen and (min-width:1368px) and (max-width:1368px) and (min-height:912px) and (max-height:912px) {
+
+    .divona{
+        column-gap: 2.7%;
+    }
+    .posts{
+        width: 23%;
+    }
+    .search-box{
+        width: 60%;
+        height: 6%;
+    }
+ }
 
 
-/*.paginacao{
-    width: 230px;
-    height: 30px;
-    margin: auto;
-    margin-bottom: 30px;
-}
-.quadradinhos{
-    width: 30px;
-    height: 30px;
-    background-color: #9368A6;
-    display: inline-block;
-    margin-right: 4px;
-    margin-right: 4px;v
+
+ /* TABLET DEITADO SURFACE DUO DEITADO*/
+@media screen and (min-width:720px) and (max-width:720px) and (min-height:540px) and (max-height:540px) {
+
+    .divona{
+        margin-top: 90px;
+    }
+    .search-box{
+        width: 70%;
+        height: 7%;
+    }
+ }
+
+/* TABLET DEITADO SURFACE DUO EM PÉ*/
+@media screen and (min-width:540px) and (max-width:540px) and (min-height:720px) and (max-height:720px) {
+
+    .divona{
+        column-gap: 3%;
+        transition: none;
+    }
+    .posts{
+        width: 60%;
+        height: fit-content;
+        padding-bottom: 3%;
+        margin: 0;
+        transition: none;
+    }
+    .search-box{
+        width: 70%;
+        height: 7%;
+    }
+    .desc{
+        display: block;
+        opacity: 1;
+        animation: none;
+    }
+    .posts:hover .desc,
+    .posts:hover .divona{
+        display: block;
+        animation: none;
+    }
+ } 
+
+/* NEST HUB MAX*/
+@media screen and (min-width:1280px) and (max-width:1280px) and (min-height:800px) and (max-height:800px) {
+
+    .posts{
+        width: 22%;
+    }
+    .search-box{
+        margin-top: 1.5%;
+    }
     
-    
-}
-
-.quadradinhos a{
-    display: inline-block;
-    align-items: center;
-    margin-top: 4px;
-    margin-left: 9px;
-    text-decoration: none;
-    
-}
-
-.maiormenor{
-    display: inline-block;
-    color: #B27FC8;
-    font-family: "Kanit", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 25px;
-    text-decoration: none;
-}
+ } 

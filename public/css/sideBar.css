@@ -11,7 +11,7 @@ body{
     height: 100vh;
 }
 
-i{
+.bi{
     color: #22E688;
     margin-left: 10px;
 }
@@ -21,13 +21,15 @@ nav.sidebar{
     height: 100%;
     background-color: #3f1859;
     padding: 40px 0px 40px 1%;
-    box-shadow: 3px 0 0 #f2ebd5;
+    box-shadow: 3px 0 0 #9368a6;
 
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
     transition: .4s;
+
+    z-index: 100;
 }
 
 nav.sidebar.expandir{
@@ -44,13 +46,14 @@ nav.sidebar.expandir{
     cursor: pointer;
 }
 
-ul{
+.ul-sidebar{
     height: 100%;
     list-style-type: none;
+    padding: 0;
 }
 
 ul li.item-menu:hover{
-    background-color: #9368A6;
+    background-color: #9368a6;
     border-radius: 10px 0 0 10px;
 }
 
@@ -59,7 +62,7 @@ ul li.item-menu{
 }
 
 ul li.ativo{
-    background-color: #3f1859;
+    background-color: #9368a6;
     border-radius: 8px 0 0 8px;
 }
 
@@ -86,4 +89,39 @@ nav.sidebar.expandir .txt-link{
 
 ul li.item-menu a .icon > i{
     font-size: 30px;
+}
+
+@media only screen and (max-width: 800px){
+    
+    nav.sidebar-mobile{
+        margin: 5px;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        border-radius: 45%;
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #22E688;
+    }
+
+    nav.sidebar.expandir{
+        width: 100%;
+    }
+
+    .btn-expandir-mobile{
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .btn-expandir-mobile > i{
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .ul-sidebar-mobile{
+        display: none;
+    }
 }

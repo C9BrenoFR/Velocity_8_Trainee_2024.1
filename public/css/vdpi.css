@@ -1,8 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
 }
 
 #fundo {
@@ -17,31 +15,42 @@ z-index: -1;
 
 #container {
 margin-left: 5%;
-margin-top: 5%;
+margin-top: 10%;
+margin-bottom: 10%;
 }
 
 #perfil {
     display: flex;
 }
 
+.perfil-content{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+}
+
 #perfil img{
-    width: 7.2%;
-    max-width: 102px;
+    
+    
     border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
 }
 
 #perfil p{
     display: flex;
-    margin-top: 0%;
-    padding-left: 2%;
-    display: flex;
+    margin: 0;
 }
 
 .name{
     color: #FFF;
     font-family: 'Montserrat';
     font-size: 20px;    
-    font-weight: 400; 
+    font-weight: 400;
+    white-space: nowrap;
+    padding-left: 40px;
+    padding-right: 10px;
 }
 
 .data_hora{
@@ -49,10 +58,11 @@ margin-top: 5%;
     font-family: 'Montserrat';
     font-size: 20px;
     font-weight: 100;
+    white-space: nowrap;
 }
 
 #postagem {
-    margin-top: -5%;
+    margin-top: -3%;
     width: 90%;
 }
 
@@ -63,6 +73,7 @@ margin-top: 5%;
     font-weight: 700;
 
     padding-left: 10%;
+    padding-bottom: 2%;
 }
 
 .post {
@@ -94,15 +105,31 @@ margin-top: 5%;
 
 @media only screen and (max-width: 767px) {
 
+#container{
+    margin-top: 30%;
+}
+
 #perfil img {
-    width: 8%;
-    max-width: 102px;
+    width: 50px;
+    max-width: 50px;
     margin-left: 2%;
+    max-height: 50px;
+    min-height: 50px;
+    height: 50px;
 }
 .name, .data_hora {
-    font-size: 10px;
+    display: flex;
+    font-size: 15px;
     padding-top: 2%;
     padding-left: 2%;
+    align-items: center;
+    padding-left: 10px;
+    white-space: wrap;
+}
+
+.data_hora{
+
+    white-space: nowrap;
 }
 .titulo {
     display: flex;
@@ -139,16 +166,26 @@ margin-top: 5%;
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
 
+    #container {
+        margin-top: 15%;
+    }
+
     #perfil img {
-        width: 6%;
-        max-width: 102px;
+        width: 80px;
+        max-width: 80px;
         margin-left: 2%;
+        max-height: 80px;
+        min-height: 80px;
+        height: 80px;
     }
     .name, .data_hora {
-        font-size: 15px;
+        display: flex;
+        font-size: 20px;
         padding-top: 2%;
         padding-left: 2%;
-    }
+        align-items: center;
+        padding-left: 15px;
+        }
     .titulo {
         display: flex;
         padding-left: 0%;

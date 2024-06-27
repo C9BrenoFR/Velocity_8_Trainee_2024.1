@@ -11,11 +11,89 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
+
+    display: flex;
+    flex-direction: column;
 }
+
+/* PAGINAÇÃO */
+#pagination {
+    margin-top: 2%;
+    padding-bottom: 2%;
+  }
+  
+  .btn-outline-warning {
+    margin: 0 8px 0 8px;
+  }
+  
+  .paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #240638;
+    height: 5%;
+    padding: 0 3% 10px;
+    gap: 5px;
+    
+  }
+  
+  .paginacao .page {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: white;
+    color: #b27fc8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2;
+  }
+  
+  .paginacao .page:hover {
+    filter: brightness(1.2);
+  }
+  
+  .paginacao .page>a{
+    text-decoration: none;
+  }
+  
+  .paginacao .active{
+    width: 40px;
+    height: 40px;
+    background-color: #3F1859;
+    color: #22e688;
+  }
+  
+  .paginacao .page-item{
+    list-style-type: none;
+  }
+  
+  .paginacao .control {
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .control-prev {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .control-next {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .paginacao .disabled{
+    pointer-events: none;
+    display: none;
+  }
 
 .card-title{
     background-color: #3F1859;
-    margin-top: 2%;
+    margin-top: 10%;
     width: 100%;
     height: 10vh;
     backdrop-filter: blur(70px);
@@ -33,9 +111,13 @@ body{
     border-radius: 20px;
   }
 
+.btn-outline-warning {
+    margin: 0 8px 0 8px;
+}
+
 .card-table {
     background-color: #3F1859;
-    margin-top: 5%;
+    margin-top: 2%;
     width: 100%;
     height: fit-content;
     backdrop-filter: blur(70px);
@@ -119,13 +201,15 @@ td{
 
 }
 
+/* TABLET */
 @media screen and (max-width: 768px) and (min-width: 420px){
 
-.btn{
-    margin: 3% 10% 3% 10%;
+  .btn{
+      margin: 3% 2% 3% 2%;
+  }
 }
-    
-}
+
+
 @media screen and (max-height: 1400px) and (min-height: 1100px) {
 body{
     background-size: cover;
@@ -133,5 +217,199 @@ body{
     background-repeat: no-repeat;
 }
     
+}
+
+/* CELULAR */
+@media screen and (max-width: 500px) {
+
+  .modal_vis{
+    width: 80%;
+  }
+  
+  .modal_vis_titulo > h1{
+    color: white;
+    width: 60%;
+    font-size: 26px;
+  }
+  .modal_vis > h2 {
+    color: white;
+    width: 60%;
+    font-size: 22px;
+  }
+
+  .modal_edicao_content {
+    width: 90%;
+  }
+
+  .modal_delete > input {
+    width: 90%;
+  }
+
+  .modal_delete{
+    width: 90%;
+  }
+  .botoes_deletar {
+    flex-direction: row;
+    width: fit-content;
+  }
+  .card-title {
+    margin-top: 69%;
+    margin-bottom: 3%;
+  }
+  
+}
+
+/* CELULAR PEQUENO */
+@media screen and (max-width: 400px) {
+  .card-title {
+    margin-top: 85%;
+  }
+}
+
+/* CELULAR SE*/
+@media screen and (max-width: 380px) {
+  .card-title {
+    margin-top: 125%;
+  }
+}
+/* CELULAR S8+ */
+@media screen and (min-width: 360px) and (max-width: 360px){
+  .card-title {
+    margin-top: 115%;
+  }
+}
+/* CELULAR Z FOLD 5 */
+@media screen and (max-width: 350px){
+  .card-title {
+    margin-top: 80%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .card-table {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* TABLET MINI */
+@media screen and (min-width: 500px) and (max-width:790px){
+  .card-title {
+    margin-top: 25%;
+  }
+}
+/* TABLET AIR */
+@media screen and (min-width: 791px) and (max-width:820px){
+  .card-title {
+    margin-top: 25%;
+    margin-left: 6%;
+  }
+  .card-table{
+    margin-left: 6%;
+  }
+}
+
+/* TABLET PRO */
+@media screen and (min-width: 821px) and (max-width:1024px){
+  .card-title {
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+  .card-table{
+    margin-left: 5%;
+  }
+}
+
+/* TABLET SURFACE PRO 7 */
+@media screen and (min-width: 821px) and (max-width:912px){
+  .card-title {
+    margin-top: 33%;
+    margin-left: 5%;
+  }
+  .card-table{
+    margin-left: 5%;
+  }
+}
+
+/* TABLET PRO 7 */
+@media screen and (min-width: 540px) and (max-width:540px){
+  .card-title {
+    margin-top: 95%;
+  }
+  .btn-primary{
+    margin: 0%;
+  }
+}
+/* SURFACE DUO */
+@media screen and (min-width: 540px) and (max-width: 540px) and (min-height: 720px) and (max-height: 720px) {
+
+  .btn{
+    margin: 0%;
+  }
+  .a{
+    margin: 3% 15% 3% 15%;
+  } 
+  .card-title {
+    margin-top: 95%;
+  }
+    
+}
+
+/* TABLET */
+@media screen and (min-width: 1024px) and (max-width:1024px){
+  .btn{
+    margin: 2% 12% 2% 12%;
+  }
+  .btn-primary{
+    margin: 3% 2% 3% 2%;
+  }
+  
+}
+
+/* NEST HUB */
+@media screen and (min-width: 1024px) and (max-width:1024px) and (min-height:600px) and (max-height:600px){
+  .card-title {
+    margin-top: 15%;
+  }
+  .btn{
+    margin: 0%;
+  }
+  .b{
+    margin: 3% 0% 3% 0%;
+  } 
+  .td1{
+    width: 6%;
+}
+
+  .td2{
+      width: 60%;
+  }
+  .td3{
+      width: 34%;
+
+  }
+
+}
+
+/* NEST HUB MAX */
+@media screen and (min-width: 1280px) and (max-width:1280px) and (min-height:800px) and (max-height:800px){
+  .card-title {
+    margin-left: 3.5%;
+  }
+  .card-table {
+    margin-left: 3.5%;
+  }
+}
+
+
+
+/*ALTERANDO TELA DE FUNDO QUANDO ABRIR O MODAL*/
+.filtro {
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  position: absolute;
+  display: none;
+  z-index: 2;
+  opacity: 0.8;
 }
 

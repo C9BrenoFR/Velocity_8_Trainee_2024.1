@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velocity 8</title>
+    <title>V8 - Footer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/public/css/footer.css" />
 </head>
 <body>
-    <main>
-
-    </main>
+   
     <footer>
         <div id="footer-content">
             
-            <ul class="footer-list">
+            <ul class="footer-list ul-footer">
                 <li>
                     <h2>Sobre Nós</h2>
-                    <hr>
+                    <hr class="hr-footer">
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Missão</a>
+                    <a  class="footer-link" onclick="revelar('#missao', '#visao', '#valores', '#imagem')">Missão</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Valores</a>
+                    <a  class="footer-link" onclick="revelar('#valores', '#visao', '#missao', '#imagem')">Valores</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Visão</a>
+                    <a  class="footer-link" onclick="revelar('#visao', '#missao', '#valores', '#imagem')">Visão</a>
                 </li>
             </ul>
             <div id="footer_contacts">
-                <img src="/public/assets/veloci8.png" alt="">
-
+                <img class="img-footer" src="/public/assets/veloci8.png" alt="" id="imagem">
+                <div class="img-footer disable modales" id="missao">
+                    <p class="text-footer">Inspirar e informar entusiastas de carros com análises confiáveis e conteúdo atualizado, fomentando uma comunidade inclusiva de amantes de veículos.</p>
+                </div>
+                <div class="img-footer disable modales" id="visao">
+                    <p class="text-footer">Ambicionamos ser o líder em conteúdo automotivo, inovando na entrega de notícias e análises e estabelecendo um padrão de excelência e confiabilidade para leitores globais.</p>
+                </div>
+                <div class="img-footer disable modales" id="valores">
+                    <p class="text-footer">Valorizamos a integridade e a qualidade em nosso conteúdo, a paixão pelo automobilismo, a inovação constante em nossa abordagem e o desenvolvimento de uma comunidade engajada.</p>
+                </div>
               
             </div>
-            <ul class="footer_social">
+            <ul class="footer_social ul-footer">
                 <li>
                     <h2>Redes Sociais</h2>
-                    <hr>
+                    <hr class="hr-footer">
 
                 </li>
                 <div id="socialmedia">
@@ -58,4 +64,8 @@
     
 
 </body>
+
+<script src="/public/js/footer.js"></script>
+
+
 </html>

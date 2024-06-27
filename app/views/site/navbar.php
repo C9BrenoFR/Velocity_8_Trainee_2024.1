@@ -23,10 +23,10 @@
       <div class="logo">
         <a href="/"> <img src="/public/assets/logo1.png" alt="" /></a>
         <ul class="ul-nav">
-          <li>
+          <li class="icone-nav">
             <a href="/" class="footer-link"> <i class="fa-solid fa-house"></i></a>
           </li>
-          <li>
+          <li class="icone-nav">
             <a href="/posts" class="footer-link"> <i class="fa-solid fa-list"></i></a>
           </li>
           <li>

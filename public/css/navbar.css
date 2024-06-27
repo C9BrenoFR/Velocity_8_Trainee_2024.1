@@ -108,6 +108,7 @@
 /* CELULAR  EM PÉ */
 @media screen and (max-width: 390px) {
   
+  
 
   #NAV {
     padding-left: 2%;
@@ -136,6 +137,7 @@
     margin-right: 10px;
   }
 
+  
 
   #NAV {
     padding-left: 5%;
@@ -149,10 +151,20 @@
   .ul-nav {
     list-style: none;
     display: flex;
-    padding-left: 30%;
+    padding-left: 30px;
     gap: 40%;
     justify-content: space-around;
+
     
+  }
+
+
+  .ul-nav-ativo{
+    padding-left: 0;
+  }
+
+  .search-nav > input{
+    width: 100px;
   }
 
 }
@@ -171,4 +183,8 @@
   #NAV {
     height: 15%;
   }
+}
+
+.disable{
+  display: none;
 }

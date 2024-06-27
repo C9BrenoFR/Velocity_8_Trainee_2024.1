@@ -18,18 +18,26 @@
                     <hr class="hr-footer">
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Missão</a>
+                    <a  class="footer-link" onclick="revelar('#missao', '#visao', '#valores', '#imagem')">Missão</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Valores</a>
+                    <a  class="footer-link" onclick="revelar('#valores', '#visao', '#missao', '#imagem')">Valores</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Visão</a>
+                    <a  class="footer-link" onclick="revelar('#visao', '#missao', '#valores', '#imagem')">Visão</a>
                 </li>
             </ul>
             <div id="footer_contacts">
-                <img class="img-footer" src="/public/assets/veloci8.png" alt="">
-
+                <img class="img-footer" src="/public/assets/veloci8.png" alt="" id="imagem">
+                <div class="img-footer disable modales" id="missao">
+                    <p class="text-footer">Inspirar e informar entusiastas de carros com análises confiáveis e conteúdo atualizado, fomentando uma comunidade inclusiva de amantes de veículos.</p>
+                </div>
+                <div class="img-footer disable modales" id="visao">
+                    <p class="text-footer">Ambicionamos ser o líder em conteúdo automotivo, inovando na entrega de notícias e análises e estabelecendo um padrão de excelência e confiabilidade para leitores globais.</p>
+                </div>
+                <div class="img-footer disable modales" id="valores">
+                    <p class="text-footer">Valorizamos a integridade e a qualidade em nosso conteúdo, a paixão pelo automobilismo, a inovação constante em nossa abordagem e o desenvolvimento de uma comunidade engajada.</p>
+                </div>
               
             </div>
             <ul class="footer_social ul-footer">
@@ -56,4 +64,8 @@
     
 
 </body>
+
+<script src="/public/js/footer.js"></script>
+
+
 </html>

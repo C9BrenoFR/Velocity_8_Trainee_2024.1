@@ -135,14 +135,18 @@ body, html{
 }
 
 .posts img{
-    margin-top: 15px;
+    margin-top: 7%;
     width: 86%;
     height: 190px; /* 60% */
     border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 7%;
+    
     object-fit: cover;
+
 }
+
+
+
 
 .posts-naoencontrado img{
     margin-top: 15px;

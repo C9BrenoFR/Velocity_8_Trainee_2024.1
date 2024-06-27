@@ -48,11 +48,18 @@ if (isset($_SESSION['logado'])){
             <form action="/users/create" method="POST">
                 <h1>Criar conta</h1>
                 
-                <div>
-                    <input class="input" name="nome" type="text" placeholder="Nome"/>
-                </div>
+                <div class="input">
+                        <input class="input-senha" name="nome" type="text" placeholder="Nome"/>
+                        <i class="bi bi-eye-fill eye o-0" id="btn-senha" ></i>
+                    </div>
+                    
+                
                 <label>
-                    <input class="input" name="email" type="email" placeholder="Email"/>
+                    <div class="input">
+                        <input class="input-senha" name="email" type="email" placeholder="Email"/>
+                        <i class="bi bi-eye-fill eye o-0" id="btn-senha" ></i>
+                    </div>
+                   
                 </label>
                 <label>
                     <div class="input">
@@ -67,7 +74,13 @@ if (isset($_SESSION['logado'])){
             <form action="login" method="post">
                 <h1>Entrar</h1>
                 <label>
-                    <input class="input" type="email" placeholder="Email" name="email"/>
+                <div class="input">
+
+                   
+                    <input class="input-senha" type="email" placeholder="Email" name="email"/>
+                    <i class="bi bi-eye-fill eye o-0" id="btn-senha2" onclick="mostrarSenha2('senhaEntrar')"></i>
+                </div>
+                                       
                 </label>
                 <label class="senha">
                     <div class="input">
@@ -82,6 +95,7 @@ if (isset($_SESSION['logado'])){
                     <p style="color: red">
                  <?php if(isset($error)){
                     echo $error['error'];
+                    $error['error']=NULL;
                  } ?>
                     </p>
                 </div>

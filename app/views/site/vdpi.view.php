@@ -1,8 +1,3 @@
-<?php
-
-$data = new DateTime($post[0]->data);
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,7 +21,7 @@ $data = new DateTime($post[0]->data);
             <img src="<?= $user[0]->pfp ?>" alt="">
             <div class="perfil-content">
             <p class="name"><?= $user[0]->name ?></p>
-            <p class="data_hora">em <?= $data->format("d/m/Y") ?></p>
+            <p class="data_hora">em <?= $post[0]->data ?></p>
             </div>
         </div>
 

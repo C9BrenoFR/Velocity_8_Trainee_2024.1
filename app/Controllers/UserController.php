@@ -36,7 +36,7 @@ class UserController
     public function edit(){
 
         if(!empty($_FILES['img']['tmp_name'])){
-            if($_POST['imgAntiga'] != "/public/img/defaultpfp.png")
+            if($_POST['imgAntiga'] != "public/img/defaultpfp.png")
             {
                 unlink($_POST['imgAntiga']);
             }

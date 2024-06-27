@@ -140,7 +140,7 @@
   #NAV {
     padding-left: 5%;
     padding-right: 6%;
-    height: 12%;
+    height: 90px;
     background: rgb(36, 6, 56);
     display: flex;
     justify-content: space-between;

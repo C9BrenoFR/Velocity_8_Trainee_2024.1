@@ -98,7 +98,7 @@ $data->setTimezone(new DateTimeZone('America/Sao_Paulo'));
                                     <select name="autor" class="form-select" id="1" required>
                                         <option value=""> Selecione o Autor:</option>
                                         <?php foreach($users as $user): ?>
-                                            <option value="<?php echo $user->id ?>" <?= $user->id == $post->idUser ? 'selected' : ' ' ?> ><?php echo $user->name ?></option>
+                                            <option  value="<?=$user->id?>"><?php echo $user->name ?></option>
                                             <?php endforeach; ?>
                                     </select>
                                     <?php else : ?>
@@ -239,7 +239,7 @@ $data->setTimezone(new DateTimeZone('America/Sao_Paulo'));
                             </div>
                             <div class="col-sm">
                                 <label for="data" class="form-label">Data: </label>
-                                <input type="date" value="<?php echo $post->data ?>" class="form-control" id="data" name="data" readonly>
+                                <input type="text" value="<?php echo $post->data ?>" class="form-control" id="data" name="data" readonly>
                                 
                             </div>
                         </div>

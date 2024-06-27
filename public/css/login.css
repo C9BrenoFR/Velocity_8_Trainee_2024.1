@@ -6,6 +6,9 @@ body {
     
     }
     
+    * {
+        font-family: "Montserrat", sans-serif;
+    }
     
     .area-foto{
         
@@ -237,7 +240,7 @@ margin-left: 10px;
         outline: none;
         border: none;
         background: none;
-
+        color: #22E688;
     }
     
 
@@ -378,4 +381,12 @@ margin-left: 10px;
     }
     button:hover{
         cursor: pointer;
+    }
+
+
+
+
+    .o-0{
+        opacity: 0%;
+        cursor: default;
     }
